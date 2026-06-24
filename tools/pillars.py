@@ -64,10 +64,11 @@ def scorecard():
          "value": "tidy/fresh = 42% fewer first-pass flaws (7->4 across 5 tasks); cleaner first pass = less "
                   "downstream debug/cleanup (the calculable payoff); neutral on trivial tasks",
          "gate": "blind flaw-count judge, first-pass code"},
-        {"id": "P9", "name": "Long-form / loop quality", "status": "UNMEASURED",
-         "value": "quality-per-NET-token via a multi-pass refeeding loop; defined by the GLOSSOPETRAE/Fable "
-                  "framework synthesis (draft->critique->verify->rewrite, stop on convergence)",
-         "gate": "single-pass vs refeed-loop: quality judge + total-token sum (workflow)"},
+        {"id": "P9", "name": "Long-form / loop quality", "status": "MEASURED",
+         "value": "REFEED loop: 2 wins / 3 ties vs single-pass, flaws 4->0 (caught a confident-wrong correctness "
+                  "BLOCKER) at 3.3x token cost. NOT a token saver — a bug-catching/quality lever; net-positive only "
+                  "where a latent bug exists (downstream bug-cost > 3.3x pass-cost); pure tax on already-correct tasks",
+         "gate": "single-pass vs draft->critique->revise, blind quality + flaw count + token sum"},
     ]
 
 

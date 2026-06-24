@@ -136,6 +136,17 @@ P8-rework (verdict=LIMITED): REFEED's G-exec gate reuses the P8 per-eval pattern
 
 P9-longform (verdict=LIMITED): REFEED IS the loop P9 specified, with P9's metric (Q/T = final-pass-rate / total-tokens-across-all-passes) as its quality-per-token STOP governor. P9 measured the loop wins on HARD execution-graded tasks (Q/T up, expected passes 3.36→1.03) and is null-or-slight-loss on easy/med (no headroom, you pay the per-pass tax for nothing). REFEED encodes this directly: Kmax=1 on easy (no loop), the full loop only where the gate is executable and the task is hard, and a marginal-Q/T floor that halts the loop the instant a pass stops earning its tokens. P9's compression-is-null and NL-boundary caveats are why REFEED never uses an opaque surface inside the loop and bounds the Q/T win to code-with-a-real-interpreter.
 
+## Measured (P9 test-gate — single-pass vs REFEED on 5 hard tasks)
+Blind judge + token count: **REFEED 2 wins / 3 ties, flaws 4→0** (it caught a genuine correctness
+BLOCKER on an LRU cache that the single pass shipped while claiming "audited, all correct" — the
+confident-wrong failure, the most valuable kind), at **3.3× the tokens** (13,049 vs 3,944 o200k). The
+wins landed exactly on the 2 tasks with a latent bug; neutral on the 3 already-correct ones.
+**Conclusion: REFEED is NOT a token saver — it is a bug-catching quality lever, net-positive only when a
+latent bug exists and its downstream cost exceeds ~3.3× the generation tokens (correctness-critical
+work), and pure tax otherwise.** This is exactly why the loop is SELECTIVE (classify first, Kmax=1 on
+easy, stop on the marginal-quality-per-token floor): everywhere it is a token furnace; on hard work it
+pays for itself in avoided rework (the P8 link).
+
 ## Honest limits
 COST OF EXTRA PASSES. Every pass is real tokens, and the loop only nets positive where the quality gate clears more value than the passes cost. Measured shape (P9/P4, n=30, CIs ±7-18pp, one task family of textbook 3-construct logic): on HARD execution-graded tasks the loop cuts expected passes ~3.4→1 and Q/T rises; on EASY/MED tasks there is no headroom — the first ORDO-output-contract draft already clears the gate, so a loop is pure tax (per-pass glyph/verdict overhead with near-zero pass-count benefit). That is why Kmax defaults to 1 for easy work and the marginal quality-per-token floor exists: REFEED must STOP the instant ΔQ/Δtokens drops below the pre-set floor, or it becomes the brute-force token furnace it was built to avoid. Best-of-N is the most expensive member (N parallel drafts) and is justified per-call, never a default; N stays 2-4. The throughput/latency 'win' is a quality result wearing a latency hat (P3) and applies ONLY to hard execution-graded tasks — do not bill it twice.
 
