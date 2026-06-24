@@ -192,6 +192,23 @@ is OPEN. No saving is claimed without a `tokcost.py` number; no symbol ships wit
   `output.py` = the output-contract enforcer (TSV for uniform records, minified JSON else, filler
   flagged). `test_ordo.py` **8/8 green** incl. round-trip coverage over all 20 benchmark prompts. The
   measurement instrument every remaining experiment runs through.
+- **C3 · ≥10% floor (PASS, far over).** 3 realistic end-to-end exchanges (prompt + produced output),
+  English vs readable-ORDO+output-contract: 495 → 178 o200k = **64% combined**. Even the explainer
+  (substance kept, only filler cut) = 51%; structured/operational = 70-72%. Output dominates.
+- **C4 · quality (PASS — ORDO exceeds English).** Blind A/B, 9 stratified tasks, judge scored which
+  output better satisfies the task ignoring length: **ORDO 6 wins / 2 ties / 1 loss.** The gain is
+  STRUCTURE-driven with *readable*-ORDO (no exotic glyphs) — the structured prompt produced more
+  on-target answers on the hard tier. The one loss (e2) was an encoding error (the ORDO prompt dropped
+  "one sentence"), not a quality deficit. So the +36pp "glyph" lead reproduces as a *structure* lead,
+  the cleaner and more honest finding.
+- **C6 · speed proxy (PASS).** Output tokens 6,468 → 4,423 = **~32% fewer** overall (≈48% excluding one
+  over-delivery outlier where a mis-set audience tag made ORDO answer longer). Most tasks 39-66% fewer
+  output tokens from the ponytail+format contract. Reported as an output-token saving, NOT a proven
+  wall-clock win (per the research caveat).
+- **C7 · intent-as-symbol (`spec/macros.md`).** 16 whole-intent macros (the user's "sentence = symbol"):
+  avg 8.2-token instruction → 1.4-token readable code, **6.8 saved/use**; readable (deanchor) so they
+  decode reliably and double as a quality lever (a 1-token `cot`/`srev`/`risk` reliably triggers a
+  strong reasoning mode). Decode test running.
 
 ## The language is done (P0-P4). Next: the harness (separate concept)
 P0 alphabet → P1.x pool/matrix/allocation → P2 grammar (ORDO-G, ~35%, decode 1.70) → P3 output
