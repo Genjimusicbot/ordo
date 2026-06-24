@@ -1,0 +1,29 @@
+glyph	directive	cl100k	o200k	expands_to
+σ	summarize	1	1	summarize the following
+ε	explain	1	1	explain the following
+δ	define	1	1	define or describe
+α	analyze	1	1	analyze the following
+χ	critique	1	1	critique or review the following
+ρ	rewrite	1	1	rewrite or rephrase the following
+τ	translate	1	1	translate the following
+π	plan	1	1	make a step-by-step plan for
+λ	code	1	1	write code that
+γ	generate	1	1	generate or write or create
+β	brainstorm	1	1	brainstorm ideas for
+μ	compare	1	1	compare or contrast the following
+φ	fix	1	1	find and fix the bug in
+ν	refactor	1	1	refactor the following code
+ω	conclude	1	1	give the final answer or conclusion
+→	continue	1	1	continue
+↑	expand	1	1	expand on or elaborate
+↓	shorten	1	1	make this shorter or tl;dr
+★	rate	1	1	rate from 1 to 10
+☆	example	1	1	give a worked example of
+※	extract	1	1	extract the key points from
+§	outline	1	1	outline or give the structure of
+●	list	1	1	list the
+■	classify	1	1	classify or categorize
+×	remove	1	1	remove or delete or strip
+¬	exclude	1	1	do NOT or exclude
+±	vary	1	1	give alternatives or variations of
+†	verify	1	1	verify the following is correct
