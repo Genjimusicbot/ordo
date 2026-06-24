@@ -175,6 +175,24 @@ is OPEN. No saving is claimed without a `tokcost.py` number; no symbol ships wit
 - **Open:** re-validate the × / 据 fix on a future run; per-target-model decode (tested on the workflow
   model); the RUNTIME/harness that auto-applies ORDO (the separate second concept).
 
+## ADAPT run — P5/P6 (2026-06-24): research, deanchor verdict, the harness
+- **C1 · research synthesis** (`docs/research-synthesis.md`): 20 docs → 63 mechanisms → 12 ranked
+  beyond-token-density levers, each graded by confidence (only 7/63 "measured"). Honest caveats: no
+  measured speed win, +36pp is a single-source LEAD, single-word lever dead, exotic glyphs token-negative.
+- **C2 · DEANCHOR VERDICT = readable wins** (measured): English 437 / readable-ORDO 297 (**+32%**) /
+  glyph-ORDO 285 (**+35%**) o200k — glyphs buy only **3pp**. Blind decode: **readable 2.00/2 (perfect,
+  60/60)** vs glyph 1.95 (glyphs silently mis-decoded 心金→"key problem", dropped τ码 — confident-wrong,
+  the worst failure mode). Glitch screen clean (all glyphs well-learned tokens). **Decision: readable-
+  terse is ORDO's default wire format; glyphs are an opt-in dense mode for proven-round-trip commands
+  where token cost dominates.** The grammar STRUCTURE delivers the 32%; the glyphs were costing
+  reliability for ~0 token gain. (Pending: C4 will test whether glyphs add hard-task QUALITY, the +36pp
+  lead — if not, readable wins outright.)
+- **C8 · the harness** (`harness/`): `ordo.py` = a deterministic table-driven ORDO-G decoder
+  (parse→AST→English, dual-use 码/段 resolved by position, unknown glyph → literal never errors);
+  `output.py` = the output-contract enforcer (TSV for uniform records, minified JSON else, filler
+  flagged). `test_ordo.py` **8/8 green** incl. round-trip coverage over all 20 benchmark prompts. The
+  measurement instrument every remaining experiment runs through.
+
 ## The language is done (P0-P4). Next: the harness (separate concept)
 P0 alphabet → P1.x pool/matrix/allocation → P2 grammar (ORDO-G, ~35%, decode 1.70) → P3 output
 framework (format-by-shape + ponytail 77% + caveman) → P4 skillstone (`ORDO.md`, 1.75/2). The LANGUAGE
