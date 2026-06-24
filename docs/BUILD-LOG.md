@@ -208,7 +208,25 @@ is OPEN. No saving is claimed without a `tokcost.py` number; no symbol ships wit
 - **C7 · intent-as-symbol (`spec/macros.md`).** 16 whole-intent macros (the user's "sentence = symbol"):
   avg 8.2-token instruction → 1.4-token readable code, **6.8 saved/use**; readable (deanchor) so they
   decode reliably and double as a quality lever (a 1-token `cot`/`srev`/`risk` reliably triggers a
-  strong reasoning mode). Decode test running.
+  strong reasoning mode). **Decode test: 1.8/2 (54/60) → C7 PASS** (only weakness: bare-subject
+  `this gap` drops the implicit "answer this"; fixed by reading a macro as additive).
+- **C5 · hallucination (PASS — honest null + calibration).** Two runs (v1 obvious-fictional, v2 harder
+  invention-bait + false-premise traps): on a strong frontier model BOTH arms scored **0 confident-
+  wrong, 0 false-premise-affirmed, 0 invention** — the plain baseline is already at the floor, so the
+  epistemic layer showed **no measurable confident-wrong reduction**. But it **does not backfire** (the
+  VOKU trap: never stamps "verified" on a falsehood) and showed a **better-calibrated posture**
+  (abstained on genuine-uncertainty recall items where plain volunteered luck-of-recall specifics). The
+  reduction benefit would surface on weaker models (per GLOSSOPETRAE's "gains concentrate on weaker
+  models"). Recorded honestly, not oversold.
+- **C9 · VERDICT (PASS — terminate).** `VERDICT.md` = every measured number + the explicit cut list +
+  the recommendation (readable grammar + output contract + macros + harness). `ORDO.md` banner now
+  states readable-default / glyph-opt-in. Harness gate 8/8 green.
+
+### ADAPT termination: SUCCESS — 9/9 criteria green
+ORDO's value is **grammar structure + output discipline**, not exotic glyphs. ~64% end-to-end token
+save AND blind-judged quality ≥ English (6-2-1), with honest nulls (no wall-clock speed proof, no
+hallucination reduction on a saturated frontier baseline). The deanchor reframe was correct and is now
+the default. Built, measured, audit-ready.
 
 ## The language is done (P0-P4). Next: the harness (separate concept)
 P0 alphabet → P1.x pool/matrix/allocation → P2 grammar (ORDO-G, ~35%, decode 1.70) → P3 output

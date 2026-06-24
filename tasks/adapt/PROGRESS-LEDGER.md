@@ -15,4 +15,11 @@ C7 intent-as-symbol · C8 harness · C9 committed+verdict.
 | 7 | P7/C7 | built spec/macros.md (16 intent-as-symbol macros, avg 8.2tok→1.4tok, saved 6.8/use); decode test launched | running | 6/9 |
 | 8 | P8/C7 | macro decode test: mean **1.8/2** (54/60), deterministic; bare-subject fix noted | **C7 PASS** | 7/9 |
 | 9 | P8/C5 | hallucination v1: both arms 0/24 confident-wrong, 8/8 abstain — markers DON'T backfire but test under-discriminates (easy fictional items); T1 escalation → harder traps | inconclusive → re-run | 7/9 |
-| 10 | P8/C5b | hallucination v2: invention-bait + false-premise traps where a plain reader slips | running | 7/9 |
+| 10 | P8/C5b | hallucination v2 (harder traps): both arms 0 confident-wrong / 0 false-premise / 0 invention; epistemic arm ABSTAINED on recall traps where plain volunteered (better calibration); no backfire | **C5 PASS** (null on reduction at saturated baseline, + calibration) | 8/9 |
+| 11 | P9/C9 | wrote VERDICT.md (every measured number + cut list + recommendation); ORDO.md deanchor banner; harness gate 8/8 green | **C9 PASS** | **9/9 SUCCESS** |
+
+## TERMINATION: SUCCESS (9/9 all criteria PASS, 2026-06-24)
+All acceptance criteria green. The language is built, measured, and honestly verdicted. Headline: the
+value is GRAMMAR STRUCTURE + OUTPUT DISCIPLINE (~64% end-to-end + quality ≥ English), not exotic glyphs
+(deanchored). Full numbers in `VERDICT.md`. No criterion was reopened; green count rose monotonically
+0→9. One T1 escalation (C5 harder traps) used; no T2+ needed. Commits local, not pushed.

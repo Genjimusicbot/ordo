@@ -1,5 +1,13 @@
 # ORDO — paste-in spec (teach any LLM the language in one shot)
 
+> **Two surface forms (measured).** ORDO's saving comes from the GRAMMAR, not the glyphs. A blind test
+> showed **readable-ORDO** (English keyword tokens, e.g. `sum txt 3bul conc aud:lay`) decodes at a
+> perfect 2.00/2 and saves 32% tokens, while the **glyph** form below saves 35% but decodes at 1.95/2
+> with occasional silent misreads. **Default to readable-ORDO; use the glyph form as an opt-in dense
+> mode** only where the extra 3% matters and the command is proven to round-trip. Both use the identical
+> grammar (directives → operand → modifiers → constraints → epistemic); only the token alphabet differs.
+> This file specifies the glyph form; swap each glyph for its English keyword to get the readable form.
+
 You are reading **ORDO**, a compact command language. After this spec you may receive ORDO command
 strings: expand each to its full English instruction using ONLY the rules below, then carry it out.
 When **you** produce output, follow the OUTPUT rules at the end. ORDO works on any model; the token
