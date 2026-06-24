@@ -263,6 +263,13 @@ test-gated, never theoretical.
 - **Behavioral "do it good" macros** (`spec/macros.md`): `arch` (rebuild-vs-fix, saves 29/use), `fresh`
   (skip the averaged answer, 21), `tidy` (smallest correct thing, 20) — token-cheap levers for the
   pillars a token count can't touch (P4/P7/P8). Effect test-gated, not assumed.
+- **P7/P8 test-gate (measured, blind, 22 agents):** **P7 architecture** = `arch` directive +0.20
+  (1.40→1.60 rebuild-vs-fix); reliably states a rebuild verdict + justification, lift concentrated where
+  plain underperforms (the regex-HTML case), neutral where the model already re-architects or no
+  foundation exists. **P8 rework** = `tidy/fresh` cut first-pass flaws **42% (7→4 across 5 tasks)** —
+  cleaner first pass (capped pagination, safer exception defaults, honored the "safely" contract) = less
+  downstream debug/cleanup; neutral on trivial tasks. **Scoreboard now 7/8 MEASURED** (only P3 real
+  wall-clock proxy-only). The "do it good, not fast" ideanomics is validated as a measured pillar.
 
 ## The language is done (P0-P4). Next: the harness (separate concept)
 P0 alphabet → P1.x pool/matrix/allocation → P2 grammar (ORDO-G, ~35%, decode 1.70) → P3 output

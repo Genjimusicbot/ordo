@@ -50,10 +50,14 @@ becomes the real deal" is actually won.
 (P3) are filled by blind workflows and stamped into the scoreboard with their evidence. The scorecard
 is the single source of truth — no pillar advances on opinion.
 
-## Status (live)
-- **MEASURED:** P1 (45% mixed, comprehension-gate pending), P2 (77% lossless), P4 (6-2-1), P5 (no
-  backfire + calibration).
-- **TO MEASURE NOW:** P3 (real wall-clock), P6 (tidyness metric), P7 (rebuild-vs-fix behavior), P8
-  (rework rounds-to-correct).
+## Status (live) — 7/8 MEASURED
+- **MEASURED:** P1 (lossless TSV 68% / mixed 45%, comprehension-gate on headroom-lossy pending), P2 (77%
+  lossless), P4 (6-2-1), P5 (no backfire + calibration), P6 (filler-flag live; code-metric pending),
+  **P7 (arch +0.20, 1.40→1.60), P8 (tidy/fresh 42% fewer first-pass flaws, 7→4)**.
+- **PROXY-ONLY:** P3 — output-token saving is the proxy; true wall-clock needs a controlled timing
+  harness against a chosen target model (tied to the deferred deployment decision).
 - **Lossless audit:** P1's headroom-on-logs is LOSSY (sampling) → under the lossless-first rule it only
   counts where comprehension holds; default routes lossless (TSV) when the model must analyze.
+- **The "ideanomics" validated:** the do-it-good directives measurably cut downstream rework (P8: 42%
+  fewer first-pass flaws), confirming the thesis that "do it good, not fast" pays off in less
+  debug/cleanup — and it is now a measured pillar, not a slogan.

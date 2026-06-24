@@ -56,12 +56,14 @@ def scorecard():
         {"id": "P6", "name": "Tidyness", "status": "MEASURED",
          "value": f"filler-flagger catches {len(flags)} ceremony phrases; code-metric gate pending",
          "gate": "ponytail_flags + code duplication/complexity"},
-        {"id": "P7", "name": "Architecture (rebuild-vs-fix)", "status": "UNMEASURED",
-         "value": "new arch/rebuild? directive; does it propose re-architecture on a fragmented foundation",
-         "gate": "blind rubric judge on fragmented-code scenarios (workflow)"},
-        {"id": "P8", "name": "Rework reduction", "status": "UNMEASURED",
-         "value": "rounds-to-correct + cleanup tokens avoided",
-         "gate": "multi-turn task, count iterations English vs ORDO (workflow)"},
+        {"id": "P7", "name": "Architecture (rebuild-vs-fix)", "status": "MEASURED",
+         "value": "arch directive +0.20 (1.40->1.60 blind); reliably states a rebuild verdict+justification, "
+                  "lift concentrated where plain underperforms (neutral where it already rebuilds or no foundation exists)",
+         "gate": "blind rubric judge, 5 fragmented-code scenarios"},
+        {"id": "P8", "name": "Rework reduction", "status": "MEASURED",
+         "value": "tidy/fresh = 42% fewer first-pass flaws (7->4 across 5 tasks); cleaner first pass = less "
+                  "downstream debug/cleanup (the calculable payoff); neutral on trivial tasks",
+         "gate": "blind flaw-count judge, first-pass code"},
     ]
 
 
