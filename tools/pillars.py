@@ -64,6 +64,10 @@ def scorecard():
          "value": "tidy/fresh = 42% fewer first-pass flaws (7->4 across 5 tasks); cleaner first pass = less "
                   "downstream debug/cleanup (the calculable payoff); neutral on trivial tasks",
          "gate": "blind flaw-count judge, first-pass code"},
+        {"id": "P9", "name": "Long-form / loop quality", "status": "UNMEASURED",
+         "value": "quality-per-NET-token via a multi-pass refeeding loop; defined by the GLOSSOPETRAE/Fable "
+                  "framework synthesis (draft->critique->verify->rewrite, stop on convergence)",
+         "gate": "single-pass vs refeed-loop: quality judge + total-token sum (workflow)"},
     ]
 
 

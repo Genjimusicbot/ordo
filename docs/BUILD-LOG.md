@@ -263,6 +263,26 @@ test-gated, never theoretical.
 - **Behavioral "do it good" macros** (`spec/macros.md`): `arch` (rebuild-vs-fix, saves 29/use), `fresh`
   (skip the averaged answer, 21), `tidy` (smallest correct thing, 20) — token-cheap levers for the
   pillars a token count can't touch (P4/P7/P8). Effect test-gated, not assumed.
+
+## GLOSSOPETRAE × pillars + the REFEED framework (2026-06-24)
+Took Pliny's GLOSSOPETRAE (cloned, read FINDINGS/PAPER) and ran one analysis per pillar (9-agent
+fan-out, high-effort, honest verdicts), excluding the covert-channel/stego arm (refuted +
+policy-blocked by its own authors; conflicts with our DISCLAIMERS). `docs/glossopetrae-pillars.md`.
+- **Verdicts (honest, agents tokenized to verify):** P1 context **NULL** (opaque surface INFLATES
+  tokens — glyph-soup ~2× conlang, several× plain English; opacity is the wrong axis). P4 quality
+  **REAL-LEVER** (forcing the model off the familiar English surface improves hard-task STRUCTURE —
+  AST-graded gap persists; the rigorous core of +36pp). P8 **LIMITED→strong as evaluation**
+  (contamination-free per-eval = un-gameable test gates). P2/P3/P5/P6/P7/P9 **LIMITED** (surface
+  density doesn't transfer to NL, doesn't help speed; re-confirms the deanchor).
+- **Bottom line:** GLOSSOPETRAE is a QUALITY + EVALUATION insight, not a compression one. The value is
+  captured by the framework, not by glyphing the surface.
+- **`spec/framework.md` — ORDO REFEED**, the Fable-style multi-pass refeeding loop: classify→write the
+  DONE contract (gate/target/budget) up front (the de-anchor)→hold format constant→draft→REFEED a TYPED
+  verdict (not praise)→DECIDE (refeed the DELTA, not the transcript)→STOP on target/budget/no-progress/
+  marginal-quality-per-token floor→EMIT (honest if not done). P9 metric = Q/T (final-pass quality ÷
+  total tokens across all passes). Wins on HARD tasks (~3.4→1 passes); pure tax on easy (Kmax=1
+  default). The disciplined antidote to brute-force token-furnace looping.
+- New pillar **P9 (long-form/loop quality)** added to `spec/pillars.md` + scoreboard (9 pillars now).
 - **P7/P8 test-gate (measured, blind, 22 agents):** **P7 architecture** = `arch` directive +0.20
   (1.40→1.60 rebuild-vs-fix); reliably states a rebuild verdict + justification, lift concentrated where
   plain underperforms (the regex-HTML case), neutral where the model already re-architects or no

@@ -30,6 +30,7 @@ does not count.
 | P6 | **Tidyness** | output ceremony/filler ratio; for generated CODE: duplication + complexity + dead-code | `ponytail_flags` + code metrics on generated code | filler-flagger exists | ponytail + "no-scaffold" directive |
 | P7 | **Architecture (rebuild-vs-fix)** | on a fragmented/unscalable task, does it flag the foundation + propose re-architecture vs build-on-top | blind rubric judge on fragmented-code scenarios | UNBUILT (new directive) | `arch`/`rebuild?` macro |
 | P8 | **Rework reduction** (the payoff) | rounds-to-correct (iterations to an accepted result) + thinking/cleanup tokens avoided | multi-turn task, count iterations English vs ORDO | UNMEASURED | the sum of P4-P7 (cleaner first pass) |
+| P9 | **Long-form / loop quality** (subjugated long-form → long-form context) | quality-per-NET-token: does a structured multi-pass loop beat one big pass on quality AND total tokens | single-pass vs refeed-loop on a task, judge quality + sum tokens | UNMEASURED (defined by the GLOSSOPETRAE/Fable synthesis) | the multi-pass refeeding framework |
 
 ## The "do it good, not fast" behavioral layer (serves P4, P7, P8)
 Three directives that force the model off the generic averaged answer and onto *this* problem — added
