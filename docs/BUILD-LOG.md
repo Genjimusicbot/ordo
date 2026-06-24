@@ -83,6 +83,29 @@ is OPEN. No saving is claimed without a `tokcost.py` number; no symbol ships wit
   o200k/cl100k-proven, Claude tokenizer unverified (Phase 4); the directive+phrase layers stack but
   sentence-level net savings measured in Phase 4.
 
+## P1.7 — full glyph allocation + mathematical verification (2026-06-24)
+- **What:** allocated the entire glyph pool to the highest-value items and MEASURED the realized
+  saving on real text. `tools/allocate.py` (build + verify), `spec/candidates.json` (3,144 harvested),
+  `spec/master-map.{tsv,md}`, `tests/corpus/{prose.txt,code.py,prompts.txt}`.
+- **How:** a 15-domain parallel harvest workflow (prose/code/prompt/jargon/cli/sql/...) produced 3,144
+  multi-token candidates; folded in ~25k multi-token words from `wordfreq`; ranked all by
+  `value = freq × (tokens−1)`; greedily assigned all 1,637 free glyphs (Tier-A to the top, Tier-B to
+  the tail); then encoded real corpora, applied substitutions, re-encoded, compared.
+- **Checked/verified (the math, exact):**
+  - **Real technical text (40 files, 18 py + 22 md): Tier-A buys +0.73% o200k / +0.43% cl100k.** Under
+    1%. The 1,600-glyph vocabulary layer is a weak lever on actual code/docs.
+  - **General prose (case-folded): Tier-A +5.40% o200k / +4.20% cl100k.** The high end, connective-rich.
+  - **Full A+B map: +2.52% o200k but −2.15% cl100k** — Tier-B glyphs (1 tok o200k, 2-3 tok cl100k)
+    ADD tokens on the older tokenizer. Cross-tokenizer trap; rejected as default.
+  - Marginal curve: top-400 ≈ 52% of estimated value, top-800 ≈ 75%.
+- **Verdict (redirects the project):** vocabulary substitution = ~1-5% lever, register-dependent and
+  tokenizer-fragile; NOT where the big gain is. Ship Tier-A (501 glyphs) as a minor opt-in; flag
+  Tier-B o200k-only. The real levers are GRAMMAR (structure) + VERBOSITY (output). The math confirms
+  the intuition: do the grammar next.
+- **Open:** Claude tokenizer proxy (the cl100k/o200k split on Tier-B is the warning sign); ranking
+  freqs estimated (verification is real); sentence-level savings with the directive grammar stacked =
+  measured in P2/P4.
+
 ## Next: P2 — the grammar
 Operand type-tags (text/file/code/list determinatives), the modifier set (brevity/length/format/
 tone), the mandatory epistemic slot (certainty + source), directive chaining (pipe), and the

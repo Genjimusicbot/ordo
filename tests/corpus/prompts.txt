@@ -1,0 +1,20 @@
+Summarize the following article in three bullet points and make sure to keep the key numbers.
+Write a function that takes a list of integers and returns the running total, step by step.
+Explain step by step how a transformer model processes a sequence of tokens.
+Refactor the code below without changing its behavior, and add error handling where it is missing.
+Compare these two approaches in terms of performance and readability, and tell me which is better.
+Based on the data in the table, what is the difference between the two quarters?
+Fix the bug in this code and explain what was wrong in plain language.
+Translate the following paragraph into French, keeping the tone as close as possible to the original.
+Give me a list of the most common mistakes people make when they are learning to write SQL.
+Rewrite this email so that it sounds more professional, but make sure it is still friendly.
+In other words, take the rough draft below and turn it into something I can send to a client.
+Make it more concise without losing any of the important details.
+According to the documentation, how should I configure the timeout for a long running request?
+Generate a unit test for the function above, including at least one edge case.
+As a result of the change, the build is failing; can you tell me what is going on and how to fix it?
+Note that the input may be empty, so handle that case as well.
+Please review the pull request and point out anything that looks like a security problem.
+On the other hand, if performance is the priority, what would you recommend instead?
+Write a short product description for a new pair of running shoes, in the style of a friendly brand.
+Extract the key points from the transcript and organize them under clear headings.

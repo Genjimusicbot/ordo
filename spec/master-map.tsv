@@ -1,0 +1,1665 @@
+rank	text	glyph	tier	cl100k	o200k	saved	freq_per_M	value	cum_value_pct	domain
+-	at the same time	同	A	4	4	3	-	-	-	phrase-map
+-	on the other hand	反	A	4	4	3	-	-	-	phrase-map
+-	as a result	则	A	3	3	2	-	-	-	phrase-map
+-	step by step	步	A	3	3	2	-	-	-	phrase-map
+-	in other words	即	A	3	3	2	-	-	-	phrase-map
+-	in terms of	关	A	3	3	2	-	-	-	phrase-map
+-	with respect to	对	A	3	3	2	-	-	-	phrase-map
+-	as well as	及	A	3	3	2	-	-	-	phrase-map
+-	in order to	为	A	3	3	2	-	-	-	phrase-map
+-	a lot of	多	A	3	3	2	-	-	-	phrase-map
+-	keep in mind	记	A	3	3	2	-	-	-	phrase-map
+-	more or less	约	A	3	3	2	-	-	-	phrase-map
+-	in this case	此	A	3	3	2	-	-	-	phrase-map
+-	take into account	量	A	3	3	2	-	-	-	phrase-map
+-	the difference between	异	A	3	3	2	-	-	-	phrase-map
+-	for example	例	A	2	2	1	-	-	-	phrase-map
+-	such as	如	A	2	2	1	-	-	-	phrase-map
+-	make sure	确	A	2	2	1	-	-	-	phrase-map
+-	based on	据	A	2	2	1	-	-	-	phrase-map
+-	according to	按	A	2	2	1	-	-	-	phrase-map
+-	note that	注	A	2	2	1	-	-	-	phrase-map
+-	in addition	加	A	2	2	1	-	-	-	phrase-map
+-	the following	下	A	2	2	1	-	-	-	phrase-map
+-	in general	总	A	2	2	1	-	-	-	phrase-map
+-	such that	使	A	2	2	1	-	-	-	phrase-map
+-	compared to	比	A	2	2	1	-	-	-	phrase-map
+-	because	因	A	1	1	0	-	-	-	phrase-map
+1	if err != nil {	ά	A	5	5	4	6500.0	26000.0	0.73	code-general
+2	Dict[str, Any]	έ	A	5	5	4	5200.0	20800.0	1.31	python
+3	git commit -m	ή	A	4	4	3	6200.0	18600.0	1.84	shell-cli-git
+4	className=	ί	A	2	3	2	9000.0	18000.0	2.34	js-ts
+5	for (int i = 0; i <	η	A	10	10	9	1600.0	14400.0	2.75	code-general
+6	err != nil	θ	A	3	3	2	7000.0	14000.0	3.14	code-general
+7	<div className=	ι	A	3	4	3	4500.0	13500.0	3.52	js-ts
+8	CASE WHEN ... THEN ... ELSE ... END	κ	A	8	8	7	1800.0	12600.0	3.87	sql-data
+9	from __future__ import annotations	ο	A	6	6	5	2400.0	12000.0	4.21	python
+10	CREATE TABLE IF NOT EXISTS	ς	A	5	5	4	2800.0	11200.0	4.53	sql-data
+11	SELECT * FROM	υ	A	3	3	2	5500.0	11000.0	4.83	sql-data
+12	</div>	ό	A	3	3	2	5200.0	10400.0	5.13	js-ts
+13	- [ ]	Ђ	A	3	3	2	5200.0	10400.0	5.42	markdown-docs
+14	>/dev/null 2>&1	А	A	7	7	6	1700.0	10200.0	5.71	shell-cli-git
+15	ORDER BY ... DESC	Б	A	4	4	3	3400.0	10200.0	5.99	sql-data
+16	-> Dict[str, Any]:	В	A	6	6	5	2000.0	10000.0	6.27	python
+17	for i := 0; i <	Г	A	8	8	7	1400.0	9800.0	6.55	code-general
+18	VARCHAR(255)	Д	A	4	4	3	3200.0	9600.0	6.82	sql-data
+19	- [x]	Е	A	4	4	3	3100.0	9300.0	7.08	markdown-docs
+20	git add .	З	A	3	3	2	4300.0	8600.0	7.32	shell-cli-git
+21	node_modules	И	A	2	2	1	8500.0	8500.0	7.56	shell-cli-git
+22	} else {	К	A	3	3	2	4200.0	8400.0	7.8	code-general
+23	rm -rf	Л	A	3	3	2	4200.0	8400.0	8.03	shell-cli-git
+24	git push origin	М	A	3	3	2	4100.0	8200.0	8.26	shell-cli-git
+25	GROUP BY	Н	A	2	2	1	8200.0	8200.0	8.49	sql-data
+26	if (	О	A	2	2	1	8000.0	8000.0	8.72	code-general
+27	ORDER BY	П	A	2	2	1	8000.0	8000.0	8.94	sql-data
+28	IS NOT NULL	Р	A	3	3	2	4000.0	8000.0	9.17	sql-data
+29	WHEN ... THEN	С	A	4	3	2	4000.0	8000.0	9.39	sql-data
+30	List[Dict[str, Any]]	Т	A	7	7	6	1300.0	7800.0	9.61	python
+31	FOREIGN KEY	У	A	3	3	2	3900.0	7800.0	9.83	sql-data
+32	DROP TABLE IF EXISTS	Ф	A	4	4	3	2600.0	7800.0	10.05	sql-data
+33	COALESCE(	Ц	A	4	4	3	2600.0	7800.0	10.27	sql-data
+34	LEFT JOIN ... ON	Ч	A	4	4	3	2600.0	7800.0	10.49	sql-data
+35	pip install -r requirements.txt	Э	A	6	6	5	1500.0	7500.0	10.7	shell-cli-git
+36	return nil, err	Я	A	4	4	3	2400.0	7200.0	10.9	code-general
+37	i = 0; i <	а	A	7	7	6	1200.0	7200.0	11.1	code-general
+38	i want you to	б	A	4	4	3	2400.0	7200.0	11.3	prompt-instructions
+39	sudo apt-get install	в	A	4	4	3	2400.0	7200.0	11.51	shell-cli-git
+40	WITH ... AS (	г	A	4	4	3	2400.0	7200.0	11.71	sql-data
+41	source venv/bin/activate	д	A	6	6	5	1400.0	7000.0	11.9	shell-cli-git
+42	SELECT *	е	A	2	2	1	7000.0	7000.0	12.1	sql-data
+43	EXPLAIN ANALYZE	ж	A	5	6	5	1400.0	7000.0	12.3	sql-data
+44	NOT NULL	з	A	2	2	1	6800.0	6800.0	12.49	sql-data
+45	IF NOT EXISTS	и	A	3	3	2	3400.0	6800.0	12.68	sql-data
+46	OVER (PARTITION BY	й	A	5	5	4	1700.0	6800.0	12.87	sql-data
+47	} else if (	к	A	4	4	3	2200.0	6600.0	13.06	code-general
+48	2>/dev/null	л	A	4	4	3	2200.0	6600.0	13.24	shell-cli-git
+49	npx tsc --noEmit	м	A	8	7	6	1100.0	6600.0	13.43	shell-cli-git
+50	127.0.0.1	н	A	7	7	6	1100.0	6600.0	13.61	shell-cli-git
+51	COUNT(DISTINCT	о	A	4	4	3	2200.0	6600.0	13.8	sql-data
+52	INNER JOIN ... ON	п	A	4	4	3	2200.0	6600.0	13.98	sql-data
+53	in the	р	A	2	2	1	6500.0	6500.0	14.17	prompt-instructions
+54	return false;	с	A	3	3	2	3200.0	6400.0	14.35	code-general
+55	make it more	т	A	3	3	2	3200.0	6400.0	14.53	prompt-instructions
+56	what is the	у	A	3	3	2	3200.0	6400.0	14.71	prompt-instructions
+57	Content-Type: application/json	ф	A	5	5	4	1600.0	6400.0	14.89	web-http-api
+58	CREATE TABLE	х	A	2	2	1	6400.0	6400.0	15.06	sql-data
+59	WHERE id =	ц	A	3	3	2	3200.0	6400.0	15.24	sql-data
+60	LIMIT 1	ч	A	3	3	2	3200.0	6400.0	15.42	sql-data
+61	payload: Dict[str, Any] = Body(...)	ш	A	10	10	9	700.0	6300.0	15.6	python
+62	-H "Content-Type: application/json"	щ	A	8	8	7	900.0	6300.0	15.78	web-http-api
+63	ON DELETE CASCADE	ъ	A	3	4	3	2100.0	6300.0	15.96	sql-data
+64	npm run dev	ы	A	3	3	2	3100.0	6200.0	16.13	shell-cli-git
+65	: string	ь	A	2	2	1	6000.0	6000.0	16.3	js-ts
+66	return true;	э	A	3	3	2	3000.0	6000.0	16.47	code-general
+67	System.out.println(	ю	A	4	4	3	2000.0	6000.0	16.64	code-general
+68	let me know	я	A	3	3	2	3000.0	6000.0	16.8	prompt-instructions
+69	of the	ё	A	2	2	1	6000.0	6000.0	16.97	prompt-instructions
+70	npm run build	і	A	3	3	2	3000.0	6000.0	17.14	shell-cli-git
+71	No such file or directory	א	A	5	5	4	1500.0	6000.0	17.31	shell-cli-git
+72	response.json()	ב	A	3	3	2	3000.0	6000.0	17.48	web-http-api
+73	CREATE OR REPLACE	ד	A	3	4	3	2000.0	6000.0	17.65	sql-data
+74	ON CONFLICT DO NOTHING	ה	A	5	5	4	1500.0	6000.0	17.82	sql-data
+75	COUNT(*)	ו	A	2	2	1	6000.0	6000.0	17.98	sql-data
+76	JOIN ... ON	ח	A	3	3	2	3000.0	6000.0	18.15	sql-data
+77	BETWEEN ... AND	י	A	5	4	3	2000.0	6000.0	18.32	sql-data
+78	EXPLAIN (ANALYZE, BUFFERS)	ל	A	11	13	12	500.0	6000.0	18.49	sql-data
+79	LEFT JOIN	מ	A	2	2	1	5800.0	5800.0	18.65	sql-data
+80	return 0;	נ	A	4	4	3	1900.0	5700.0	18.81	code-general
+81	i need you to	ע	A	4	4	3	1900.0	5700.0	18.97	prompt-instructions
+82	git checkout -b	ר	A	4	4	3	1900.0	5700.0	19.13	shell-cli-git
+83	find . -name	ש	A	4	4	3	1900.0	5700.0	19.29	shell-cli-git
+84	TEXT NOT NULL DEFAULT ''	ת	A	5	5	4	1400.0	5600.0	19.45	python
+85	Optional[str] = None	أ	A	5	5	4	1400.0	5600.0	19.61	python
+86	explain step by step	إ	A	4	5	4	1400.0	5600.0	19.76	prompt-instructions
+87	UNION ALL	ا	A	3	3	2	2800.0	5600.0	19.92	sql-data
+88	=> {	ب	A	2	2	1	5500.0	5500.0	20.08	js-ts
+89	this.	ة	A	2	2	1	5500.0	5500.0	20.23	code-general
+90	ON DUPLICATE KEY UPDATE	ت	A	5	6	5	1100.0	5500.0	20.39	sql-data
+91	std::vector<	ث	A	4	4	3	1800.0	5400.0	20.54	code-general
+92	npm install -g	ج	A	4	4	3	1800.0	5400.0	20.69	shell-cli-git
+93	curl -X POST	ح	A	4	4	3	1800.0	5400.0	20.84	shell-cli-git
+94	please let me know	خ	A	4	4	3	1800.0	5400.0	20.99	business-email
+95	Optional[str]	د	A	3	3	2	2600.0	5200.0	21.14	python
+96	INSERT INTO	ذ	A	2	2	1	5200.0	5200.0	21.28	sql-data
+97	std::	ر	A	2	2	1	5200.0	5200.0	21.43	code-general
+98	make sure to	ز	A	3	3	2	2600.0	5200.0	21.58	prompt-instructions
+99	how do i	س	A	3	3	2	2600.0	5200.0	21.72	prompt-instructions
+100	package.json	ش	A	2	2	1	5200.0	5200.0	21.87	shell-cli-git
+101	package-lock.json	ص	A	3	3	2	2600.0	5200.0	22.01	shell-cli-git
+102	python -m venv	ض	A	5	5	4	1300.0	5200.0	22.16	shell-cli-git
+103	git push -u origin	ط	A	5	5	4	1300.0	5200.0	22.31	shell-cli-git
+104	PRIMARY KEY	ظ	A	2	2	1	5200.0	5200.0	22.45	sql-data
+105	CREATE OR REPLACE FUNCTION	ع	A	4	5	4	1300.0	5200.0	22.6	sql-data
+106	CASE WHEN	غ	A	2	2	1	5200.0	5200.0	22.74	sql-data
+107	COMMIT;	ف	A	3	3	2	2600.0	5200.0	22.89	sql-data
+108	500 Internal Server Error	ق	A	4	4	3	1700.0	5100.0	23.03	web-http-api
+109	SERIAL PRIMARY KEY	ك	A	4	4	3	1700.0	5100.0	23.18	sql-data
+110	i want you	ل	A	3	3	2	2500.0	5000.0	23.32	prompt-instructions
+111	you to	م	A	2	2	1	5000.0	5000.0	23.46	prompt-instructions
+112	to the	ن	A	2	2	1	5000.0	5000.0	23.6	prompt-instructions
+113	TIMESTAMP WITH TIME ZONE	ه	A	6	6	5	1000.0	5000.0	23.74	sql-data
+114	@router.post(	و	A	4	4	3	1600.0	4800.0	23.87	python
+115	@router.get(	ى	A	4	4	3	1600.0	4800.0	24.01	python
+116	Optional[Dict[str, Any]]	ي	A	7	7	6	800.0	4800.0	24.14	python
+117	ON CONFLICT	پ	A	3	3	2	2400.0	4800.0	24.28	sql-data
+118	return null;	ک	A	3	3	2	2400.0	4800.0	24.41	code-general
+119	fmt.Println(	گ	A	3	3	2	2400.0	4800.0	24.55	code-general
+120	std::string	ی	A	3	3	2	2400.0	4800.0	24.68	code-general
+121	std::cout <<	क	A	4	4	3	1600.0	4800.0	24.82	code-general
+122	give me a list of	त	A	5	5	4	1200.0	4800.0	24.95	prompt-instructions
+123	i would like you to	न	A	5	5	4	1200.0	4800.0	25.09	prompt-instructions
+124	what are the	प	A	3	3	2	2400.0	4800.0	25.22	prompt-instructions
+125	--version	म	A	2	2	1	4800.0	4800.0	25.36	shell-cli-git
+126	git commit -am	र	A	4	4	3	1600.0	4800.0	25.49	shell-cli-git
+127	python3 -m	ल	A	4	4	3	1600.0	4800.0	25.63	shell-cli-git
+128	ls -la	स	A	3	3	2	2400.0	4800.0	25.76	shell-cli-git
+129	2>&1	ह	A	3	3	2	2400.0	4800.0	25.9	shell-cli-git
+130	find . -type f	ন	A	5	5	4	1200.0	4800.0	26.03	shell-cli-git
+131	localhost:3000	র	A	4	4	3	1600.0	4800.0	26.17	shell-cli-git
+132	**Note:**	ก	A	3	3	2	2400.0	4800.0	26.3	markdown-docs
+133	can be used to	ข	A	4	4	3	1600.0	4800.0	26.44	markdown-docs
+134	you need to	ค	A	3	3	2	2400.0	4800.0	26.57	markdown-docs
+135	thank you for	ง	A	3	3	2	2400.0	4800.0	26.71	business-email
+136	ON CONFLICT DO UPDATE	จ	A	5	5	4	1200.0	4800.0	26.84	sql-data
+137	GROUP BY ... HAVING	ช	A	5	5	4	1200.0	4800.0	26.98	sql-data
+138	NOT IN (	ณ	A	3	3	2	2400.0	4800.0	27.11	sql-data
+139	IN (	ด	A	2	2	1	4800.0	4800.0	27.25	sql-data
+140	FOREIGN KEY (... REFERENCES	ต	A	5	5	4	1200.0	4800.0	27.38	sql-data
+141	payload.get(	ถ	A	3	3	2	2300.0	4600.0	27.51	python
+142	() => {	ท	A	3	3	2	2300.0	4600.0	27.64	js-ts
+143	explain the	น	A	2	3	2	2300.0	4600.0	27.77	prompt-instructions
+144	a list of	บ	A	3	3	2	2300.0	4600.0	27.9	prompt-instructions
+145	git status	ป	A	2	2	1	4600.0	4600.0	28.03	shell-cli-git
+146	git rebase	ผ	A	3	3	2	2300.0	4600.0	28.16	shell-cli-git
+147	mkdir -p	พ	A	3	3	2	2300.0	4600.0	28.28	shell-cli-git
+148	one of the	ม	A	3	3	2	2300.0	4600.0	28.41	markdown-docs
+149	INNER JOIN	ย	A	2	2	1	4600.0	4600.0	28.54	sql-data
+150	user_id	ร	A	2	2	1	4600.0	4600.0	28.67	sql-data
+151	raise HTTPException(	ล	A	4	4	3	1500.0	4500.0	28.8	python
+152	from typing import Any, Dict, List, Optional	ว	A	10	10	9	500.0	4500.0	28.92	python
+153	catch (Exception e) {	ส	A	6	6	5	900.0	4500.0	29.05	code-general
+154	i'm trying to	ห	A	4	4	3	1500.0	4500.0	29.18	prompt-instructions
+155	for the	อ	A	2	2	1	4500.0	4500.0	29.3	prompt-instructions
+156	npm install	ะ	A	2	2	1	4500.0	4500.0	29.43	shell-cli-git
+157	sudo apt-get update	า	A	4	4	3	1500.0	4500.0	29.56	shell-cli-git
+158	python3 -m pip install	ำ	A	6	6	5	900.0	4500.0	29.68	shell-cli-git
+159	if you want to	เ	A	4	4	3	1500.0	4500.0	29.81	markdown-docs
+160	thank you for your	แ	A	4	4	3	1500.0	4500.0	29.94	business-email
+161	ROW_NUMBER() OVER	ใ	A	4	4	3	1500.0	4500.0	30.06	sql-data
+162	ORDER BY ... ASC	ไ	A	4	4	3	1500.0	4500.0	30.19	sql-data
+163	summarize the following	あ	A	5	5	4	1100.0	4400.0	30.31	prompt-instructions
+164	you are a	い	A	3	3	2	2200.0	4400.0	30.44	prompt-instructions
+165	i want to	う	A	3	3	2	2200.0	4400.0	30.56	prompt-instructions
+166	--help	え	A	2	2	1	4400.0	4400.0	30.68	shell-cli-git
+167	python -m	お	A	3	3	2	2200.0	4400.0	30.81	shell-cli-git
+168	venv/bin/activate	か	A	5	5	4	1100.0	4400.0	30.93	shell-cli-git
+169	if (!response.ok)	が	A	5	5	4	1100.0	4400.0	31.05	web-http-api
+170	CREATE OR REPLACE VIEW	き	A	4	5	4	1100.0	4400.0	31.18	sql-data
+171	PARTITION BY	く	A	3	3	2	2200.0	4400.0	31.3	sql-data
+172	LIMIT 10	け	A	3	3	2	2200.0	4400.0	31.42	sql-data
+173	TIMESTAMPTZ	こ	A	5	5	4	1100.0	4400.0	31.55	sql-data
+174	CONSTRAINT ... FOREIGN KEY	ご	A	5	5	4	1100.0	4400.0	31.67	sql-data
+175	WHERE 1=1	さ	A	5	5	4	1100.0	4400.0	31.8	sql-data
+176	DELETE FROM	ざ	A	2	2	1	4300.0	4300.0	31.92	sql-data
+177	the number of	し	A	3	3	2	2100.0	4200.0	32.03	math-logic
+178	created_at	じ	A	2	2	1	4200.0	4200.0	32.15	sql-data
+179	can you	す	A	2	2	1	4200.0	4200.0	32.27	prompt-instructions
+180	on the	せ	A	2	2	1	4200.0	4200.0	32.39	prompt-instructions
+181	tsconfig.json	そ	A	3	3	2	2100.0	4200.0	32.51	shell-cli-git
+182	~/.bashrc	た	A	4	4	3	1400.0	4200.0	32.62	shell-cli-git
+183	git push --set-upstream origin	だ	A	7	7	6	700.0	4200.0	32.74	shell-cli-git
+184	```python	ち	A	2	2	1	4200.0	4200.0	32.86	markdown-docs
+185	i hope this email finds you well	っ	A	7	7	6	700.0	4200.0	32.98	business-email
+186	application/json	つ	A	2	2	1	4200.0	4200.0	33.1	web-http-api
+187	404 Not Found	て	A	3	3	2	2100.0	4200.0	33.21	web-http-api
+188	IS NULL	で	A	2	2	1	4200.0	4200.0	33.33	sql-data
+189	ELSE NULL END	と	A	3	4	3	1400.0	4200.0	33.45	sql-data
+190	VARCHAR(	ど	A	2	2	1	4200.0	4200.0	33.57	sql-data
+191	AS (SELECT	な	A	3	3	2	2100.0	4200.0	33.69	sql-data
+192	CHARACTER SET utf8mb4	に	A	7	7	6	700.0	4200.0	33.8	sql-data
+193	please let me know if you have any questions	の	A	9	9	8	520.0	4160.0	33.92	business-email
+194	ALTER TABLE	は	A	2	2	1	4100.0	4100.0	34.04	sql-data
+195	, error)	ば	A	3	3	2	2000.0	4000.0	34.15	code-general
+196	<< std::endl;	ま	A	5	5	4	1000.0	4000.0	34.26	code-general
+197	i have a	み	A	3	3	2	2000.0	4000.0	34.37	prompt-instructions
+198	chmod +x	め	A	3	3	2	2000.0	4000.0	34.49	shell-cli-git
+199	~/.zshrc	も	A	5	5	4	1000.0	4000.0	34.6	shell-cli-git
+200	grep -r	や	A	3	3	2	2000.0	4000.0	34.71	shell-cli-git
+201	const response = await fetch	よ	A	5	5	4	1000.0	4000.0	34.82	web-http-api
+202	DEFAULT CURRENT_TIMESTAMP	ら	A	3	3	2	2000.0	4000.0	34.94	sql-data
+203	TIMESTAMP	り	A	2	2	1	4000.0	4000.0	35.05	sql-data
+204	write a function that	る	A	4	4	3	1300.0	3900.0	35.16	prompt-instructions
+205	give me a list	れ	A	4	4	3	1300.0	3900.0	35.27	prompt-instructions
+206	git checkout	ろ	A	2	2	1	3900.0	3900.0	35.38	shell-cli-git
+207	docker exec -it	わ	A	4	4	3	1300.0	3900.0	35.49	shell-cli-git
+208	tar -xzf	を	A	4	4	3	1300.0	3900.0	35.6	shell-cli-git
+209	onClick={	ん	A	2	3	2	1900.0	3800.0	35.7	js-ts
+210	!= null	ア	A	2	2	1	3800.0	3800.0	35.81	code-general
+211	git push	ィ	A	2	2	1	3800.0	3800.0	35.92	shell-cli-git
+212	apt-get install	イ	A	3	3	2	1900.0	3800.0	36.02	shell-cli-git
+213	yarn add	ウ	A	3	3	2	1900.0	3800.0	36.13	shell-cli-git
+214	pip install	ェ	A	2	2	1	3800.0	3800.0	36.24	shell-cli-git
+215	/usr/local/bin	エ	A	3	3	2	1900.0	3800.0	36.34	shell-cli-git
+216	```bash	オ	A	2	2	1	3800.0	3800.0	36.45	markdown-docs
+217	For more information	カ	A	3	3	2	1900.0	3800.0	36.56	markdown-docs
+218	you can also	キ	A	3	3	2	1900.0	3800.0	36.66	markdown-docs
+219	Content-Type	ク	A	2	2	1	3800.0	3800.0	36.77	web-http-api
+220	VALUES (	グ	A	2	2	1	3800.0	3800.0	36.88	sql-data
+221	LIMIT ... OFFSET	コ	A	3	3	2	1900.0	3800.0	36.98	sql-data
+222	INT NOT NULL	サ	A	3	3	2	1900.0	3800.0	37.09	sql-data
+223	} from	シ	A	2	2	1	3700.0	3700.0	37.19	js-ts
+224	neural network	ジ	A	3	3	2	1850.0	3700.0	37.3	ml-ai-jargon
+225	git pull	ス	A	2	2	1	3700.0	3700.0	37.4	shell-cli-git
+226	is not None	ズ	A	3	3	2	1800.0	3600.0	37.5	python
+227	CREATE INDEX IF NOT EXISTS	セ	A	5	5	4	900.0	3600.0	37.6	sql-data
+228	public static void	タ	A	3	3	2	1800.0	3600.0	37.7	code-general
+229	fmt.Printf(	ダ	A	3	3	2	1800.0	3600.0	37.81	code-general
+230	} catch (	チ	A	3	3	2	1800.0	3600.0	37.91	code-general
+231	npm run	ッ	A	2	2	1	3600.0	3600.0	38.01	shell-cli-git
+232	npx create-react-app	テ	A	5	5	4	900.0	3600.0	38.11	shell-cli-git
+233	ls -l	デ	A	3	3	2	1800.0	3600.0	38.21	shell-cli-git
+234	docker-compose up	ト	A	3	3	2	1800.0	3600.0	38.31	shell-cli-git
+235	kubectl get pods	ド	A	3	4	3	1200.0	3600.0	38.41	shell-cli-git
+236	kubectl apply -f	ナ	A	4	5	4	900.0	3600.0	38.51	shell-cli-git
+237	git reset --hard	ニ	A	4	4	3	1200.0	3600.0	38.61	shell-cli-git
+238	tsc --noEmit	バ	A	6	5	4	900.0	3600.0	38.72	shell-cli-git
+239	git commit --amend	パ	A	5	5	4	900.0	3600.0	38.82	shell-cli-git
+240	#!/usr/bin/env python	ビ	A	5	5	4	900.0	3600.0	38.92	shell-cli-git
+241	is used to	ピ	A	3	3	2	1800.0	3600.0	39.02	markdown-docs
+242	i look forward to hearing from you	フ	A	7	7	6	600.0	3600.0	39.12	business-email
+243	status: 200	ブ	A	4	4	3	1200.0	3600.0	39.22	web-http-api
+244	LEFT OUTER JOIN	プ	A	3	4	3	1200.0	3600.0	39.32	sql-data
+245	ADD CONSTRAINT	ペ	A	2	3	2	1800.0	3600.0	39.42	sql-data
+246	ROW_NUMBER()	ポ	A	3	3	2	1800.0	3600.0	39.53	sql-data
+247	ROLLBACK;	マ	A	3	3	2	1800.0	3600.0	39.63	sql-data
+248	FROM (SELECT	ム	A	3	3	2	1800.0	3600.0	39.73	sql-data
+249	self.	メ	A	2	2	1	3500.0	3500.0	39.83	python
+250	from the	ャ	A	2	2	1	3500.0	3500.0	39.92	prompt-instructions
+251	with the	ュ	A	2	2	1	3500.0	3500.0	40.02	prompt-instructions
+252	cd ..	ョ	A	2	2	1	3500.0	3500.0	40.12	shell-cli-git
+253	Co-Authored-By	ラ	A	6	6	5	700.0	3500.0	40.22	shell-cli-git
+254	fatal: not a git repository	リ	A	6	6	5	700.0	3500.0	40.32	shell-cli-git
+255	status code	ル	A	2	2	1	3500.0	3500.0	40.42	web-http-api
+256	GENERATED ALWAYS AS IDENTITY	レ	A	6	6	5	700.0	3500.0	40.51	sql-data
+257	in the following	ロ	A	3	3	2	1700.0	3400.0	40.61	prompt-instructions
+258	updated_at	ン	A	2	2	1	3400.0	3400.0	40.7	sql-data
+259	import {	一	A	2	2	1	3400.0	3400.0	40.8	js-ts
+260	== null	万	A	2	2	1	3400.0	3400.0	40.9	code-general
+261	how can i	三	A	3	3	2	1700.0	3400.0	40.99	prompt-instructions
+262	give me	上	A	2	2	1	3400.0	3400.0	41.09	prompt-instructions
+263	i need to	不	A	3	3	2	1700.0	3400.0	41.18	prompt-instructions
+264	large language model	与	A	3	3	2	1700.0	3400.0	41.28	ml-ai-jargon
+265	git clone	专	A	2	2	1	3400.0	3400.0	41.37	shell-cli-git
+266	.venv	业	A	3	3	2	1700.0	3400.0	41.47	shell-cli-git
+267	you want to	东	A	3	3	2	1700.0	3400.0	41.56	markdown-docs
+268	throw new Error	两	A	3	3	2	1700.0	3400.0	41.66	web-http-api
+269	SUM(	个	A	2	2	1	3400.0	3400.0	41.76	sql-data
+270	BEGIN TRANSACTION	中	A	2	3	2	1700.0	3400.0	41.85	sql-data
+271	it is important to note that	串	A	6	6	5	680.0	3400.0	41.95	logic-reasoning
+272	return fmt.Errorf(	主	A	4	4	3	1100.0	3300.0	42.04	code-general
+273	git log	么	A	2	2	1	3300.0	3300.0	42.13	shell-cli-git
+274	git diff	义	A	2	2	1	3300.0	3300.0	42.22	shell-cli-git
+275	docker run -it	之	A	4	4	3	1100.0	3300.0	42.32	shell-cli-git
+276	git remote add origin	也	A	4	4	3	1100.0	3300.0	42.41	shell-cli-git
+277	tar -czf	书	A	4	4	3	1100.0	3300.0	42.5	shell-cli-git
+278	ps aux | grep	了	A	4	4	3	1100.0	3300.0	42.6	shell-cli-git
+279	if [ -f	事	A	4	4	3	1100.0	3300.0	42.69	shell-cli-git
+280	ON UPDATE CASCADE	二	A	3	4	3	1100.0	3300.0	42.78	sql-data
+281	greater than or equal to	于	A	5	5	4	820.0	3280.0	42.87	math-logic
+282	-> List[Dict[str, Any]]:	五	A	9	9	8	400.0	3200.0	42.96	python
+283	fmt.Errorf(	些	A	3	3	2	1600.0	3200.0	43.05	code-general
+284	to_string()	交	A	3	3	2	1600.0	3200.0	43.14	code-general
+285	const std::string&	产	A	5	5	4	800.0	3200.0	43.23	code-general
+286	%w", err)	享	A	5	5	4	800.0	3200.0	43.32	code-general
+287	write a function	京	A	3	3	2	1600.0	3200.0	43.41	prompt-instructions
+288	i would like	人	A	3	3	2	1600.0	3200.0	43.5	prompt-instructions
+289	is there a	亿	A	3	3	2	1600.0	3200.0	43.59	prompt-instructions
+290	is there a way to	今	A	5	5	4	800.0	3200.0	43.68	prompt-instructions
+291	based on the	介	A	3	3	2	1600.0	3200.0	43.77	prompt-instructions
+292	cp -r	从	A	3	3	2	1600.0	3200.0	43.86	shell-cli-git
+293	#!/bin/bash	他	A	3	3	2	1600.0	3200.0	43.95	shell-cli-git
+294	Already up to date.	付	A	5	5	4	800.0	3200.0	44.04	shell-cli-git
+295	looking forward to	代	A	3	3	2	1600.0	3200.0	44.13	business-email
+296	https://	以	A	2	2	1	3200.0	3200.0	44.22	web-http-api
+297	status_code == 200	们	A	5	5	4	800.0	3200.0	44.31	web-http-api
+298	DROP TABLE	件	A	2	2	1	3200.0	3200.0	44.4	sql-data
+299	SELECT DISTINCT	价	A	2	2	1	3200.0	3200.0	44.49	sql-data
+300	CAST(... AS	任	A	3	3	2	1600.0	3200.0	44.58	sql-data
+301	WITH RECURSIVE	份	A	5	5	4	800.0	3200.0	44.67	sql-data
+302	DECIMAL(	企	A	3	3	2	1600.0	3200.0	44.76	sql-data
+303	ENGINE=InnoDB	优	A	4	5	4	800.0	3200.0	44.85	sql-data
+304	less than or equal to	会	A	5	5	4	780.0	3120.0	44.94	math-logic
+305	/dev/null	传	A	2	2	1	3100.0	3100.0	45.03	shell-cli-git
+306	if __name__ == "__main__":	但	A	9	9	8	380.0	3040.0	45.11	python
+307	from typing import	位	A	3	3	2	1500.0	3000.0	45.19	python
+308	conn.execute(	体	A	3	3	2	1500.0	3000.0	45.28	python
+309	with _connect() as conn:	何	A	7	7	6	500.0	3000.0	45.36	python
+310	i++) {	余	A	3	3	2	1500.0	3000.0	45.45	code-general
+311	-> Result<	作	A	3	3	2	1500.0	3000.0	45.53	code-general
+312	in the style of	你	A	4	4	3	1000.0	3000.0	45.62	prompt-instructions
+313	can you please	供	A	3	3	2	1500.0	3000.0	45.7	prompt-instructions
+314	as a	価	A	2	2	1	3000.0	3000.0	45.78	prompt-instructions
+315	act as a	保	A	3	3	2	1500.0	3000.0	45.87	prompt-instructions
+316	what is a	信	A	3	3	2	1500.0	3000.0	45.95	prompt-instructions
+317	do not	修	A	2	2	1	3000.0	3000.0	46.04	prompt-instructions
+318	yarn install	倍	A	3	3	2	1500.0	3000.0	46.12	shell-cli-git
+319	.gitignore	值	A	2	2	1	3000.0	3000.0	46.21	shell-cli-git
+320	chown -R	停	A	4	4	3	1000.0	3000.0	46.29	shell-cli-git
+321	rm -r	像	A	3	3	2	1500.0	3000.0	46.37	shell-cli-git
+322	docker compose up	元	A	3	3	2	1500.0	3000.0	46.46	shell-cli-git
+323	**Important:**	先	A	3	3	2	1500.0	3000.0	46.54	markdown-docs
+324	Internal Server Error	入	A	3	3	2	1500.0	3000.0	46.63	web-http-api
+325	OUTER JOIN	全	A	3	3	2	1500.0	3000.0	46.71	sql-data
+326	TRUNCATE TABLE	公	A	4	4	3	1000.0	3000.0	46.8	sql-data
+327	CURRENT_TIMESTAMP	共	A	2	2	1	3000.0	3000.0	46.88	sql-data
+328	LIKE '%	其	A	2	2	1	3000.0	3000.0	46.96	sql-data
+329	SET TRANSACTION ISOLATION LEVEL	具	A	6	7	6	500.0	3000.0	47.05	sql-data
+330	GRANT ALL PRIVILEGES	内	A	6	6	5	600.0	3000.0	47.13	sql-data
+331	git branch	円	A	2	2	1	2900.0	2900.0	47.21	shell-cli-git
+332	CREATE INDEX	册	A	2	2	1	2900.0	2900.0	47.3	sql-data
+333	REFERENCES	再	A	1	2	1	2900.0	2900.0	47.38	sql-data
+334	INTEGER NOT NULL	写	A	3	3	2	1400.0	2800.0	47.46	sql-data
+335	.mkdir(parents=True, exist_ok=True)	出	A	9	9	8	350.0	2800.0	47.53	python
+336	Optional[Dict[str, Any]] = None	击	A	9	9	8	350.0	2800.0	47.61	python
+337	const char *	分	A	3	3	2	1400.0	2800.0	47.69	code-general
+338	return nil	列	A	2	2	1	2800.0	2800.0	47.77	code-general
+339	std::unique_ptr<	初	A	5	5	4	700.0	2800.0	47.85	code-general
+340	make sure that	利	A	3	3	2	1400.0	2800.0	47.93	markdown-docs
+341	how do you	别	A	3	3	2	1400.0	2800.0	48.01	prompt-instructions
+342	how to	到	A	2	2	1	2800.0	2800.0	48.09	prompt-instructions
+343	write a	制	A	2	2	1	2800.0	2800.0	48.16	prompt-instructions
+344	the code	前	A	2	2	1	2800.0	2800.0	48.24	prompt-instructions
+345	i need	力	A	2	2	1	2800.0	2800.0	48.32	prompt-instructions
+346	fine-tuning	功	A	3	3	2	1400.0	2800.0	48.4	ml-ai-jargon
+347	pnpm install	务	A	3	3	2	1400.0	2800.0	48.48	shell-cli-git
+348	rm -f	动	A	3	3	2	1400.0	2800.0	48.56	shell-cli-git
+349	docker-compose.yml	動	A	3	3	2	1400.0	2800.0	48.64	shell-cli-git
+350	git rebase -i	包	A	5	5	4	700.0	2800.0	48.71	shell-cli-git
+351	git pull --rebase	化	A	5	5	4	700.0	2800.0	48.79	shell-cli-git
+352	npm run lint	北	A	3	3	2	1400.0	2800.0	48.87	shell-cli-git
+353	README.md	区	A	2	2	1	2800.0	2800.0	48.95	shell-cli-git
+354	command not found	十	A	3	3	2	1400.0	2800.0	49.03	shell-cli-git
+355	C:\Users	午	A	3	3	2	1400.0	2800.0	49.11	shell-cli-git
+356	src/	华	A	2	2	1	2800.0	2800.0	49.19	shell-cli-git
+357	http://localhost	单	A	3	3	2	1400.0	2800.0	49.27	shell-cli-git
+358	**Example:**	南	A	3	3	2	1400.0	2800.0	49.34	markdown-docs
+359	for more details	历	A	3	3	2	1400.0	2800.0	49.42	markdown-docs
+360	if you have any questions	原	A	5	5	4	700.0	2800.0	49.5	business-email
+361	request to the	去	A	3	3	2	1400.0	2800.0	49.58	web-http-api
+362	UNIQUE INDEX	县	A	3	3	2	1400.0	2800.0	49.66	sql-data
+363	MAX(	参	A	2	2	1	2800.0	2800.0	49.74	sql-data
+364	DENSE_RANK()	友	A	4	5	4	700.0	2800.0	49.82	sql-data
+365	UNIQUE (	发	A	3	3	2	1400.0	2800.0	49.89	sql-data
+366	router = APIRouter()	取	A	5	6	5	550.0	2750.0	49.97	python
+367	raise HTTPException(status_code=404, detail=	变	A	10	10	9	300.0	2700.0	50.05	python
+368	raise HTTPException(status_code=400, detail=	口	A	10	10	9	300.0	2700.0	50.12	python
+369	is there a way	只	A	4	4	3	900.0	2700.0	50.2	prompt-instructions
+370	make it	可	A	2	2	1	2700.0	2700.0	50.28	prompt-instructions
+371	import numpy as np	台	A	4	4	3	900.0	2700.0	50.35	ml-ai-jargon
+372	git merge	右	A	2	2	1	2700.0	2700.0	50.43	shell-cli-git
+373	git branch -d	号	A	4	4	3	900.0	2700.0	50.5	shell-cli-git
+374	git remote -v	司	A	4	4	3	900.0	2700.0	50.58	shell-cli-git
+375	tar -xvf	合	A	4	4	3	900.0	2700.0	50.65	shell-cli-git
+376	curl -sSL	名	A	4	4	3	900.0	2700.0	50.73	shell-cli-git
+377	NODE_ENV=production	后	A	4	4	3	900.0	2700.0	50.81	shell-cli-git
+378	localhost:8080	向	A	4	4	3	900.0	2700.0	50.88	shell-cli-git
+379	make sure you have	否	A	4	4	3	900.0	2700.0	50.96	markdown-docs
+380	i would like to	含	A	4	4	3	900.0	2700.0	51.03	business-email
+381	GROUP BY 1	听	A	4	4	3	900.0	2700.0	51.11	sql-data
+382	come up with	启	A	3	3	2	1300.0	2600.0	51.18	prompt-instructions
+383	-> None:	告	A	3	3	2	1300.0	2600.0	51.26	python
+384	= None	员	A	2	2	1	2600.0	2600.0	51.33	python
+385	try {	周	A	2	2	1	2600.0	2600.0	51.4	code-general
+386	#include <	命	A	2	2	1	2600.0	2600.0	51.47	code-general
+387	return err	和	A	2	2	1	2600.0	2600.0	51.55	code-general
+388	map[string]	品	A	3	3	2	1300.0	2600.0	51.62	code-general
+389	throw new	哈	A	2	2	1	2600.0	2600.0	51.69	code-general
+390	i'd like	商	A	3	3	2	1300.0	2600.0	51.77	prompt-instructions
+391	you are an	問	A	3	3	2	1300.0	2600.0	51.84	prompt-instructions
+392	explain how	器	A	2	3	2	1300.0	2600.0	51.91	prompt-instructions
+393	list of	四	A	2	2	1	2600.0	2600.0	51.99	prompt-instructions
+394	create a	回	A	2	2	1	2600.0	2600.0	52.06	prompt-instructions
+395	help me	国	A	2	2	1	2600.0	2600.0	52.13	prompt-instructions
+396	if you	图	A	2	2	1	2600.0	2600.0	52.2	prompt-instructions
+397	origin main	土	A	2	2	1	2600.0	2600.0	52.28	shell-cli-git
+398	apt-get update	在	A	3	3	2	1300.0	2600.0	52.35	shell-cli-git
+399	~/.ssh	地	A	3	3	2	1300.0	2600.0	52.42	shell-cli-git
+400	grep -i	场	A	3	3	2	1300.0	2600.0	52.5	shell-cli-git
+401	kill -9	址	A	3	3	2	1300.0	2600.0	52.57	shell-cli-git
+402	| grep	型	A	2	2	1	2600.0	2600.0	52.64	shell-cli-git
+403	tail -f	城	A	3	3	2	1300.0	2600.0	52.72	shell-cli-git
+404	npm run test	基	A	3	3	2	1300.0	2600.0	52.79	shell-cli-git
+405	.github/workflows	報	A	3	3	2	1300.0	2600.0	52.86	shell-cli-git
+406	as shown below	場	A	3	3	2	1300.0	2600.0	52.94	markdown-docs
+407	```json	填	A	2	2	1	2600.0	2600.0	53.01	markdown-docs
+408	## Getting Started	增	A	3	3	2	1300.0	2600.0	53.08	markdown-docs
+409	by default	声	A	2	2	1	2600.0	2600.0	53.15	markdown-docs
+410	in this example	处	A	3	3	2	1300.0	2600.0	53.23	markdown-docs
+411	run the following	备	A	3	3	2	1300.0	2600.0	53.3	markdown-docs
+412	a set of	复	A	3	3	2	1300.0	2600.0	53.37	markdown-docs
+413	the same as	外	A	3	3	2	1300.0	2600.0	53.45	markdown-docs
+414	i wanted to reach out	大	A	5	5	4	650.0	2600.0	53.52	business-email
+415	API key	天	A	2	2	1	2600.0	2600.0	53.59	web-http-api
+416	parse the response	失	A	3	3	2	1300.0	2600.0	53.67	web-http-api
+417	try/catch	头	A	3	3	2	1300.0	2600.0	53.74	web-http-api
+418	from the response	女	A	3	3	2	1300.0	2600.0	53.81	web-http-api
+419	CREATE UNIQUE INDEX	好	A	3	3	2	1300.0	2600.0	53.88	sql-data
+420	RETURNING *	始	A	3	3	2	1300.0	2600.0	53.96	sql-data
+421	END AS	子	A	2	2	1	2600.0	2600.0	54.03	sql-data
+422	import pandas as pd	字	A	4	4	3	850.0	2550.0	54.1	ml-ai-jargon
+423	let me know if you have any questions	存	A	8	8	7	360.0	2520.0	54.17	business-email
+424	git fetch	学	A	2	2	1	2500.0	2500.0	54.24	shell-cli-git
+425	except (TypeError, ValueError):	安	A	6	8	7	350.0	2450.0	54.31	python
+426	from typing import Any, Dict, Optional	宋	A	8	8	7	350.0	2450.0	54.38	python
+427	in this section	完	A	3	3	2	1200.0	2400.0	54.45	markdown-docs
+428	so that	定	A	2	2	1	2400.0	2400.0	54.52	prompt-instructions
+429	def __init__(self	实	A	5	5	4	600.0	2400.0	54.58	python
+430	-> str:	审	A	3	3	2	1200.0	2400.0	54.65	python
+431	: number	客	A	2	2	1	2400.0	2400.0	54.72	js-ts
+432	break;	家	A	2	2	1	2400.0	2400.0	54.79	code-general
+433	i < n;	容	A	4	4	3	800.0	2400.0	54.85	code-general
+434	.unwrap()	密	A	2	2	1	2400.0	2400.0	54.92	code-general
+435	e.printStackTrace()	导	A	3	5	4	600.0	2400.0	54.99	code-general
+436	std::shared_ptr<	将	A	5	5	4	600.0	2400.0	55.06	code-general
+437	std::move(	小	A	4	4	3	800.0	2400.0	55.12	code-general
+438	template <typename T>	少	A	5	5	4	600.0	2400.0	55.19	code-general
+439	return result;	尔	A	3	3	2	1200.0	2400.0	55.26	code-general
+440	== 0	就	A	3	3	2	1200.0	2400.0	55.32	code-general
+441	new ArrayList<>()	局	A	4	5	4	600.0	2400.0	55.39	code-general
+442	explain why	展	A	2	3	2	1200.0	2400.0	55.46	prompt-instructions
+443	explain the difference between	山	A	4	5	4	600.0	2400.0	55.53	prompt-instructions
+444	give me an example	岁	A	4	4	3	800.0	2400.0	55.59	prompt-instructions
+445	show me how to	−	A	4	4	3	800.0	2400.0	55.66	prompt-instructions
+446	the same	™	A	2	2	1	2400.0	2400.0	55.73	prompt-instructions
+447	doesn't work	←	A	3	3	2	1200.0	2400.0	55.8	prompt-instructions
+448	convolutional neural network	►	A	5	5	4	600.0	2400.0	55.86	ml-ai-jargon
+449	git remote	☴	A	2	2	1	2400.0	2400.0	55.93	shell-cli-git
+450	pip3 install	♀	A	3	3	2	1200.0	2400.0	56.0	shell-cli-git
+451	/var/log	♥	A	2	3	2	1200.0	2400.0	56.07	shell-cli-git
+452	docker run	♪	A	2	2	1	2400.0	2400.0	56.13	shell-cli-git
+453	git push --force	✔	A	4	4	3	800.0	2400.0	56.2	shell-cli-git
+454	git cherry-pick	⠀	A	4	4	3	800.0	2400.0	56.27	shell-cli-git
+455	grep -rn	─	A	3	3	2	1200.0	2400.0	56.34	shell-cli-git
+456	yarn dev	━	A	3	3	2	1200.0	2400.0	56.4	shell-cli-git
+457	Changes not staged for commit	│	A	5	5	4	600.0	2400.0	56.47	shell-cli-git
+458	## Prerequisites	═	A	3	4	3	800.0	2400.0	56.54	markdown-docs
+459	out of the box	║	A	4	4	3	800.0	2400.0	56.61	markdown-docs
+460	refer to the	╗	A	3	3	2	1200.0	2400.0	56.67	markdown-docs
+461	if you are using	╝	A	4	4	3	800.0	2400.0	56.74	markdown-docs
+462	is equal to	█	A	3	3	2	1200.0	2400.0	56.81	math-logic
+463	looking forward to hearing from you	░	A	6	6	5	480.0	2400.0	56.88	business-email
+464	request body	、	A	2	2	1	2400.0	2400.0	56.94	web-http-api
+465	access token	。	A	2	2	1	2400.0	2400.0	57.01	web-http-api
+466	exponential backoff	《	A	4	4	3	800.0	2400.0	57.08	web-http-api
+467	the response object	》	A	3	3	2	1200.0	2400.0	57.15	web-http-api
+468	AUTO_INCREMENT	「	A	2	2	1	2400.0	2400.0	57.21	sql-data
+469	UPDATE ... SET	」	A	3	3	2	1200.0	2400.0	57.28	sql-data
+470	MIN(	『	A	2	2	1	2400.0	2400.0	57.35	sql-data
+471	DATE_TRUNC	』	A	2	3	2	1200.0	2400.0	57.41	sql-data
+472	NOW()	【	A	2	2	1	2400.0	2400.0	57.48	sql-data
+473	BIGINT	】	A	2	2	1	2400.0	2400.0	57.55	sql-data
+474	please let me know if	〜	A	5	5	4	580.0	2320.0	57.61	business-email
+475	for me	΄	B	2	2	1	2300.0	2300.0	57.68	prompt-instructions
+476	requirements.txt	Ά	B	2	2	1	2300.0	2300.0	57.74	shell-cli-git
+477	docker build	Έ	B	2	2	1	2300.0	2300.0	57.81	shell-cli-git
+478	GET request	Ό	B	2	2	1	2300.0	2300.0	57.87	web-http-api
+479	HTTP request	ΐ	B	2	2	1	2300.0	2300.0	57.94	web-http-api
+480	IF EXISTS	Α	B	2	2	1	2300.0	2300.0	58.0	sql-data
+481	AVG(	Β	B	3	2	1	2300.0	2300.0	58.07	sql-data
+482	int main(int argc, char	Γ	B	6	6	5	450.0	2250.0	58.13	code-general
+483	the best way to	Δ	B	4	4	3	750.0	2250.0	58.19	prompt-instructions
+484	POST request	Ε	B	2	2	1	2250.0	2250.0	58.26	web-http-api
+485	a number of	Ζ	B	3	3	2	1100.0	2200.0	58.32	markdown-docs
+486	request: Request	Η	B	3	3	2	1100.0	2200.0	58.38	python
+487	List[str]	Θ	B	3	3	2	1100.0	2200.0	58.44	python
+488	for row in	Ι	B	3	3	2	1100.0	2200.0	58.5	python
+489	profile_id	Κ	B	2	2	1	2200.0	2200.0	58.57	python
+490	ADD COLUMN	Λ	B	2	2	1	2200.0	2200.0	58.63	sql-data
+491	const [	Μ	B	2	2	1	2200.0	2200.0	58.69	js-ts
+492	useState(	Ν	B	2	3	2	1100.0	2200.0	58.75	js-ts
+493	string | null	Ξ	B	3	3	2	1100.0	2200.0	58.81	js-ts
+494	println!(	Ο	B	2	2	1	2200.0	2200.0	58.87	code-general
+495	func (	Π	B	2	2	1	2200.0	2200.0	58.94	code-general
+496	#[derive(	Ρ	B	3	3	2	1100.0	2200.0	59.0	code-general
+497	std::endl	Σ	B	3	3	2	1100.0	2200.0	59.06	code-general
+498	!= 0	Τ	B	3	3	2	1100.0	2200.0	59.12	code-general
+499	i++	Υ	B	2	2	1	2200.0	2200.0	59.18	code-general
+500	.push_back(	Φ	B	3	3	2	1100.0	2200.0	59.25	code-general
+501	the following code	Χ	B	3	3	2	1100.0	2200.0	59.31	prompt-instructions
+502	tell me about	Ψ	B	3	3	2	1100.0	2200.0	59.37	prompt-instructions
+503	i'm getting	Ω	B	3	3	2	1100.0	2200.0	59.43	prompt-instructions
+504	here is	ζ	B	2	2	1	2200.0	2200.0	59.49	prompt-instructions
+505	i need a	ξ	B	3	3	2	1100.0	2200.0	59.55	prompt-instructions
+506	for each	ψ	B	2	2	1	2200.0	2200.0	59.62	markdown-docs
+507	each of the	ϊ	B	3	3	2	1100.0	2200.0	59.68	markdown-docs
+508	the best	ϋ	B	2	2	1	2200.0	2200.0	59.74	prompt-instructions
+509	should be	ύ	B	2	2	1	2200.0	2200.0	59.8	prompt-instructions
+510	all of the	ώ	B	3	3	2	1100.0	2200.0	59.86	prompt-instructions
+511	that i	ἀ	B	2	2	1	2200.0	2200.0	59.93	prompt-instructions
+512	git reset	ἐ	B	2	2	1	2200.0	2200.0	59.99	shell-cli-git
+513	chmod 755	ὐ	B	3	3	2	1100.0	2200.0	60.05	shell-cli-git
+514	ls -al	ὰ	B	3	3	2	1100.0	2200.0	60.11	shell-cli-git
+515	~/.config	ὶ	B	3	3	2	1100.0	2200.0	60.17	shell-cli-git
+516	HEAD~1	ί	B	3	3	2	1100.0	2200.0	60.23	shell-cli-git
+517	systemctl restart	ὸ	B	3	3	2	1100.0	2200.0	60.3	shell-cli-git
+518	yarn build	ῖ	B	3	3	2	1100.0	2200.0	60.36	shell-cli-git
+519	see the following	ῦ	B	3	3	2	1100.0	2200.0	60.42	markdown-docs
+520	**Warning:**	ῶ	B	3	3	2	1100.0	2200.0	60.48	markdown-docs
+521	**Usage:**	Ё	B	3	3	2	1100.0	2200.0	60.54	markdown-docs
+522	query parameters	Є	B	2	2	1	2200.0	2200.0	60.61	web-http-api
+523	Set-Cookie	Ѕ	B	3	3	2	1100.0	2200.0	60.67	web-http-api
+524	fetch(url)	І	B	3	3	2	1100.0	2200.0	60.73	web-http-api
+525	to the endpoint	Ї	B	3	3	2	1100.0	2200.0	60.79	web-http-api
+526	CAST(	Ј	B	2	2	1	2200.0	2200.0	60.85	sql-data
+527	SUBSTRING(	Ў	B	3	3	2	1100.0	2200.0	60.91	sql-data
+528	DATETIME	Ж	B	2	2	1	2200.0	2200.0	60.98	sql-data
+529	if and only if	Й	B	4	4	3	720.0	2160.0	61.04	math-logic
+530	i just wanted to follow up on	Х	B	7	7	6	360.0	2160.0	61.1	business-email
+531	please let me know if you have any further questions	Ш	B	10	10	9	240.0	2160.0	61.16	business-email
+532	from fastapi import	Щ	B	4	4	3	700.0	2100.0	61.22	python
+533	logger = logging.getLogger(__name__)	Ъ	B	7	8	7	300.0	2100.0	61.28	python
+534	from 'react'	Ы	B	4	4	3	700.0	2100.0	61.33	js-ts
+535	onClick={() =>	Ь	B	3	4	3	700.0	2100.0	61.39	js-ts
+536	public static void main	Ю	B	4	4	3	700.0	2100.0	61.45	code-general
+537	fn main() {	ђ	B	4	4	3	700.0	2100.0	61.51	code-general
+538	String::from(	ѓ	B	4	4	3	700.0	2100.0	61.57	code-general
+539	func (s *	є	B	4	4	3	700.0	2100.0	61.63	code-general
+540	pretend you are	ѕ	B	4	4	3	700.0	2100.0	61.69	prompt-instructions
+541	explain the difference	ї	B	3	4	3	700.0	2100.0	61.75	prompt-instructions
+542	tell me	ј	B	2	2	1	2100.0	2100.0	61.81	prompt-instructions
+543	based on the following	љ	B	4	4	3	700.0	2100.0	61.87	prompt-instructions
+544	come up with a	њ	B	4	4	3	700.0	2100.0	61.92	prompt-instructions
+545	machine learning	ћ	B	2	2	1	2100.0	2100.0	61.98	ml-ai-jargon
+546	npm start	ќ	B	2	2	1	2100.0	2100.0	62.04	shell-cli-git
+547	--no-verify	ў	B	4	4	3	700.0	2100.0	62.1	shell-cli-git
+548	if [ -z	џ	B	4	4	3	700.0	2100.0	62.16	shell-cli-git
+549	## Table of Contents	Ґ	B	4	4	3	700.0	2100.0	62.22	markdown-docs
+550	pull request	Ғ	B	2	2	1	2100.0	2100.0	62.28	markdown-docs
+551	thank you so much	ғ	B	4	4	3	700.0	2100.0	62.34	business-email
+552	Access-Control-Allow-Origin	җ	B	4	4	3	700.0	2100.0	62.4	web-http-api
+553	FULL OUTER JOIN	ҙ	B	3	4	3	700.0	2100.0	62.46	sql-data
+554	ORDER BY 1	Қ	B	4	4	3	700.0	2100.0	62.51	sql-data
+555	ON DELETE SET NULL	қ	B	4	4	3	700.0	2100.0	62.57	sql-data
+556	INSERT OR REPLACE	ҟ	B	3	4	3	700.0	2100.0	62.63	sql-data
+557	INSERT OR IGNORE	Ҡ	B	3	4	3	700.0	2100.0	62.69	sql-data
+558	in addition to	ҡ	B	3	3	2	1000.0	2000.0	62.75	markdown-docs
+559	at this point	ң	B	3	3	2	1000.0	2000.0	62.8	markdown-docs
+560	parents=True, exist_ok=True	ҧ	B	6	6	5	400.0	2000.0	62.86	python
+561	len(	ҩ	B	2	2	1	2000.0	2000.0	62.92	python
+562	if not	ҫ	B	2	2	1	2000.0	2000.0	62.97	python
+563	async function	ҭ	B	2	2	1	2000.0	2000.0	63.03	web-http-api
+564	let mut	Ү	B	2	2	1	2000.0	2000.0	63.08	code-general
+565	use std::	ү	B	3	3	2	1000.0	2000.0	63.14	code-general
+566	) error {	Ұ	B	3	3	2	1000.0	2000.0	63.2	code-general
+567	Ok(())	ұ	B	3	3	2	1000.0	2000.0	63.25	code-general
+568	func (c *Config)	Ҳ	B	6	6	5	400.0	2000.0	63.31	code-general
+569	fix the	ҳ	B	2	2	1	2000.0	2000.0	63.37	prompt-instructions
+570	show me	ҵ	B	2	2	1	2000.0	2000.0	63.42	prompt-instructions
+571	as possible	Ҷ	B	2	2	1	2000.0	2000.0	63.48	prompt-instructions
+572	do not include	ҷ	B	3	3	2	1000.0	2000.0	63.53	prompt-instructions
+573	error message	Һ	B	2	2	1	2000.0	2000.0	63.59	web-http-api
+574	add a	һ	B	2	2	1	2000.0	2000.0	63.65	prompt-instructions
+575	make a	ҽ	B	2	2	1	2000.0	2000.0	63.7	prompt-instructions
+576	does not work	ҿ	B	3	3	2	1000.0	2000.0	63.76	prompt-instructions
+577	at the end	Ә	B	3	3	2	1000.0	2000.0	63.82	prompt-instructions
+578	that you	ә	B	2	2	1	2000.0	2000.0	63.87	prompt-instructions
+579	git init	ӡ	B	2	2	1	2000.0	2000.0	63.93	shell-cli-git
+580	git config	ӣ	B	2	2	1	2000.0	2000.0	63.98	shell-cli-git
+581	sudo apt	Ө	B	2	2	1	2000.0	2000.0	64.04	shell-cli-git
+582	npm test	ө	B	2	2	1	2000.0	2000.0	64.1	shell-cli-git
+583	docker-compose	ӯ	B	2	2	1	2000.0	2000.0	64.15	shell-cli-git
+584	kubectl get	ӷ	B	2	3	2	1000.0	2000.0	64.21	shell-cli-git
+585	grep -v	ԥ	B	3	3	2	1000.0	2000.0	64.26	shell-cli-git
+586	curl -O	Ա	B	3	3	2	1000.0	2000.0	64.32	shell-cli-git
+587	systemctl status	Բ	B	3	3	2	1000.0	2000.0	64.38	shell-cli-git
+588	head -n	Գ	B	3	3	2	1000.0	2000.0	64.43	shell-cli-git
+589	npx eslint	Դ	B	3	3	2	1000.0	2000.0	64.49	shell-cli-git
+590	**Output:**	Ե	B	3	3	2	1000.0	2000.0	64.55	markdown-docs
+591	the following command	Ը	B	3	3	2	1000.0	2000.0	64.6	markdown-docs
+592	please don't hesitate to contact me	Թ	B	7	6	5	400.0	2000.0	64.66	business-email
+593	request headers	Ժ	B	2	2	1	2000.0	2000.0	64.71	web-http-api
+594	rate limit	Ի	B	2	2	1	2000.0	2000.0	64.77	web-http-api
+595	Not Found	Լ	B	2	2	1	2000.0	2000.0	64.83	web-http-api
+596	HTTP response	Խ	B	2	2	1	2000.0	2000.0	64.88	web-http-api
+597	application/x-www-form-urlencoded	Ծ	B	5	5	4	500.0	2000.0	64.94	web-http-api
+598	REST API	Կ	B	2	2	1	2000.0	2000.0	65.0	web-http-api
+599	NUMERIC(	Հ	B	3	3	2	1000.0	2000.0	65.05	sql-data
+600	the set of	Մ	B	3	3	2	980.0	1960.0	65.11	math-logic
+601	unsupervised learning	Յ	B	4	4	3	650.0	1950.0	65.16	ml-ai-jargon
+602	state of the art	Ն	B	4	4	3	650.0	1950.0	65.22	ml-ai-jargon
+603	feel free to reach out	Շ	B	5	5	4	480.0	1920.0	65.27	business-email
+604	just wanted to follow up	Ո	B	5	5	4	480.0	1920.0	65.32	business-email
+605	instead of	Չ	B	2	2	1	1900.0	1900.0	65.38	prompt-instructions
+606	except Exception	Պ	B	2	2	1	1900.0	1900.0	65.43	python
+607	is None	Ռ	B	2	2	1	1900.0	1900.0	65.48	python
+608	export const	Ս	B	2	2	1	1900.0	1900.0	65.54	js-ts
+609	?: string	Վ	B	2	2	1	1900.0	1900.0	65.59	js-ts
+610	pub fn	Տ	B	2	2	1	1900.0	1900.0	65.64	code-general
+611	while (	Ր	B	2	2	1	1900.0	1900.0	65.7	code-general
+612	this code	Ւ	B	2	2	1	1900.0	1900.0	65.75	prompt-instructions
+613	when i	Փ	B	2	2	1	1900.0	1900.0	65.8	prompt-instructions
+614	transformer model	Ք	B	3	3	2	950.0	1900.0	65.86	ml-ai-jargon
+615	Dockerfile	Օ	B	3	2	1	1900.0	1900.0	65.91	shell-cli-git
+616	best regards	Ֆ	B	2	2	1	1900.0	1900.0	65.96	business-email
+617	i hope you are doing well	՛	B	6	6	5	380.0	1900.0	66.02	business-email
+618	refresh token	՝	B	2	2	1	1900.0	1900.0	66.07	web-http-api
+619	401 Unauthorized	՞	B	2	2	1	1900.0	1900.0	66.12	web-http-api
+620	status_code	ա	B	2	2	1	1900.0	1900.0	66.18	web-http-api
+621	JSON response	բ	B	2	2	1	1900.0	1900.0	66.23	web-http-api
+622	JSON.parse	գ	B	2	2	1	1900.0	1900.0	66.28	web-http-api
+623	Bad Request	դ	B	2	2	1	1900.0	1900.0	66.34	web-http-api
+624	await fetch	ե	B	2	2	1	1900.0	1900.0	66.39	web-http-api
+625	error handling	զ	B	2	2	1	1900.0	1900.0	66.44	web-http-api
+626	response body	է	B	2	2	1	1900.0	1900.0	66.5	web-http-api
+627	as soon as possible	ը	B	4	4	3	620.0	1860.0	66.55	business-email
+628	please do not hesitate to	թ	B	5	5	4	460.0	1840.0	66.6	business-email
+629	thank you for your email	ժ	B	5	5	4	460.0	1840.0	66.65	business-email
+630	it is worth noting that	ի	B	5	5	4	460.0	1840.0	66.71	logic-reasoning
+631	APIRouter()	լ	B	3	4	3	600.0	1800.0	66.76	python
+632	sqlite3.connect(	խ	B	4	4	3	600.0	1800.0	66.81	python
+633	time.time()	ծ	B	3	3	2	900.0	1800.0	66.86	python
+634	str(value or "")	կ	B	4	4	3	600.0	1800.0	66.91	python
+635	isinstance(	հ	B	3	3	2	900.0	1800.0	66.96	python
+636	return {	ձ	B	2	2	1	1800.0	1800.0	67.01	python
+637	"ok": True	ղ	B	4	4	3	600.0	1800.0	67.06	python
+638	except Exception as exc:	ճ	B	5	5	4	450.0	1800.0	67.11	python
+639	Any]] = None	մ	B	4	4	3	600.0	1800.0	67.16	python
+640	console.log(	յ	B	3	3	2	900.0	1800.0	67.21	js-ts
+641	map[string]interface{}	ն	B	4	4	3	600.0	1800.0	67.26	code-general
+642	Vec<	շ	B	2	2	1	1800.0	1800.0	67.31	code-general
+643	using namespace std;	ո	B	4	4	3	600.0	1800.0	67.36	code-general
+644	\n");	չ	B	2	2	1	1800.0	1800.0	67.41	code-general
+645	ctx context.Context	պ	B	3	3	2	900.0	1800.0	67.46	code-general
+646	?;	ջ	B	2	2	1	1800.0	1800.0	67.51	code-general
+647	assertEquals(	ռ	B	2	3	2	900.0	1800.0	67.56	code-general
+648	fix the bug	ս	B	3	3	2	900.0	1800.0	67.62	prompt-instructions
+649	explain what	վ	B	2	3	2	900.0	1800.0	67.67	prompt-instructions
+650	show me how	տ	B	3	3	2	900.0	1800.0	67.72	prompt-instructions
+651	write me a	ր	B	3	3	2	900.0	1800.0	67.77	prompt-instructions
+652	easier to	ց	B	3	3	2	900.0	1800.0	67.82	prompt-instructions
+653	trying to	ւ	B	2	2	1	1800.0	1800.0	67.87	prompt-instructions
+654	here is my	փ	B	3	3	2	900.0	1800.0	67.92	prompt-instructions
+655	help me with	ք	B	3	3	2	900.0	1800.0	67.97	prompt-instructions
+656	improve the	օ	B	3	3	2	900.0	1800.0	68.02	prompt-instructions
+657	take a look at	ֆ	B	4	4	3	600.0	1800.0	68.07	prompt-instructions
+658	the best way	և	B	3	3	2	900.0	1800.0	68.12	prompt-instructions
+659	what's the best	։	B	4	4	3	600.0	1800.0	68.17	prompt-instructions
+660	let's	ג	B	2	2	1	1800.0	1800.0	68.22	prompt-instructions
+661	you are an expert	ז	B	4	4	3	600.0	1800.0	68.27	prompt-instructions
+662	if it	ט	B	2	2	1	1800.0	1800.0	68.32	prompt-instructions
+663	reinforcement learning	ך	B	4	3	2	900.0	1800.0	68.37	ml-ai-jargon
+664	git stash	כ	B	2	2	1	1800.0	1800.0	68.42	shell-cli-git
+665	chmod -R	ם	B	3	3	2	900.0	1800.0	68.48	shell-cli-git
+666	/etc/hosts	ן	B	3	3	2	900.0	1800.0	68.53	shell-cli-git
+667	git reset --soft	ס	B	4	4	3	600.0	1800.0	68.58	shell-cli-git
+668	tail -n	ף	B	3	3	2	900.0	1800.0	68.63	shell-cli-git
+669	[skip ci]	פ	B	4	4	3	600.0	1800.0	68.68	shell-cli-git
+670	Cargo.toml	ץ	B	3	3	2	900.0	1800.0	68.73	shell-cli-git
+671	set -e	צ	B	3	3	2	900.0	1800.0	68.78	shell-cli-git
+672	$(pwd)	ק	B	3	3	2	900.0	1800.0	68.83	shell-cli-git
+673	conda install	ء	B	2	3	2	900.0	1800.0	68.88	shell-cli-git
+674	Get-ChildItem	آ	B	4	4	3	600.0	1800.0	68.93	shell-cli-git
+675	table of contents	ؤ	B	3	3	2	900.0	1800.0	68.98	markdown-docs
+676	**Tip:**	ئ	B	3	3	2	900.0	1800.0	69.03	markdown-docs
+677	**Returns:**	ـ	B	3	3	2	900.0	1800.0	69.08	markdown-docs
+678	## Contributing	٠	B	3	3	2	900.0	1800.0	69.13	markdown-docs
+679	please refer to	١	B	3	3	2	900.0	1800.0	69.18	markdown-docs
+680	the following example	٢	B	3	3	2	900.0	1800.0	69.23	markdown-docs
+681	command line	٣	B	2	2	1	1800.0	1800.0	69.28	markdown-docs
+682	you should see	٤	B	3	3	2	900.0	1800.0	69.33	markdown-docs
+683	depending on your	٥	B	3	3	2	900.0	1800.0	69.39	markdown-docs
+684	an array of	٦	B	3	3	2	900.0	1800.0	69.44	markdown-docs
+685	the same way	٧	B	3	3	2	900.0	1800.0	69.49	markdown-docs
+686	i will get back to you	٨	B	6	6	5	360.0	1800.0	69.54	business-email
+687	response headers	٩	B	2	2	1	1800.0	1800.0	69.59	web-http-api
+688	endpoints	٪	B	2	2	1	1800.0	1800.0	69.64	web-http-api
+689	JSON object	٫	B	2	2	1	1800.0	1800.0	69.69	web-http-api
+690	JSON.stringify	٬	B	2	2	1	1800.0	1800.0	69.74	web-http-api
+691	Service Unavailable	ٹ	B	3	3	2	900.0	1800.0	69.79	web-http-api
+692	Too Many Requests	ٺ	B	3	3	2	900.0	1800.0	69.84	web-http-api
+693	idempotency key	ٻ	B	5	4	3	600.0	1800.0	69.89	web-http-api
+694	=== 200	ټ	B	3	3	2	900.0	1800.0	69.94	web-http-api
+695	200 OK	ٽ	B	2	2	1	1800.0	1800.0	69.99	web-http-api
+696	CORS policy	ٿ	B	3	3	2	900.0	1800.0	70.04	web-http-api
+697	multipart/form-data	ڀ	B	3	3	2	900.0	1800.0	70.09	web-http-api
+698	webhook URL	ځ	B	3	3	2	900.0	1800.0	70.14	web-http-api
+699	AUTOINCREMENT	ڃ	B	2	3	2	900.0	1800.0	70.19	sql-data
+700	GROUP_CONCAT	ڄ	B	3	3	2	900.0	1800.0	70.24	sql-data
+701	EXTRACT(	څ	B	3	3	2	900.0	1800.0	70.3	sql-data
+702	RANK()	چ	B	3	3	2	900.0	1800.0	70.35	sql-data
+703	SMALLINT	ڇ	B	3	3	2	900.0	1800.0	70.4	sql-data
+704	START TRANSACTION	ڈ	B	2	3	2	900.0	1800.0	70.45	sql-data
+705	HAVING COUNT	ډ	B	3	3	2	900.0	1800.0	70.5	sql-data
+706	AND created_at	ڊ	B	3	3	2	900.0	1800.0	70.55	sql-data
+707	the value of	ڌ	B	3	3	2	880.0	1760.0	70.6	math-logic
+708	row_factory = sqlite3.Row	ڍ	B	6	6	5	350.0	1750.0	70.65	python
+709	isinstance(value, str)	ڏ	B	6	6	5	350.0	1750.0	70.7	python
+710	def __init__(self,	ڑ	B	6	6	5	350.0	1750.0	70.75	python
+711	i am writing to	ړ	B	4	4	3	580.0	1740.0	70.79	business-email
+712	&mut	ڕ	B	2	2	1	1700.0	1700.0	70.84	code-general
+713	public class	ږ	B	2	2	1	1700.0	1700.0	70.89	code-general
+714	act as	ژ	B	2	2	1	1700.0	1700.0	70.94	prompt-instructions
+715	the output	ڙ	B	2	2	1	1700.0	1700.0	70.98	prompt-instructions
+716	generate a	ښ	B	2	2	1	1700.0	1700.0	71.03	prompt-instructions
+717	in python	ڪ	B	2	2	1	1700.0	1700.0	71.08	prompt-instructions
+718	needs to	ګ	B	2	2	1	1700.0	1700.0	71.13	prompt-instructions
+719	apt install	ڭ	B	2	2	1	1700.0	1700.0	71.18	shell-cli-git
+720	/usr/bin	ڳ	B	2	2	1	1700.0	1700.0	71.22	shell-cli-git
+721	docker ps	ڵ	B	2	2	1	1700.0	1700.0	71.27	shell-cli-git
+722	```typescript	ں	B	2	2	1	1700.0	1700.0	71.32	markdown-docs
+723	**Description:**	ڻ	B	3	3	2	850.0	1700.0	71.37	markdown-docs
+724	environment variables	ڼ	B	2	2	1	1700.0	1700.0	71.41	markdown-docs
+725	less than	ھ	B	2	2	1	1700.0	1700.0	71.46	math-logic
+726	query string	ۀ	B	2	2	1	1700.0	1700.0	71.51	web-http-api
+727	User-Agent	ہ	B	2	2	1	1700.0	1700.0	71.56	web-http-api
+728	base URL	ۃ	B	2	2	1	1700.0	1700.0	71.61	web-http-api
+729	req.body	ۆ	B	2	2	1	1700.0	1700.0	71.65	web-http-api
+730	query params	ۇ	B	2	2	1	1700.0	1700.0	71.7	web-http-api
+731	CREATE DATABASE	ۈ	B	2	2	1	1700.0	1700.0	71.75	sql-data
+732	CURRENT_DATE	ۋ	B	2	2	1	1700.0	1700.0	71.8	sql-data
+733	NOT EXISTS	ۍ	B	2	2	1	1700.0	1700.0	71.84	sql-data
+734	please let me know if you need anything	ێ	B	8	8	7	240.0	1680.0	71.89	business-email
+735	it should be noted that	ې	B	5	5	4	420.0	1680.0	71.94	logic-reasoning
+736	what's wrong with	ے	B	4	4	3	550.0	1650.0	71.99	prompt-instructions
+737	training data	۔	B	2	2	1	1650.0	1650.0	72.03	ml-ai-jargon
+738	**Prerequisites:**	ە	B	4	4	3	550.0	1650.0	72.08	markdown-docs
+739	feel free to	۰	B	3	3	2	820.0	1640.0	72.12	business-email
+740	thank you in advance	۱	B	4	4	3	540.0	1620.0	72.17	business-email
+741	i look forward to	۲	B	4	4	3	540.0	1620.0	72.21	business-email
+742	depending on	۳	B	2	2	1	1600.0	1600.0	72.26	markdown-docs
+743	for item in	۴	B	3	3	2	800.0	1600.0	72.3	python
+744	actor_id=	۵	B	3	3	2	800.0	1600.0	72.35	python
+745	f"{	۶	B	2	2	1	1600.0	1600.0	72.39	python
+746	onChange={	۷	B	2	3	2	800.0	1600.0	72.44	js-ts
+747	useState<	۸	B	2	3	2	800.0	1600.0	72.48	js-ts
+748	className={cn(	۹	B	4	5	4	400.0	1600.0	72.53	js-ts
+749	int main(	۽	B	3	3	2	800.0	1600.0	72.57	code-general
+750	argc, char **argv	۾	B	5	5	4	400.0	1600.0	72.62	code-general
+751	std::make_unique<	ა	B	5	5	4	400.0	1600.0	72.66	code-general
+752	// TODO:	ბ	B	3	3	2	800.0	1600.0	72.71	code-general
+753	Ok(	გ	B	2	2	1	1600.0	1600.0	72.75	code-general
+754	ArrayList<	დ	B	2	3	2	800.0	1600.0	72.8	code-general
+755	assert_eq!(	ე	B	3	3	2	800.0	1600.0	72.84	code-general
+756	in bullet points	ვ	B	3	3	2	800.0	1600.0	72.89	prompt-instructions
+757	do not use	ზ	B	3	3	2	800.0	1600.0	72.93	prompt-instructions
+758	i am trying	თ	B	3	3	2	800.0	1600.0	72.98	prompt-instructions
+759	here's my	ი	B	3	3	2	800.0	1600.0	73.02	prompt-instructions
+760	could you	კ	B	2	2	1	1600.0	1600.0	73.07	prompt-instructions
+761	i want a	ლ	B	3	3	2	800.0	1600.0	73.11	prompt-instructions
+762	so that it	მ	B	3	3	2	800.0	1600.0	73.16	prompt-instructions
+763	pros and cons	ნ	B	4	3	2	800.0	1600.0	73.2	prompt-instructions
+764	why is	ო	B	2	2	1	1600.0	1600.0	73.25	prompt-instructions
+765	the user	პ	B	2	2	1	1600.0	1600.0	73.29	prompt-instructions
+766	language model	ჟ	B	2	2	1	1600.0	1600.0	73.34	ml-ai-jargon
+767	supervised learning	რ	B	3	3	2	800.0	1600.0	73.38	ml-ai-jargon
+768	exploratory data analysis	ს	B	5	5	4	400.0	1600.0	73.43	ml-ai-jargon
+769	npm i	ტ	B	2	2	1	1600.0	1600.0	73.47	shell-cli-git
+770	$PATH	უ	B	2	2	1	1600.0	1600.0	73.52	shell-cli-git
+771	ssh-keygen	ფ	B	3	3	2	800.0	1600.0	73.56	shell-cli-git
+772	systemctl enable	ქ	B	3	3	2	800.0	1600.0	73.61	shell-cli-git
+773	CHANGELOG.md	ღ	B	3	3	2	800.0	1600.0	73.65	shell-cli-git
+774	#!/bin/sh	ყ	B	3	3	2	800.0	1600.0	73.7	shell-cli-git
+775	[ -d	შ	B	3	3	2	800.0	1600.0	73.74	shell-cli-git
+776	conda activate	ჩ	B	2	3	2	800.0	1600.0	73.79	shell-cli-git
+777	node --version	ც	B	3	3	2	800.0	1600.0	73.83	shell-cli-git
+778	**Parameters:**	ძ	B	3	3	2	800.0	1600.0	73.88	markdown-docs
+779	## Troubleshooting	წ	B	4	3	2	800.0	1600.0	73.92	markdown-docs
+780	Getting Started	ჭ	B	2	2	1	1600.0	1600.0	73.97	markdown-docs
+781	in this guide	ხ	B	3	3	2	800.0	1600.0	74.01	markdown-docs
+782	environment variable	ჯ	B	2	2	1	1600.0	1600.0	74.06	markdown-docs
+783	greater than	ჰ	B	2	2	1	1600.0	1600.0	74.1	math-logic
+784	do not hesitate to reach out	अ	B	6	6	5	320.0	1600.0	74.15	business-email
+785	thank you for your time	आ	B	5	5	4	400.0	1600.0	74.19	business-email
+786	i'll get back to you	इ	B	6	6	5	320.0	1600.0	74.24	business-email
+787	http://	ई	B	2	2	1	1600.0	1600.0	74.28	web-http-api
+788	rate limiting	उ	B	2	2	1	1600.0	1600.0	74.33	web-http-api
+789	HTTP method	ऊ	B	2	2	1	1600.0	1600.0	74.37	web-http-api
+790	unauthorized	ए	B	2	2	1	1600.0	1600.0	74.42	web-http-api
+791	unauthenticated	ऐ	B	2	3	2	800.0	1600.0	74.46	web-http-api
+792	response.status	ऑ	B	2	2	1	1600.0	1600.0	74.51	web-http-api
+793	res.status	ओ	B	2	2	1	1600.0	1600.0	74.55	web-http-api
+794	HTTP status	औ	B	2	2	1	1600.0	1600.0	74.6	web-http-api
+795	resource not found	ख	B	3	3	2	800.0	1600.0	74.64	web-http-api
+796	DEFAULT NULL	ग	B	2	2	1	1600.0	1600.0	74.69	sql-data
+797	CREATE VIEW	घ	B	2	2	1	1600.0	1600.0	74.73	sql-data
+798	DISTINCT ON	ङ	B	3	3	2	800.0	1600.0	74.78	sql-data
+799	CONVERT(	च	B	3	3	2	800.0	1600.0	74.82	sql-data
+800	DESC LIMIT	छ	B	2	2	1	1600.0	1600.0	74.87	sql-data
+801	OFFSET 0	ज	B	3	3	2	800.0	1600.0	74.91	sql-data
+802	WHERE NOT	झ	B	2	2	1	1600.0	1600.0	74.96	sql-data
+803	GROUP BY ROLLUP	ञ	B	5	5	4	400.0	1600.0	75.0	sql-data
+804	JSONB	ट	B	2	2	1	1600.0	1600.0	75.05	sql-data
+805	ARRAY_AGG	ठ	B	3	3	2	800.0	1600.0	75.09	sql-data
+806	i'd like to	ड	B	4	4	3	520.0	1560.0	75.14	business-email
+807	i look forward to working with you	ढ	B	7	7	6	260.0	1560.0	75.18	business-email
+808	the sum of	ण	B	3	3	2	760.0	1520.0	75.22	math-logic
+809	thank you for reaching out	थ	B	5	5	4	380.0	1520.0	75.26	business-email
+810	as follows	द	B	2	2	1	1500.0	1500.0	75.31	markdown-docs
+811	at least	ध	B	2	2	1	1500.0	1500.0	75.35	math-logic
+812	json.loads(	फ	B	3	3	2	750.0	1500.0	75.39	python
+813	int(time.time())	ब	B	4	4	3	500.0	1500.0	75.43	python
+814	.strip()	भ	B	2	2	1	1500.0	1500.0	75.48	python
+815	Optional[float]	य	B	3	4	3	500.0	1500.0	75.52	python
+816	PRAGMA journal_mode=WAL	ऱ	B	6	6	5	300.0	1500.0	75.56	python
+817	limit: int = 500	ळ	B	6	6	5	300.0	1500.0	75.6	python
+818	limit: int = 100	व	B	6	6	5	300.0	1500.0	75.64	python
+819	isinstance(value, dict)	श	B	6	6	5	300.0	1500.0	75.69	python
+820	raise ValueError(	ष	B	3	4	3	500.0	1500.0	75.73	python
+821	from pathlib import Path	ऽ	B	4	4	3	500.0	1500.0	75.77	python
+822	.get("id")	क़	B	4	4	3	500.0	1500.0	75.81	python
+823	.append(	ज़	B	2	2	1	1500.0	1500.0	75.85	python
+824	= []	ड़	B	2	2	1	1500.0	1500.0	75.9	python
+825	return (	ढ़	B	2	2	1	1500.0	1500.0	75.94	js-ts
+826	.map((	फ़	B	2	2	1	1500.0	1500.0	75.98	js-ts
+827	import React from 'react'	।	B	6	6	5	300.0	1500.0	76.02	js-ts
+828	#[derive(Debug)]	॥	B	4	4	3	500.0	1500.0	76.07	code-general
+829	std::cerr <<	०	B	4	4	3	500.0	1500.0	76.11	code-general
+830	printf("	१	B	2	2	1	1500.0	1500.0	76.15	code-general
+831	.size()	२	B	2	2	1	1500.0	1500.0	76.19	code-general
+832	Vec::new()	३	B	4	4	3	500.0	1500.0	76.23	code-general
+833	the error	४	B	2	2	1	1500.0	1500.0	76.28	prompt-instructions
+834	what are the differences	५	B	4	4	3	500.0	1500.0	76.32	prompt-instructions
+835	given the	६	B	2	2	1	1500.0	1500.0	76.36	prompt-instructions
+836	make this	७	B	2	2	1	1500.0	1500.0	76.4	prompt-instructions
+837	deep learning	८	B	2	2	1	1500.0	1500.0	76.44	ml-ai-jargon
+838	logistic regression	९	B	3	3	2	750.0	1500.0	76.49	ml-ai-jargon
+839	retrieval augmented generation	॰	B	5	4	3	500.0	1500.0	76.53	ml-ai-jargon
+840	import tensorflow as tf	অ	B	4	4	3	500.0	1500.0	76.57	ml-ai-jargon
+841	export PATH	আ	B	2	2	1	1500.0	1500.0	76.61	shell-cli-git
+842	origin/main	ই	B	2	2	1	1500.0	1500.0	76.65	shell-cli-git
+843	ps aux	উ	B	2	2	1	1500.0	1500.0	76.7	shell-cli-git
+844	brew install	এ	B	2	2	1	1500.0	1500.0	76.74	shell-cli-git
+845	dist/	ও	B	2	2	1	1500.0	1500.0	76.78	shell-cli-git
+846	## API Reference	ক	B	3	3	2	750.0	1500.0	76.82	markdown-docs
+847	i look forward to your response	খ	B	6	6	5	300.0	1500.0	76.87	business-email
+848	i wanted to let you know	গ	B	6	6	5	300.0	1500.0	76.91	business-email
+849	Content-Length	ঘ	B	2	2	1	1500.0	1500.0	76.95	web-http-api
+850	path parameter	ঙ	B	2	2	1	1500.0	1500.0	76.99	web-http-api
+851	JSON body	চ	B	2	2	1	1500.0	1500.0	77.03	web-http-api
+852	response.data	ছ	B	2	2	1	1500.0	1500.0	77.08	web-http-api
+853	res.json	জ	B	2	2	1	1500.0	1500.0	77.12	web-http-api
+854	HTTP headers	ঝ	B	2	2	1	1500.0	1500.0	77.16	web-http-api
+855	error response	ঞ	B	2	2	1	1500.0	1500.0	77.2	web-http-api
+856	query parameter	ট	B	2	2	1	1500.0	1500.0	77.24	web-http-api
+857	DROP COLUMN	ঠ	B	2	2	1	1500.0	1500.0	77.29	sql-data
+858	divided by	ড	B	3	3	2	720.0	1440.0	77.33	math-logic
+859	at your earliest convenience	ঢ	B	4	4	3	480.0	1440.0	77.37	business-email
+860	i hope you are well	ণ	B	5	5	4	360.0	1440.0	77.41	business-email
+861	i am reaching out to	ত	B	5	5	4	360.0	1440.0	77.45	business-email
+862	we would like to	থ	B	4	4	3	480.0	1440.0	77.49	business-email
+863	please let me know if you have any issues	দ	B	9	9	8	180.0	1440.0	77.53	business-email
+864	if you have any questions or concerns	ধ	B	7	7	6	240.0	1440.0	77.57	business-email
+865	to put it simply	প	B	4	4	3	470.0	1410.0	77.61	logic-reasoning
+866	for instance	ফ	B	2	2	1	1400.0	1400.0	77.65	markdown-docs
+867	take a look	ব	B	3	3	2	700.0	1400.0	77.69	prompt-instructions
+868	sqlite3.Connection	ভ	B	3	3	2	700.0	1400.0	77.73	python
+869	json.dumps(	ম	B	3	3	2	700.0	1400.0	77.77	python
+870	return None	য	B	2	2	1	1400.0	1400.0	77.81	python
+871	Optional[int]	ল	B	3	3	2	700.0	1400.0	77.85	python
+872	for key in	শ	B	3	3	2	700.0	1400.0	77.89	python
+873	except Exception:	ষ	B	3	3	2	700.0	1400.0	77.92	python
+874	for k, v in	স	B	5	5	4	350.0	1400.0	77.96	python
+875	for i in range(	হ	B	5	5	4	350.0	1400.0	78.0	python
+876	ORDER BY created_at DESC	ৎ	B	5	5	4	350.0	1400.0	78.04	python
+877	= str(	ড়	B	3	3	2	700.0	1400.0	78.08	python
+878	= {}	ঢ়	B	2	2	1	1400.0	1400.0	78.12	python
+879	=> void	য়	B	2	2	1	1400.0	1400.0	78.16	js-ts
+880	| null	০	B	2	2	1	1400.0	1400.0	78.2	js-ts
+881	(err error)	১	B	3	3	2	700.0	1400.0	78.24	code-general
+882	&self	২	B	2	2	1	1400.0	1400.0	78.28	code-general
+883	return new	৩	B	2	2	1	1400.0	1400.0	78.32	code-general
+884	const auto&	৪	B	3	3	2	700.0	1400.0	78.36	code-general
+885	append(	৫	B	2	2	1	1400.0	1400.0	78.4	code-general
+886	}));	৬	B	2	2	1	1400.0	1400.0	78.44	code-general
+887	() const {	৭	B	3	3	2	700.0	1400.0	78.47	code-general
+888	Some(	৮	B	2	2	1	1400.0	1400.0	78.51	code-general
+889	HashMap<	৯	B	2	3	2	700.0	1400.0	78.55	code-general
+890	List<String>	ৰ	B	3	3	2	700.0	1400.0	78.59	code-general
+891	uint32_t	ৱ	B	3	3	2	700.0	1400.0	78.63	code-general
+892	difference between	৷	B	2	2	1	1400.0	1400.0	78.67	prompt-instructions
+893	in detail	அ	B	2	2	1	1400.0	1400.0	78.71	prompt-instructions
+894	in a table	ஆ	B	3	3	2	700.0	1400.0	78.75	prompt-instructions
+895	make sure you	இ	B	3	3	2	700.0	1400.0	78.79	prompt-instructions
+896	just the	உ	B	2	2	1	1400.0	1400.0	78.83	prompt-instructions
+897	translate the following	எ	B	3	3	2	700.0	1400.0	78.87	prompt-instructions
+898	write a python	ஒ	B	3	3	2	700.0	1400.0	78.91	prompt-instructions
+899	in typescript	க	B	3	3	2	700.0	1400.0	78.95	prompt-instructions
+900	given the following	ங	B	3	3	2	700.0	1400.0	78.99	prompt-instructions
+901	an error	ச	B	2	2	1	1400.0	1400.0	79.03	prompt-instructions
+902	what does this	ஜ	B	3	3	2	700.0	1400.0	79.06	prompt-instructions
+903	the above	ஞ	B	2	2	1	1400.0	1400.0	79.1	markdown-docs
+904	make it look	ட	B	3	3	2	700.0	1400.0	79.14	prompt-instructions
+905	improve this	ண	B	3	3	2	700.0	1400.0	79.18	prompt-instructions
+906	refactor this	த	B	3	3	2	700.0	1400.0	79.22	prompt-instructions
+907	make sure it	ந	B	3	3	2	700.0	1400.0	79.26	prompt-instructions
+908	build a	ன	B	2	2	1	1400.0	1400.0	79.3	prompt-instructions
+909	walk me through	ப	B	3	3	2	700.0	1400.0	79.34	prompt-instructions
+910	what's wrong	ம	B	3	3	2	700.0	1400.0	79.38	prompt-instructions
+911	find the	ய	B	2	2	1	1400.0	1400.0	79.42	prompt-instructions
+912	generative adversarial network	ர	B	5	5	4	350.0	1400.0	79.46	ml-ai-jargon
+913	natural language processing	ற	B	3	3	2	700.0	1400.0	79.5	ml-ai-jargon
+914	origin master	ல	B	2	2	1	1400.0	1400.0	79.54	shell-cli-git
+915	.env.local	ள	B	2	2	1	1400.0	1400.0	79.58	shell-cli-git
+916	chmod 644	ழ	B	3	3	2	700.0	1400.0	79.62	shell-cli-git
+917	$HOME	வ	B	2	2	1	1400.0	1400.0	79.65	shell-cli-git
+918	upstream main	ஷ	B	3	3	2	700.0	1400.0	79.69	shell-cli-git
+919	xargs	ஸ	B	2	2	1	1400.0	1400.0	79.73	shell-cli-git
+920	wget -q	ஹ	B	3	3	2	700.0	1400.0	79.77	shell-cli-git
+921	nothing to commit	ฆ	B	3	3	2	700.0	1400.0	79.81	shell-cli-git
+922	git --version	ฉ	B	3	3	2	700.0	1400.0	79.85	shell-cli-git
+923	export NODE_ENV	ซ	B	3	3	2	700.0	1400.0	79.89	shell-cli-git
+924	```js	ญ	B	2	2	1	1400.0	1400.0	79.93	markdown-docs
+925	**Default:**	ฎ	B	3	3	2	700.0	1400.0	79.97	markdown-docs
+926	## Usage	ฏ	B	2	2	1	1400.0	1400.0	80.01	markdown-docs
+927	under the hood	ฐ	B	3	3	2	700.0	1400.0	80.05	markdown-docs
+928	the example above	ฑ	B	3	3	2	700.0	1400.0	80.09	markdown-docs
+929	this document	ธ	B	2	2	1	1400.0	1400.0	80.13	markdown-docs
+930	configuration file	ฝ	B	2	2	1	1400.0	1400.0	80.17	markdown-docs
+931	out of scope	ฟ	B	3	3	2	700.0	1400.0	80.21	markdown-docs
+932	is required	ภ	B	2	2	1	1400.0	1400.0	80.24	markdown-docs
+933	the return value	ฤ	B	3	3	2	700.0	1400.0	80.28	markdown-docs
+934	step-by-step	ศ	B	3	3	2	700.0	1400.0	80.32	markdown-docs
+935	for all	ษ	B	2	2	1	1400.0	1400.0	80.36	math-logic
+936	please find attached	ฬ	B	3	3	2	700.0	1400.0	80.4	business-email
+937	kind regards	ฮ	B	2	2	1	1400.0	1400.0	80.44	business-email
+938	just wanted to let you know	ฯ	B	6	6	5	280.0	1400.0	80.48	business-email
+939	thank you for bringing this to my attention	โ	B	8	8	7	200.0	1400.0	80.52	business-email
+940	request method	ๆ	B	2	2	1	1400.0	1400.0	80.56	web-http-api
+941	parse JSON	๑	B	2	2	1	1400.0	1400.0	80.6	web-http-api
+942	request URL	๒	B	2	2	1	1400.0	1400.0	80.64	web-http-api
+943	res.send	ນ	B	2	2	1	1400.0	1400.0	80.68	web-http-api
+944	req.params	າ	B	2	2	1	1400.0	1400.0	80.72	web-http-api
+945	idempotent	་	B	3	3	2	700.0	1400.0	80.76	web-http-api
+946	response object	ས	B	2	2	1	1400.0	1400.0	80.8	web-http-api
+947	request object	က	B	2	2	1	1400.0	1400.0	80.83	web-http-api
+948	webhook	ခ	B	2	2	1	1400.0	1400.0	80.87	web-http-api
+949	validation error	ဂ	B	2	2	1	1400.0	1400.0	80.91	web-http-api
+950	RIGHT JOIN	င	B	2	2	1	1400.0	1400.0	80.95	sql-data
+951	DROP CONSTRAINT	စ	B	2	3	2	700.0	1400.0	80.99	sql-data
+952	STRING_AGG	ဆ	B	3	3	2	700.0	1400.0	81.03	sql-data
+953	TO_CHAR(	ဇ	B	3	3	2	700.0	1400.0	81.07	sql-data
+954	TINYINT	ည	B	3	3	2	700.0	1400.0	81.11	sql-data
+955	BIGSERIAL	ဏ	B	3	3	2	700.0	1400.0	81.15	sql-data
+956	GRANT SELECT	တ	B	3	3	2	700.0	1400.0	81.19	sql-data
+957	JSON_EXTRACT	ထ	B	3	3	2	700.0	1400.0	81.23	sql-data
+958	COLLATE	ဒ	B	3	3	2	700.0	1400.0	81.27	sql-data
+959	i hope all is well	န	B	5	5	4	340.0	1360.0	81.31	business-email
+960	thank you for your understanding	ပ	B	5	5	4	340.0	1360.0	81.34	business-email
+961	def _connect()	ဖ	B	4	4	3	450.0	1350.0	81.38	python
+962	os.environ.get(	ဗ	B	4	4	3	450.0	1350.0	81.42	python
+963	uuid.uuid4()	ဘ	B	4	4	3	450.0	1350.0	81.46	python
+964	context window	မ	B	2	2	1	1350.0	1350.0	81.5	ml-ai-jargon
+965	## Acknowledgments	ယ	B	4	4	3	450.0	1350.0	81.53	markdown-docs
+966	i wanted to follow up on our	ရ	B	7	7	6	220.0	1320.0	81.57	business-email
+967	let me know if you would like	လ	B	7	7	6	220.0	1320.0	81.61	business-email
+968	or ""	ဝ	B	2	2	1	1300.0	1300.0	81.64	python
+969	from '@/	သ	B	2	2	1	1300.0	1300.0	81.68	js-ts
+970	Option<	ဟ	B	2	2	1	1300.0	1300.0	81.72	code-general
+971	context.Context	အ	B	2	2	1	1300.0	1300.0	81.75	code-general
+972	++) {	ဥ	B	2	2	1	1300.0	1300.0	81.79	code-general
+973	.clone()	၀	B	2	2	1	1300.0	1300.0	81.83	code-general
+974	Err(	၁	B	2	2	1	1300.0	1300.0	81.86	code-general
+975	format!(	၂	B	2	2	1	1300.0	1300.0	81.9	code-general
+976	keep it	၃	B	2	2	1	1300.0	1300.0	81.94	prompt-instructions
+977	in json format	၄	B	3	3	2	650.0	1300.0	81.97	prompt-instructions
+978	in the format	၅	B	3	3	2	650.0	1300.0	82.01	prompt-instructions
+979	what does	၆	B	2	2	1	1300.0	1300.0	82.05	prompt-instructions
+980	not working	၇	B	2	2	1	1300.0	1300.0	82.08	prompt-instructions
+981	as an	၈	B	2	2	1	1300.0	1300.0	82.12	prompt-instructions
+982	must be	၉	B	2	2	1	1300.0	1300.0	82.16	prompt-instructions
+983	data set	၊	B	2	2	1	1300.0	1300.0	82.19	ml-ai-jargon
+984	overfitting	။	B	3	3	2	650.0	1300.0	82.23	ml-ai-jargon
+985	/usr/local	၍	B	2	2	1	1300.0	1300.0	82.26	shell-cli-git
+986	echo $	၏	B	2	2	1	1300.0	1300.0	82.3	shell-cli-git
+987	Permission denied	ၚ	B	2	2	1	1300.0	1300.0	82.34	shell-cli-git
+988	## Installation	ၾ	B	2	2	1	1300.0	1300.0	82.37	markdown-docs
+989	for details	ၿ	B	2	2	1	1300.0	1300.0	82.41	markdown-docs
+990	working directory	ႀ	B	2	2	1	1300.0	1300.0	82.45	markdown-docs
+991	pull requests	႐	B	2	2	1	1300.0	1300.0	82.48	markdown-docs
+992	more information	႔	B	2	2	1	1300.0	1300.0	82.52	markdown-docs
+993	Cache-Control	႕	B	2	2	1	1300.0	1300.0	82.56	web-http-api
+994	JSON payload	ぁ	B	2	2	1	1300.0	1300.0	82.59	web-http-api
+995	endpoint URL	ぇ	B	2	2	1	1300.0	1300.0	82.63	web-http-api
+996	req.query	ぎ	B	2	2	1	1300.0	1300.0	82.67	web-http-api
+997	request.get	ぐ	B	2	2	1	1300.0	1300.0	82.7	web-http-api
+998	requests.post	げ	B	2	2	1	1300.0	1300.0	82.74	web-http-api
+999	network error	ず	B	2	2	1	1300.0	1300.0	82.78	web-http-api
+1000	response.ok	ぜ	B	2	2	1	1300.0	1300.0	82.81	web-http-api
+1001	GraphQL	ぞ	B	1	2	1	1300.0	1300.0	82.85	web-http-api
+1002	AND NOT	づ	B	2	2	1	1300.0	1300.0	82.89	sql-data
+1003	deleted_at	ね	B	2	2	1	1300.0	1300.0	82.92	sql-data
+1004	for this reason	ぱ	B	3	3	2	640.0	1280.0	82.96	logic-reasoning
+1005	i wanted to check in	ひ	B	5	5	4	320.0	1280.0	82.99	business-email
+1006	thank you for your consideration	び	B	5	5	4	320.0	1280.0	83.03	business-email
+1007	let me know your thoughts	ふ	B	5	5	4	320.0	1280.0	83.07	business-email
+1008	let me know how you would like to proceed	ぶ	B	9	9	8	160.0	1280.0	83.1	business-email
+1009	the square root of	ぷ	B	4	4	3	420.0	1260.0	83.14	math-logic
+1010	wanted to follow up	へ	B	4	4	3	420.0	1260.0	83.17	business-email
+1011	this means that	べ	B	3	3	2	630.0	1260.0	83.21	logic-reasoning
+1012	limit: int = 50	ほ	B	6	6	5	250.0	1250.0	83.24	python
+1013	loss function	ぼ	B	2	2	1	1250.0	1250.0	83.28	ml-ai-jargon
+1014	is given by	ぽ	B	3	3	2	620.0	1240.0	83.31	math-logic
+1015	thanks in advance	む	B	3	3	2	620.0	1240.0	83.35	business-email
+1016	just wanted to	ゃ	B	3	3	2	620.0	1240.0	83.38	business-email
+1017	regarding the	ゅ	B	3	3	2	620.0	1240.0	83.42	business-email
+1018	as described above	ゆ	B	3	3	2	600.0	1200.0	83.45	markdown-docs
+1019	therefore	ょ	B	2	2	1	1200.0	1200.0	83.48	prose-connectives
+1020	the rest	ァ	B	2	2	1	1200.0	1200.0	83.52	prompt-instructions
+1021	import sqlite3	ォ	B	3	3	2	600.0	1200.0	83.55	python
+1022	List[Dict]	ガ	B	4	4	3	400.0	1200.0	83.59	python
+1023	-> bool:	ギ	B	3	3	2	600.0	1200.0	83.62	python
+1024	-> Optional[	ケ	B	3	3	2	600.0	1200.0	83.65	python
+1025	def _now()	ゲ	B	4	4	3	400.0	1200.0	83.69	python
+1026	payload.get("id")	ゴ	B	5	5	4	300.0	1200.0	83.72	python
+1027	def get_	ザ	B	3	3	2	600.0	1200.0	83.75	python
+1028	str(payload.get(	ゼ	B	4	4	3	400.0	1200.0	83.79	python
+1029	status_code=	ソ	B	3	3	2	600.0	1200.0	83.82	python
+1030	uuid.uuid4().hex	ゾ	B	5	5	4	300.0	1200.0	83.86	python
+1031	.get("name")	ツ	B	4	4	3	400.0	1200.0	83.89	python
+1032	conn.commit()	ネ	B	3	3	2	600.0	1200.0	83.92	python
+1033	INSERT OR REPLACE INTO	ノ	B	4	5	4	300.0	1200.0	83.96	python
+1034	WHERE profile_id = ?	ハ	B	5	5	4	300.0	1200.0	83.99	python
+1035	Connection) -> None:	ヒ	B	5	5	4	300.0	1200.0	84.02	python
+1036	value or ""	ヘ	B	3	3	2	600.0	1200.0	84.06	python
+1037	: boolean	ベ	B	2	2	1	1200.0	1200.0	84.09	js-ts
+1038	: () => void	ホ	B	4	4	3	400.0	1200.0	84.13	js-ts
+1039	String[] args	ボ	B	3	3	2	600.0	1200.0	84.16	code-general
+1040	as_str()	ミ	B	3	3	2	600.0	1200.0	84.19	code-general
+1041	System.out.print(	モ	B	4	4	3	400.0	1200.0	84.23	code-general
+1042	} finally {	ヤ	B	3	3	2	600.0	1200.0	84.26	code-general
+1043	%d\n	ユ	B	2	2	1	1200.0	1200.0	84.29	code-general
+1044	func() {	ヨ	B	3	3	2	600.0	1200.0	84.33	code-general
+1045	this->	ワ	B	2	2	1	1200.0	1200.0	84.36	code-general
+1046	// TODO	ヴ	B	2	2	1	1200.0	1200.0	84.4	code-general
+1047	static_cast<	ヶ	B	3	3	2	600.0	1200.0	84.43	code-general
+1048	String::new()	ㅇ	B	4	4	3	400.0	1200.0	84.46	code-general
+1049	Map<String,	ㅋ	B	3	3	2	600.0	1200.0	84.5	code-general
+1050	t.Errorf(	ㅎ	B	3	3	2	600.0	1200.0	84.53	code-general
+1051	*testing.T	ㅠ	B	3	3	2	600.0	1200.0	84.56	code-general
+1052	int64_t	ㅡ	B	3	3	2	600.0	1200.0	84.6	code-general
+1053	the following error	ㆍ	B	3	3	2	600.0	1200.0	84.63	prompt-instructions
+1054	the following format	丁	B	3	3	2	600.0	1200.0	84.66	prompt-instructions
+1055	just give me	七	B	3	3	2	600.0	1200.0	84.7	prompt-instructions
+1056	step by step instructions	丈	B	4	4	3	400.0	1200.0	84.73	prompt-instructions
+1057	create a function	且	B	3	3	2	600.0	1200.0	84.77	prompt-instructions
+1058	write a script	世	B	3	3	2	600.0	1200.0	84.8	prompt-instructions
+1059	make it more concise	丘	B	4	4	3	400.0	1200.0	84.83	prompt-instructions
+1060	easier to read	丝	B	4	4	3	400.0	1200.0	84.87	prompt-instructions
+1061	easy to understand	严	B	3	3	2	600.0	1200.0	84.9	prompt-instructions
+1062	i am getting	並	B	3	3	2	600.0	1200.0	84.93	prompt-instructions
+1063	getting an error	丨	B	3	3	2	600.0	1200.0	84.97	prompt-instructions
+1064	help me understand	丰	B	3	3	2	600.0	1200.0	85.0	prompt-instructions
+1065	make it better	临	B	3	3	2	600.0	1200.0	85.04	prompt-instructions
+1066	optimize the	丶	B	2	3	2	600.0	1200.0	85.07	prompt-instructions
+1067	refactor the	丸	B	3	3	2	600.0	1200.0	85.1	prompt-instructions
+1068	let's say	丹	B	3	3	2	600.0	1200.0	85.14	prompt-instructions
+1069	is not working	丽	B	3	3	2	600.0	1200.0	85.17	prompt-instructions
+1070	has to	举	B	2	2	1	1200.0	1200.0	85.2	prompt-instructions
+1071	at the top	乃	B	3	3	2	600.0	1200.0	85.24	prompt-instructions
+1072	when i run	久	B	3	3	2	600.0	1200.0	85.27	prompt-instructions
+1073	make it so that	乌	B	4	4	3	400.0	1200.0	85.31	prompt-instructions
+1074	gradient descent	乎	B	2	2	1	1200.0	1200.0	85.34	ml-ai-jargon
+1075	backpropagation	乐	B	3	3	2	600.0	1200.0	85.37	ml-ai-jargon
+1076	recurrent neural network	乔	B	4	4	3	400.0	1200.0	85.41	ml-ai-jargon
+1077	dimensionality reduction	乗	B	3	4	3	400.0	1200.0	85.44	ml-ai-jargon
+1078	pretrained model	乘	B	3	3	2	600.0	1200.0	85.47	ml-ai-jargon
+1079	generative model	乙	B	3	3	2	600.0	1200.0	85.51	ml-ai-jargon
+1080	diffusion model	九	B	3	3	2	600.0	1200.0	85.54	ml-ai-jargon
+1081	self-attention	习	B	3	3	2	600.0	1200.0	85.57	ml-ai-jargon
+1082	train_test_split	乡	B	3	3	2	600.0	1200.0	85.61	ml-ai-jargon
+1083	optimizer.zero_grad()	买	B	4	4	3	400.0	1200.0	85.64	ml-ai-jargon
+1084	bias-variance tradeoff	乱	B	5	5	4	300.0	1200.0	85.68	ml-ai-jargon
+1085	npm ci	乳	B	2	2	1	1200.0	1200.0	85.71	shell-cli-git
+1086	mv -f	乾	B	3	3	2	600.0	1200.0	85.74	shell-cli-git
+1087	&& \	亂	B	2	2	1	1200.0	1200.0	85.78	shell-cli-git
+1088	| head	予	B	2	2	1	1200.0	1200.0	85.81	shell-cli-git
+1089	go build	争	B	2	2	1	1200.0	1200.0	85.84	shell-cli-git
+1090	fatal:	亏	B	2	2	1	1200.0	1200.0	85.88	shell-cli-git
+1091	$env:	云	B	3	3	2	600.0	1200.0	85.91	shell-cli-git
+1092	build/	互	B	2	2	1	1200.0	1200.0	85.95	shell-cli-git
+1093	```ts	井	B	2	2	1	1200.0	1200.0	85.98	markdown-docs
+1094	```mermaid	亚	B	3	3	2	600.0	1200.0	86.01	markdown-docs
+1095	## Overview	亞	B	2	2	1	1200.0	1200.0	86.05	markdown-docs
+1096	## Roadmap	亡	B	3	3	2	600.0	1200.0	86.08	markdown-docs
+1097	### Example	亦	B	2	2	1	1200.0	1200.0	86.11	markdown-docs
+1098	Quick Start	亩	B	2	2	1	1200.0	1200.0	86.15	markdown-docs
+1099	described below	亭	B	3	3	2	600.0	1200.0	86.18	markdown-docs
+1100	this section describes	亮	B	3	3	2	600.0	1200.0	86.22	markdown-docs
+1101	execute the following	亲	B	3	3	2	600.0	1200.0	86.25	markdown-docs
+1102	the command above	什	B	3	3	2	600.0	1200.0	86.28	markdown-docs
+1103	config file	仁	B	2	2	1	1200.0	1200.0	86.32	markdown-docs
+1104	as expected	仅	B	2	2	1	1200.0	1200.0	86.35	markdown-docs
+1105	Table of contents	仍	B	3	3	2	600.0	1200.0	86.38	markdown-docs
+1106	further information	仓	B	3	3	2	600.0	1200.0	86.42	markdown-docs
+1107	implies that	仔	B	3	3	2	600.0	1200.0	86.45	math-logic
+1108	i would appreciate it if	仕	B	5	5	4	300.0	1200.0	86.49	business-email
+1109	thank you for your patience	仙	B	5	5	4	300.0	1200.0	86.52	business-email
+1110	please let me know your availability	令	B	6	6	5	240.0	1200.0	86.55	business-email
+1111	let me know what works for you	仪	B	7	7	6	200.0	1200.0	86.59	business-email
+1112	please let me know if this works	仲	B	7	7	6	200.0	1200.0	86.62	business-email
+1113	wanted to give you a quick update	伊	B	7	7	6	200.0	1200.0	86.65	business-email
+1114	please let me know if there's anything	伍	B	8	7	6	200.0	1200.0	86.69	business-email
+1115	WWW-Authenticate	伏	B	3	3	2	600.0	1200.0	86.72	web-http-api
+1116	request payload	休	B	2	2	1	1200.0	1200.0	86.75	web-http-api
+1117	forbidden	众	B	2	2	1	1200.0	1200.0	86.79	web-http-api
+1118	fetch request	伙	B	2	2	1	1200.0	1200.0	86.82	web-http-api
+1119	await response	伝	B	2	2	1	1200.0	1200.0	86.86	web-http-api
+1120	req.headers	伟	B	2	2	1	1200.0	1200.0	86.89	web-http-api
+1121	request parameters	伤	B	2	2	1	1200.0	1200.0	86.92	web-http-api
+1122	HTTP error	伦	B	2	2	1	1200.0	1200.0	86.96	web-http-api
+1123	PUT request	伯	B	2	2	1	1200.0	1200.0	86.99	web-http-api
+1124	DELETE request	估	B	2	2	1	1200.0	1200.0	87.02	web-http-api
+1125	axios.get	伴	B	2	2	1	1200.0	1200.0	87.06	web-http-api
+1126	axios.post	伸	B	2	2	1	1200.0	1200.0	87.09	web-http-api
+1127	network request	似	B	2	2	1	1200.0	1200.0	87.13	web-http-api
+1128	preflight request	低	B	3	3	2	600.0	1200.0	87.16	web-http-api
+1129	CROSS JOIN	住	B	3	3	2	600.0	1200.0	87.19	sql-data
+1130	LAG(	佐	B	2	3	2	600.0	1200.0	87.23	sql-data
+1131	LEAD(	佛	B	3	3	2	600.0	1200.0	87.26	sql-data
+1132	WHERE EXISTS	佣	B	2	2	1	1200.0	1200.0	87.29	sql-data
+1133	WITH GRANT OPTION	佩	B	4	4	3	400.0	1200.0	87.33	sql-data
+1134	INTERSECT	佳	B	3	3	2	600.0	1200.0	87.36	sql-data
+1135	learning rate	來	B	2	2	1	1150.0	1150.0	87.39	ml-ai-jargon
+1136	as a function of	依	B	4	4	3	380.0	1140.0	87.43	math-logic
+1137	i hope this helps	侠	B	4	4	3	380.0	1140.0	87.46	business-email
+1138	as a consequence	侣	B	3	3	2	560.0	1120.0	87.49	logic-reasoning
+1139	as soon as	侧	B	3	3	2	560.0	1120.0	87.52	business-email
+1140	of the form	侯	B	3	3	2	560.0	1120.0	87.55	math-logic
+1141	thank you for your interest	侵	B	5	5	4	280.0	1120.0	87.58	business-email
+1142	thank you for your feedback	便	B	5	5	4	280.0	1120.0	87.62	business-email
+1143	i apologize for the inconvenience	係	B	5	5	4	280.0	1120.0	87.65	business-email
+1144	let me know if you have any concerns	促	B	8	8	7	160.0	1120.0	87.68	business-email
+1145	rather than	俄	B	2	2	1	1100.0	1100.0	87.71	prompt-instructions
+1146	import json	俊	B	2	2	1	1100.0	1100.0	87.74	python
+1147	= Body(...)	俗	B	3	3	2	550.0	1100.0	87.77	python
+1148	useEffect(	俱	B	3	3	2	550.0	1100.0	87.8	js-ts
+1149	? (	俺	B	2	2	1	1100.0	1100.0	87.83	js-ts
+1150	interface{}	個	B	2	2	1	1100.0	1100.0	87.86	code-general
+1151	for _,	們	B	2	2	1	1100.0	1100.0	87.89	code-general
+1152	.iter()	倒	B	2	2	1	1100.0	1100.0	87.93	code-general
+1153	assert(	候	B	2	2	1	1100.0	1100.0	87.96	code-general
+1154	size_t	借	B	2	2	1	1100.0	1100.0	87.99	code-general
+1155	public void	倡	B	2	2	1	1100.0	1100.0	88.02	code-general
+1156	without changing	値	B	2	2	1	1100.0	1100.0	88.05	prompt-instructions
+1157	the bug	倫	B	2	2	1	1100.0	1100.0	88.08	prompt-instructions
+1158	bullet points	债	B	2	2	1	1100.0	1100.0	88.11	prompt-instructions
+1159	please help	倾	B	2	2	1	1100.0	1100.0	88.14	prompt-instructions
+1160	attention mechanism	假	B	2	2	1	1100.0	1100.0	88.17	ml-ai-jargon
+1161	batch size	偏	B	2	2	1	1100.0	1100.0	88.2	ml-ai-jargon
+1162	labeled data	做	B	3	3	2	550.0	1100.0	88.23	ml-ai-jargon
+1163	inference time	健	B	3	3	2	550.0	1100.0	88.27	ml-ai-jargon
+1164	chain of thought	側	B	3	3	2	550.0	1100.0	88.3	ml-ai-jargon
+1165	end-to-end	偶	B	3	3	2	550.0	1100.0	88.33	ml-ai-jargon
+1166	git tag	偷	B	2	2	1	1100.0	1100.0	88.36	shell-cli-git
+1167	| tail	偿	B	2	2	1	1100.0	1100.0	88.39	shell-cli-git
+1168	go.mod	傅	B	2	2	1	1100.0	1100.0	88.42	shell-cli-git
+1169	go run	備	B	2	2	1	1100.0	1100.0	88.45	shell-cli-git
+1170	cargo build	储	B	2	2	1	1100.0	1100.0	88.48	shell-cli-git
+1171	## Configuration	催	B	2	2	1	1100.0	1100.0	88.51	markdown-docs
+1172	## License	傳	B	2	2	1	1100.0	1100.0	88.54	markdown-docs
+1173	## Changelog	傷	B	3	3	2	550.0	1100.0	88.57	markdown-docs
+1174	documentation for	働	B	2	2	1	1100.0	1100.0	88.6	markdown-docs
+1175	see below	僕	B	2	2	1	1100.0	1100.0	88.64	markdown-docs
+1176	command-line	價	B	2	2	1	1100.0	1100.0	88.67	markdown-docs
+1177	commit message	億	B	2	2	1	1100.0	1100.0	88.7	markdown-docs
+1178	for now	優	B	2	2	1	1100.0	1100.0	88.73	markdown-docs
+1179	Learn more	儿	B	2	2	1	1100.0	1100.0	88.76	markdown-docs
+1180	the function	允	B	2	2	1	1100.0	1100.0	88.79	math-logic
+1181	i am pleased to inform you	兄	B	6	6	5	220.0	1100.0	88.82	business-email
+1182	thank you for your prompt response	充	B	6	6	5	220.0	1100.0	88.85	business-email
+1183	let me know if that works	兆	B	6	6	5	220.0	1100.0	88.88	business-email
+1184	by the end of the week	光	B	6	6	5	220.0	1100.0	88.91	business-email
+1185	i appreciate you taking the time	克	B	6	6	5	220.0	1100.0	88.94	business-email
+1186	if you have any further questions	免	B	6	6	5	220.0	1100.0	88.98	business-email
+1187	Accept header	児	B	2	2	1	1100.0	1100.0	89.01	web-http-api
+1188	request timeout	兑	B	2	2	1	1100.0	1100.0	89.04	web-http-api
+1189	path params	兒	B	2	2	1	1100.0	1100.0	89.07	web-http-api
+1190	request failed	兔	B	2	2	1	1100.0	1100.0	89.1	web-http-api
+1191	client_id	党	B	2	2	1	1100.0	1100.0	89.13	web-http-api
+1192	RESTful	內	B	2	2	1	1100.0	1100.0	89.16	web-http-api
+1193	SET NULL	兩	B	2	2	1	1100.0	1100.0	89.19	sql-data
+1194	CHECK (	八	B	2	2	1	1100.0	1100.0	89.22	sql-data
+1195	as long as	六	B	3	3	2	540.0	1080.0	89.25	math-logic
+1196	it follows that	兰	B	3	3	2	540.0	1080.0	89.28	math-logic
+1197	multiplied by	兴	B	3	4	3	360.0	1080.0	89.31	math-logic
+1198	assume that	兵	B	2	3	2	540.0	1080.0	89.34	math-logic
+1199	can be written as	典	B	4	4	3	360.0	1080.0	89.37	math-logic
+1200	following up on	养	B	3	3	2	540.0	1080.0	89.41	business-email
+1201	if there is anything i can do	兼	B	7	7	6	180.0	1080.0	89.44	business-email
+1202	let me know a time that works	兽	B	7	7	6	180.0	1080.0	89.47	business-email
+1203	= payload or {}	冈	B	4	4	3	350.0	1050.0	89.5	python
+1204	LEADS_DB_FILE	冊	B	4	4	3	350.0	1050.0	89.52	python
+1205	addEventListener(	冒	B	2	4	3	350.0	1050.0	89.55	js-ts
+1206	throw new Error(	军	B	4	4	3	350.0	1050.0	89.58	js-ts
+1207	as detailed as possible	农	B	4	4	3	350.0	1050.0	89.61	prompt-instructions
+1208	what does this code	冠	B	4	4	3	350.0	1050.0	89.64	prompt-instructions
+1209	make sure not to	冬	B	4	4	3	350.0	1050.0	89.67	prompt-instructions
+1210	hyperparameter	冰	B	2	2	1	1050.0	1050.0	89.7	ml-ai-jargon
+1211	k-means clustering	冲	B	4	4	3	350.0	1050.0	89.73	ml-ai-jargon
+1212	unlabeled data	决	B	4	4	3	350.0	1050.0	89.76	ml-ai-jargon
+1213	stochastic gradient descent	况	B	4	4	3	350.0	1050.0	89.79	ml-ai-jargon
+1214	device = torch.device	冷	B	4	4	3	350.0	1050.0	89.82	ml-ai-jargon
+1215	is equivalent to	冻	B	3	3	2	520.0	1040.0	89.85	math-logic
+1216	should you have any questions	净	B	5	5	4	260.0	1040.0	89.88	business-email
+1217	please note that	准	B	3	3	2	520.0	1040.0	89.91	business-email
+1218	i am reaching out regarding	凉	B	5	5	4	260.0	1040.0	89.94	business-email
+1219	i would be happy to	凌	B	5	5	4	260.0	1040.0	89.97	business-email
+1220	i wanted to make sure	减	B	5	5	4	260.0	1040.0	89.99	business-email
+1221	when it comes to	凝	B	4	4	3	340.0	1020.0	90.02	prose-connectives
+1222	with respect to x	几	B	4	4	3	340.0	1020.0	90.05	math-logic
+1223	the key point	凡	B	3	3	2	510.0	1020.0	90.08	logic-reasoning
+1224	in other words,	凤	B	4	4	3	340.0	1020.0	90.11	logic-reasoning
+1225	as a result,	処	B	4	4	3	335.0	1005.0	90.14	logic-reasoning
+1226	more than	凭	B	2	2	1	1000.0	1000.0	90.17	prose-connectives
+1227	first of all	凯	B	3	3	2	500.0	1000.0	90.19	markdown-docs
+1228	TEXT PRIMARY KEY	凰	B	3	3	2	500.0	1000.0	90.22	python
+1229	-> int:	凸	B	3	3	2	500.0	1000.0	90.25	python
+1230	def list_	函	B	3	3	2	500.0	1000.0	90.28	python
+1231	logger.info(	刀	B	3	3	2	500.0	1000.0	90.31	python
+1232	str(uuid.uuid4())	切	B	5	5	4	250.0	1000.0	90.33	python
+1233	return self.	刊	B	3	3	2	500.0	1000.0	90.36	python
+1234	in range(	刑	B	3	3	2	500.0	1000.0	90.39	python
+1235	{row["name"]	划	B	5	5	4	250.0	1000.0	90.42	python
+1236	= int(	刘	B	3	3	2	500.0	1000.0	90.45	python
+1237	lead_store.	刚	B	3	3	2	500.0	1000.0	90.47	python
+1238	payload.get("actor_id")	创	B	6	6	5	200.0	1000.0	90.5	python
+1239	&& (	删	B	2	2	1	1000.0	1000.0	90.53	js-ts
+1240	to_owned()	判	B	3	3	2	500.0	1000.0	90.56	code-general
+1241	fprintf(stderr,	別	B	3	3	2	500.0	1000.0	90.59	code-general
+1242	defer	刷	B	1	2	1	1000.0	1000.0	90.62	code-general
+1243	go func()	券	B	3	3	2	500.0	1000.0	90.64	code-general
+1244	= nullptr;	刺	B	3	3	2	500.0	1000.0	90.67	code-general
+1245	.equals(	刻	B	2	2	1	1000.0	1000.0	90.7	code-general
+1246	.as_ref()	剂	B	3	3	2	500.0	1000.0	90.73	code-general
+1247	log.Fatal(	則	B	3	3	2	500.0	1000.0	90.76	code-general
+1248	in great detail	削	B	3	3	2	500.0	1000.0	90.78	prompt-instructions
+1249	keep it short	剑	B	3	3	2	500.0	1000.0	90.81	prompt-instructions
+1250	do not explain	剤	B	3	3	2	500.0	1000.0	90.84	prompt-instructions
+1251	and nothing else	剧	B	3	3	2	500.0	1000.0	90.87	prompt-instructions
+1252	rewrite the following	剩	B	3	3	2	500.0	1000.0	90.9	prompt-instructions
+1253	generate a list	剪	B	3	3	2	500.0	1000.0	90.92	prompt-instructions
+1254	keep the same	副	B	3	3	2	500.0	1000.0	90.95	prompt-instructions
+1255	the above code	割	B	3	3	2	500.0	1000.0	90.98	prompt-instructions
+1256	optimize this	創	B	2	3	2	500.0	1000.0	91.01	prompt-instructions
+1257	one by one	劇	B	3	3	2	500.0	1000.0	91.04	prompt-instructions
+1258	build me a	办	B	3	3	2	500.0	1000.0	91.06	prompt-instructions
+1259	in simple terms	助	B	3	3	2	500.0	1000.0	91.09	prompt-instructions
+1260	make it work	努	B	3	3	2	500.0	1000.0	91.12	prompt-instructions
+1261	as an expert	励	B	3	3	2	500.0	1000.0	91.15	prompt-instructions
+1262	turn this into	劲	B	3	3	2	500.0	1000.0	91.18	prompt-instructions
+1263	at the moment	劳	B	3	3	2	500.0	1000.0	91.21	prompt-instructions
+1264	make it so	効	B	3	3	2	500.0	1000.0	91.23	prompt-instructions
+1265	confusion matrix	势	B	3	3	2	500.0	1000.0	91.26	ml-ai-jargon
+1266	multi-head attention	勇	B	3	3	2	500.0	1000.0	91.29	ml-ai-jargon
+1267	sentiment analysis	勒	B	3	3	2	500.0	1000.0	91.32	ml-ai-jargon
+1268	few-shot learning	務	B	3	3	2	500.0	1000.0	91.35	ml-ai-jargon
+1269	cosine similarity	勝	B	3	3	2	500.0	1000.0	91.37	ml-ai-jargon
+1270	probability distribution	募	B	2	3	2	500.0	1000.0	91.4	ml-ai-jargon
+1271	hyperparameter tuning	勢	B	3	3	2	500.0	1000.0	91.43	ml-ai-jargon
+1272	F1 score	勤	B	3	3	2	500.0	1000.0	91.46	ml-ai-jargon
+1273	docker images	勿	B	2	2	1	1000.0	1000.0	91.49	shell-cli-git
+1274	go test	匙	B	2	2	1	1000.0	1000.0	91.51	shell-cli-git
+1275	cargo run	匹	B	2	2	1	1000.0	1000.0	91.54	shell-cli-git
+1276	dnf install	医	B	3	3	2	500.0	1000.0	91.57	shell-cli-git
+1277	Remove-Item	區	B	3	3	2	500.0	1000.0	91.6	shell-cli-git
+1278	```yaml	千	B	2	2	1	1000.0	1000.0	91.63	markdown-docs
+1279	## Features	升	B	2	2	1	1000.0	1000.0	91.65	markdown-docs
+1280	## Examples	半	B	2	2	1	1000.0	1000.0	91.68	markdown-docs
+1281	file path	协	B	2	2	1	1000.0	1000.0	91.71	markdown-docs
+1282	as needed	卒	B	2	2	1	1000.0	1000.0	91.74	markdown-docs
+1283	is optional	卓	B	2	2	1	1000.0	1000.0	91.77	markdown-docs
+1284	default value	協	B	2	2	1	1000.0	1000.0	91.8	markdown-docs
+1285	Back to top	卖	B	3	3	2	500.0	1000.0	91.82	markdown-docs
+1286	how would you like to proceed	単	B	6	6	5	200.0	1000.0	91.85	business-email
+1287	it was a pleasure meeting you	博	B	6	6	5	200.0	1000.0	91.88	business-email
+1288	No Content	占	B	2	2	1	1000.0	1000.0	91.91	web-http-api
+1289	endpoint path	卡	B	2	2	1	1000.0	1000.0	91.94	web-http-api
+1290	paginated	卢	B	2	2	1	1000.0	1000.0	91.96	web-http-api
+1291	endpoint that	卧	B	2	2	1	1000.0	1000.0	91.99	web-http-api
+1292	client_secret	卫	B	2	2	1	1000.0	1000.0	92.02	web-http-api
+1293	endpoint returns	印	B	2	2	1	1000.0	1000.0	92.05	web-http-api
+1294	IS DISTINCT FROM	危	B	3	3	2	500.0	1000.0	92.08	sql-data
+1295	keep in mind that	却	B	4	4	3	330.0	990.0	92.1	logic-reasoning
+1296	at most	卷	B	2	2	1	980.0	980.0	92.13	math-logic
+1297	for example,	卸	B	3	3	2	490.0	980.0	92.16	logic-reasoning
+1298	it is clear that	厂	B	4	4	3	325.0	975.0	92.19	logic-reasoning
+1299	as a matter of fact	厅	B	5	5	4	242.0	968.0	92.21	logic-reasoning
+1300	the rest of	厉	B	3	3	2	480.0	960.0	92.24	prose-collocations
+1301	at the end of	压	B	4	4	3	320.0	960.0	92.27	prose-collocations
+1302	e.target.value	厕	B	3	3	2	480.0	960.0	92.29	js-ts
+1303	we have that	厘	B	3	3	2	480.0	960.0	92.32	math-logic
+1304	the product of	厚	B	3	3	2	480.0	960.0	92.35	math-logic
+1305	suppose that	厦	B	3	3	2	480.0	960.0	92.38	math-logic
+1306	at least one	厨	B	3	3	2	480.0	960.0	92.4	math-logic
+1307	and so on	參	B	3	3	2	480.0	960.0	92.43	math-logic
+1308	as per our conversation	又	B	4	4	3	320.0	960.0	92.46	business-email
+1309	i would be grateful if	叉	B	5	5	4	240.0	960.0	92.48	business-email
+1310	we are pleased to announce	双	B	5	5	4	240.0	960.0	92.51	business-email
+1311	apologies for the delay	収	B	5	5	4	240.0	960.0	92.54	business-email
+1312	i would like to schedule	叔	B	5	5	4	240.0	960.0	92.56	business-email
+1313	does that work for you	受	B	5	5	4	240.0	960.0	92.59	business-email
+1314	have a great day	古	B	4	4	3	320.0	960.0	92.62	business-email
+1315	when you get a chance	句	B	5	5	4	240.0	960.0	92.64	business-email
+1316	i wanted to bring to your attention	另	B	7	7	6	160.0	960.0	92.67	business-email
+1317	i wanted to update you	叫	B	5	5	4	240.0	960.0	92.7	business-email
+1318	thanks for letting me know	召	B	5	5	4	240.0	960.0	92.73	business-email
+1319	due to	史	B	2	2	1	950.0	950.0	92.75	prose-connectives
+1320	## Architecture	叶	B	2	2	1	950.0	950.0	92.78	markdown-docs
+1321	in the meantime	吃	B	3	3	2	460.0	920.0	92.81	business-email
+1322	the equation	各	B	2	2	1	920.0	920.0	92.83	math-logic
+1323	in fact	吉	B	2	2	1	900.0	900.0	92.86	prose-connectives
+1324	of course	吊	B	2	2	1	900.0	900.0	92.88	prose-connectives
+1325	because of	吐	B	2	2	1	900.0	900.0	92.91	prose-connectives
+1326	the end of the	吕	B	4	4	3	300.0	900.0	92.93	prose-collocations
+1327	go through	吗	B	2	2	1	900.0	900.0	92.96	prompt-instructions
+1328	right now	君	B	2	2	1	900.0	900.0	92.98	prompt-instructions
+1329	understanding	吞	B	2	2	1	900.0	900.0	93.01	prose-multitoken-words
+1330	significantly	吟	B	2	3	2	450.0	900.0	93.03	prose-multitoken-words
+1331	def create_	吧	B	3	3	2	450.0	900.0	93.06	python
+1332	status_code=404	吨	B	4	4	3	300.0	900.0	93.08	python
+1333	status_code=400	吴	B	4	4	3	300.0	900.0	93.11	python
+1334	logging.getLogger(	吸	B	3	4	3	300.0	900.0	93.13	python
+1335	os.path.join(	吹	B	4	4	3	300.0	900.0	93.16	python
+1336	from dataclasses import	吻	B	4	4	3	300.0	900.0	93.18	python
+1337	or {}	吾	B	2	2	1	900.0	900.0	93.21	python
+1338	or []	呀	B	2	2	1	900.0	900.0	93.24	python
+1339	.get("type")	呈	B	4	4	3	300.0	900.0	93.26	python
+1340	.items()	呢	B	2	2	1	900.0	900.0	93.29	python
+1341	export default	味	B	2	2	1	900.0	900.0	93.31	js-ts
+1342	} catch (error) {	呵	B	6	6	5	180.0	900.0	93.34	js-ts
+1343	from 'react-router-dom'	呻	B	6	6	5	180.0	900.0	93.36	js-ts
+1344	removeEventListener(	呼	B	3	4	3	300.0	900.0	93.39	js-ts
+1345	useState(false)	咋	B	3	4	3	300.0	900.0	93.41	js-ts
+1346	{ ...	咖	B	2	2	1	900.0	900.0	93.44	js-ts
+1347	.length > 0	咨	B	4	4	3	300.0	900.0	93.46	js-ts
+1348	if (!	咪	B	2	2	1	900.0	900.0	93.49	js-ts
+1349	switch (	响	B	2	2	1	900.0	900.0	93.51	code-general
+1350	continue;	員	B	2	2	1	900.0	900.0	93.54	code-general
+1351	#include "	哥	B	2	2	1	900.0	900.0	93.56	code-general
+1352	void *	哦	B	2	2	1	900.0	900.0	93.59	code-general
+1353	:= range	哪	B	2	2	1	900.0	900.0	93.61	code-general
+1354	.expect(	哭	B	2	2	1	900.0	900.0	93.64	code-general
+1355	pub struct	哲	B	2	2	1	900.0	900.0	93.67	code-general
+1356	private final	唐	B	2	2	1	900.0	900.0	93.69	code-general
+1357	vec![	售	B	2	2	1	900.0	900.0	93.72	code-general
+1358	not found	唯	B	2	2	1	900.0	900.0	93.74	code-general
+1359	more detail	唱	B	2	2	1	900.0	900.0	93.77	prompt-instructions
+1360	keep it simple	啊	B	3	3	2	450.0	900.0	93.79	prompt-instructions
+1361	as a table	啥	B	3	3	2	450.0	900.0	93.82	prompt-instructions
+1362	in json	啦	B	2	2	1	900.0	900.0	93.84	prompt-instructions
+1363	do not add	啪	B	3	3	2	450.0	900.0	93.87	prompt-instructions
+1364	without any explanation	善	B	3	3	2	450.0	900.0	93.89	prompt-instructions
+1365	rewrite the	喊	B	2	2	1	900.0	900.0	93.92	prompt-instructions
+1366	extract the	喘	B	2	2	1	900.0	900.0	93.94	prompt-instructions
+1367	in javascript	喜	B	2	2	1	900.0	900.0	93.97	prompt-instructions
+1368	and returns	喝	B	2	2	1	900.0	900.0	93.99	prompt-instructions
+1369	given a	單	B	2	2	1	900.0	900.0	94.02	prompt-instructions
+1370	would you	営	B	2	2	1	900.0	900.0	94.04	prompt-instructions
+1371	please explain	喷	B	2	2	1	900.0	900.0	94.07	prompt-instructions
+1372	think about	嗎	B	2	2	1	900.0	900.0	94.09	prompt-instructions
+1373	why does	嗯	B	2	2	1	900.0	900.0	94.12	prompt-instructions
+1374	an expert	嘉	B	2	2	1	900.0	900.0	94.15	prompt-instructions
+1375	convert it to	嘎	B	3	3	2	450.0	900.0	94.17	prompt-instructions
+1376	in order	嘛	B	2	2	1	900.0	900.0	94.2	prompt-instructions
+1377	if there	嘴	B	2	2	1	900.0	900.0	94.22	prompt-instructions
+1378	i tried	嘿	B	2	2	1	900.0	900.0	94.25	prompt-instructions
+1379	hyperparameters	噜	B	2	2	1	900.0	900.0	94.27	ml-ai-jargon
+1380	self-supervised	团	B	3	3	2	450.0	900.0	94.3	ml-ai-jargon
+1381	training set	団	B	2	2	1	900.0	900.0	94.32	ml-ai-jargon
+1382	positional encoding	园	B	3	3	2	450.0	900.0	94.35	ml-ai-jargon
+1383	encoder-decoder	困	B	3	3	2	450.0	900.0	94.37	ml-ai-jargon
+1384	sequence-to-sequence	囲	B	4	4	3	300.0	900.0	94.4	ml-ai-jargon
+1385	in-context learning	図	B	3	3	2	450.0	900.0	94.42	ml-ai-jargon
+1386	ground-truth labels	围	B	4	4	3	300.0	900.0	94.45	ml-ai-jargon
+1387	loss.backward()	固	B	3	3	2	450.0	900.0	94.47	ml-ai-jargon
+1388	optimizer.step()	圆	B	3	3	2	450.0	900.0	94.5	ml-ai-jargon
+1389	billion parameters	圈	B	3	3	2	450.0	900.0	94.52	ml-ai-jargon
+1390	mean squared error	國	B	3	3	2	450.0	900.0	94.55	ml-ai-jargon
+1391	backward pass	園	B	2	3	2	450.0	900.0	94.58	ml-ai-jargon
+1392	virtualenv	圖	B	2	2	1	900.0	900.0	94.6	shell-cli-git
+1393	| awk	團	B	2	2	1	900.0	900.0	94.63	shell-cli-git
+1394	cargo test	圣	B	2	2	1	900.0	900.0	94.65	shell-cli-git
+1395	make install	圳	B	2	2	1	900.0	900.0	94.68	shell-cli-git
+1396	```sh	圾	B	2	2	1	900.0	900.0	94.7	markdown-docs
+1397	### Parameters	坂	B	2	2	1	900.0	900.0	94.73	markdown-docs
+1398	see above	均	B	2	2	1	900.0	900.0	94.75	markdown-docs
+1399	current directory	坊	B	2	2	1	900.0	900.0	94.78	markdown-docs
+1400	absolute path	坏	B	2	2	1	900.0	900.0	94.8	markdown-docs
+1401	is a function of	坐	B	4	4	3	300.0	900.0	94.83	math-logic
+1402	i am pleased to	坑	B	4	4	3	300.0	900.0	94.85	business-email
+1403	i am writing to inquire about	块	B	6	6	5	180.0	900.0	94.88	business-email
+1404	in response to your	坚	B	4	4	3	300.0	900.0	94.9	business-email
+1405	apologies for the delayed response	坛	B	6	6	5	180.0	900.0	94.93	business-email
+1406	going to	坝	B	2	2	1	900.0	900.0	94.95	business-email
+1407	as you can see	坡	B	4	4	3	300.0	900.0	94.98	business-email
+1408	to keep you in the loop	坦	B	6	6	5	180.0	900.0	95.01	business-email
+1409	whenever you have a moment	坪	B	6	6	5	180.0	900.0	95.03	business-email
+1410	it has come to my attention	垃	B	6	6	5	180.0	900.0	95.06	business-email
+1411	connection timeout	埃	B	2	2	1	900.0	900.0	95.08	web-http-api
+1412	retry logic	埔	B	2	2	1	900.0	900.0	95.11	web-http-api
+1413	PATCH request	域	B	2	2	1	900.0	900.0	95.13	web-http-api
+1414	URL encoded	培	B	2	2	1	900.0	900.0	95.16	web-http-api
+1415	request validation	堂	B	2	2	1	900.0	900.0	95.18	web-http-api
+1416	schema validation	堡	B	2	2	1	900.0	900.0	95.21	web-http-api
+1417	DROP INDEX	堵	B	2	2	1	900.0	900.0	95.23	sql-data
+1418	ILIKE	塑	B	2	2	1	900.0	900.0	95.26	sql-data
+1419	information_schema	塔	B	2	2	1	900.0	900.0	95.28	sql-data
+1420	in particular	塘	B	2	2	1	880.0	880.0	95.31	math-logic
+1421	due to the fact that	塞	B	5	5	4	220.0	880.0	95.33	business-email
+1422	in response to	境	B	3	3	2	440.0	880.0	95.36	business-email
+1423	recall that	墓	B	2	3	2	440.0	880.0	95.38	math-logic
+1424	given by	増	B	2	2	1	880.0	880.0	95.41	math-logic
+1425	i would appreciate	墙	B	3	3	2	440.0	880.0	95.43	business-email
+1426	thank you for your cooperation	墨	B	5	5	4	220.0	880.0	95.46	business-email
+1427	sorry for the late reply	壁	B	5	5	4	220.0	880.0	95.48	business-email
+1428	i would like to request	壇	B	5	5	4	220.0	880.0	95.51	business-email
+1429	this is a friendly reminder	士	B	5	5	4	220.0	880.0	95.53	business-email
+1430	it would be great if	壮	B	5	5	4	220.0	880.0	95.56	business-email
+1431	we apologize for any inconvenience	売	B	5	5	4	220.0	880.0	95.58	business-email
+1432	this means	変	B	2	2	1	880.0	880.0	95.6	logic-reasoning
+1433	as we can see	夏	B	4	4	3	290.0	870.0	95.63	logic-reasoning
+1434	because of this	夕	B	3	3	2	430.0	860.0	95.65	logic-reasoning
+1435	it turns out that	夜	B	4	4	3	285.0	855.0	95.68	logic-reasoning
+1436	}, [	够	B	2	2	1	850.0	850.0	95.7	js-ts
+1437	test set	夢	B	2	2	1	850.0	850.0	95.72	ml-ai-jargon
+1438	model architecture	太	B	2	2	1	850.0	850.0	95.75	ml-ai-jargon
+1439	## Requirements	夫	B	2	2	1	850.0	850.0	95.77	markdown-docs
+1440	this is because	央	B	3	3	2	425.0	850.0	95.8	logic-reasoning
+1441	furthermore	夹	B	3	3	2	420.0	840.0	95.82	prose-connectives
+1442	in the context of	夺	B	4	4	3	280.0	840.0	95.84	prose-connectives
+1443	in the end	奇	B	3	3	2	420.0	840.0	95.87	prose-connectives
+1444	Record<string,	奈	B	3	3	2	420.0	840.0	95.89	js-ts
+1445	is defined as	奉	B	3	3	2	420.0	840.0	95.91	math-logic
+1446	the values of	奋	B	3	3	2	420.0	840.0	95.94	math-logic
+1447	the set of all	奏	B	4	4	3	280.0	840.0	95.96	math-logic
+1448	with the same	契	B	3	3	2	420.0	840.0	95.99	math-logic
+1449	the right hand side	奔	B	4	4	3	280.0	840.0	96.01	math-logic
+1450	the left hand side	奖	B	4	4	3	280.0	840.0	96.03	math-logic
+1451	the length of	套	B	3	3	2	420.0	840.0	96.06	math-logic
+1452	i hope you had a great weekend	奥	B	7	7	6	140.0	840.0	96.08	business-email
+1453	in a timely manner	奴	B	4	4	3	280.0	840.0	96.1	business-email
+1454	at this time	奶	B	3	3	2	420.0	840.0	96.13	business-email
+1455	if you need anything	奷	B	4	4	3	280.0	840.0	96.15	business-email
+1456	i would like to bring to your attention	奸	B	8	8	7	120.0	840.0	96.17	business-email
+1457	i wanted to share	她	B	4	4	3	280.0	840.0	96.2	business-email
+1458	in light of this	妇	B	4	4	3	275.0	825.0	96.22	logic-reasoning
+1459	on the contrary	妈	B	3	3	2	410.0	820.0	96.24	logic-reasoning
+1460	as a result of	妓	B	4	4	3	270.0	810.0	96.27	logic-reasoning
+1461	as a whole	妖	B	3	3	2	400.0	800.0	96.29	prose-connectives
+1462	on behalf of	妙	B	3	3	2	400.0	800.0	96.31	business-email
+1463	the fact that	妞	B	3	3	2	400.0	800.0	96.33	prose-collocations
+1464	import time	妮	B	2	2	1	800.0	800.0	96.36	python
+1465	def update_	妹	B	3	3	2	400.0	800.0	96.38	python
+1466	*args, **kwargs	妻	B	5	5	4	200.0	800.0	96.4	python
+1467	datetime.now(	姆	B	3	3	2	400.0	800.0	96.42	python
+1468	conn.close()	姐	B	3	3	2	400.0	800.0	96.45	python
+1469	if TYPE_CHECKING:	姑	B	5	5	4	200.0	800.0	96.47	python
+1470	return True	姓	B	2	2	1	800.0	800.0	96.49	python
+1471	def _ensure_schema(conn	委	B	5	5	4	200.0	800.0	96.51	python
+1472	def to_dict(self)	姚	B	5	5	4	200.0	800.0	96.54	python
+1473	?: number	姜	B	2	2	1	800.0	800.0	96.56	js-ts
+1474	console.error(	姨	B	3	3	2	400.0	800.0	96.58	js-ts
+1475	default:	姿	B	2	2	1	800.0	800.0	96.6	code-general
+1476	_ =	威	B	2	2	1	800.0	800.0	96.63	code-general
+1477	() override {	娃	B	3	3	2	400.0	800.0	96.65	code-general
+1478	= default;	娇	B	3	3	2	400.0	800.0	96.67	code-general
+1479	= NULL;	娘	B	3	3	2	400.0	800.0	96.69	code-general
+1480	.begin()	娛	B	2	2	1	800.0	800.0	96.72	code-general
+1481	.end()	娜	B	2	2	1	800.0	800.0	96.74	code-general
+1482	.into()	娱	B	2	2	1	800.0	800.0	96.76	code-general
+1483	out of range	婆	B	3	3	2	400.0	800.0	96.78	code-general
+1484	@SuppressWarnings(	婚	B	2	3	2	400.0	800.0	96.81	code-general
+1485	private void	婦	B	2	2	1	800.0	800.0	96.83	code-general
+1486	as much detail	婷	B	3	3	2	400.0	800.0	96.85	prompt-instructions
+1487	json format	媒	B	2	2	1	800.0	800.0	96.87	prompt-instructions
+1488	format the	媳	B	2	2	1	800.0	800.0	96.9	prompt-instructions
+1489	without any	媽	B	2	2	1	800.0	800.0	96.92	prompt-instructions
+1490	rewrite this	嫁	B	2	2	1	800.0	800.0	96.94	prompt-instructions
+1491	that takes	嫂	B	2	2	1	800.0	800.0	96.96	prompt-instructions
+1492	please provide	嫌	B	2	2	1	800.0	800.0	96.99	prompt-instructions
+1493	clean up	嫩	B	2	2	1	800.0	800.0	97.01	prompt-instructions
+1494	go through each	嬉	B	3	3	2	400.0	800.0	97.03	prompt-instructions
+1495	have a look	孔	B	3	3	2	400.0	800.0	97.05	prompt-instructions
+1496	as if i	孕	B	3	3	2	400.0	800.0	97.08	prompt-instructions
+1497	convert the following	孙	B	3	3	2	400.0	800.0	97.1	prompt-instructions
+1498	make sure all	孟	B	3	3	2	400.0	800.0	97.12	prompt-instructions
+1499	line by line	季	B	3	3	2	400.0	800.0	97.14	prompt-instructions
+1500	make it shorter	孤	B	3	3	2	400.0	800.0	97.17	prompt-instructions
+1501	validation set	孩	B	2	2	1	800.0	800.0	97.19	ml-ai-jargon
+1502	precision and recall	學	B	3	3	2	400.0	800.0	97.21	ml-ai-jargon
+1503	natural language	宁	B	2	2	1	800.0	800.0	97.23	ml-ai-jargon
+1504	similarity search	它	B	3	3	2	400.0	800.0	97.26	ml-ai-jargon
+1505	model.train()	宅	B	3	3	2	400.0	800.0	97.28	ml-ai-jargon
+1506	model.eval()	宇	B	3	3	2	400.0	800.0	97.3	ml-ai-jargon
+1507	anomaly detection	守	B	3	3	2	400.0	800.0	97.32	ml-ai-jargon
+1508	one-hot encoding	宏	B	3	3	2	400.0	800.0	97.35	ml-ai-jargon
+1509	eslint .	宗	B	2	2	1	800.0	800.0	97.37	shell-cli-git
+1510	./configure	官	B	2	2	1	800.0	800.0	97.39	shell-cli-git
+1511	yum install	宜	B	2	2	1	800.0	800.0	97.41	shell-cli-git
+1512	AppData	宝	B	2	2	1	800.0	800.0	97.44	shell-cli-git
+1513	Set-Location	実	B	3	3	2	400.0	800.0	97.46	shell-cli-git
+1514	Invoke-WebRequest	宠	B	3	3	2	400.0	800.0	97.48	shell-cli-git
+1515	```tsx	宣	B	2	2	1	800.0	800.0	97.5	markdown-docs
+1516	```sql	室	B	2	2	1	800.0	800.0	97.53	markdown-docs
+1517	root directory	宫	B	2	2	1	800.0	800.0	97.55	markdown-docs
+1518	return value	宮	B	2	2	1	800.0	800.0	97.57	markdown-docs
+1519	Read more	害	B	2	2	1	800.0	800.0	97.59	markdown-docs
+1520	without loss of generality	宴	B	5	5	4	200.0	800.0	97.61	math-logic
+1521	it suffices to show	宽	B	5	5	4	200.0	800.0	97.64	math-logic
+1522	i am writing to request	宾	B	5	5	4	200.0	800.0	97.66	business-email
+1523	at this point in time	宿	B	5	5	4	200.0	800.0	97.68	business-email
+1524	i wanted to circle back	寄	B	5	5	4	200.0	800.0	97.7	business-email
+1525	on behalf of the team	富	B	5	5	4	200.0	800.0	97.73	business-email
+1526	keep me in the loop	寒	B	5	5	4	200.0	800.0	97.75	business-email
+1527	get back to you shortly	寓	B	5	5	4	200.0	800.0	97.77	business-email
+1528	we will be in touch	寝	B	5	5	4	200.0	800.0	97.79	business-email
+1529	any inconvenience this may have caused	察	B	6	6	5	160.0	800.0	97.82	business-email
+1530	i look forward to connecting	實	B	5	5	4	200.0	800.0	97.84	business-email
+1531	grant_type	寨	B	2	2	1	800.0	800.0	97.86	web-http-api
+1532	needless to say	寫	B	4	4	3	265.0	795.0	97.88	logic-reasoning
+1533	with that in mind	寶	B	4	4	3	260.0	780.0	97.91	business-email
+1534	is an element of	寸	B	4	4	3	260.0	780.0	97.93	math-logic
+1535	please be advised that	寺	B	4	4	3	260.0	780.0	97.95	business-email
+1536	nice to meet you	寻	B	4	4	3	260.0	780.0	97.97	business-email
+1537	consequently	対	B	2	3	2	380.0	760.0	97.99	logic-reasoning
+1538	with regard to	寿	B	3	3	2	380.0	760.0	98.01	business-email
+1539	for every	封	B	2	2	1	760.0	760.0	98.04	math-logic
+1540	the derivative of	専	B	3	3	2	380.0	760.0	98.06	math-logic
+1541	executescript(	射	B	4	4	3	250.0	750.0	98.08	python
+1542	= field(default_factory=dict)	將	B	6	6	5	150.0	750.0	98.1	python
+1543	= field(default_factory=list)	專	B	6	6	5	150.0	750.0	98.12	python
+1544	", ".join(	尊	B	4	4	3	250.0	750.0	98.14	python
+1545	getattr(request.state	尋	B	3	4	3	250.0	750.0	98.16	python
+1546	self.assertEqual(	對	B	3	4	3	250.0	750.0	98.18	python
+1547	export interface	導	B	2	2	1	750.0	750.0	98.21	js-ts
+1548	unreachable!()	尖	B	4	4	3	250.0	750.0	98.23	code-general
+1549	model training	尚	B	2	2	1	750.0	750.0	98.25	ml-ai-jargon
+1550	data science	尝	B	2	2	1	750.0	750.0	98.27	ml-ai-jargon
+1551	area under the curve	尤	B	4	4	3	250.0	750.0	98.29	ml-ai-jargon
+1552	the main idea	尸	B	3	3	2	375.0	750.0	98.31	logic-reasoning
+1553	in this context	尺	B	3	3	2	370.0	740.0	98.33	logic-reasoning
+1554	more often than not	尼	B	4	4	3	245.0	735.0	98.35	logic-reasoning
+1555	as mentioned above	尽	B	3	3	2	365.0	730.0	98.37	logic-reasoning
+1556	as opposed to	尾	B	3	3	2	360.0	720.0	98.39	prose-connectives
+1557	that being said	尿	B	3	3	2	360.0	720.0	98.41	business-email
+1558	appreciate	屁	B	3	3	2	360.0	720.0	98.43	prose-multitoken-words
+1559	is proportional to	层	B	3	3	2	360.0	720.0	98.45	math-logic
+1560	this implies that	居	B	3	3	2	360.0	720.0	98.47	math-logic
+1561	the absolute value of	届	B	4	4	3	240.0	720.0	98.49	math-logic
+1562	the rate of	屋	B	3	3	2	360.0	720.0	98.51	math-logic
+1563	the order of	屏	B	3	3	2	360.0	720.0	98.53	math-logic
+1564	in the form	属	B	3	3	2	360.0	720.0	98.55	math-logic
+1565	can be expressed as	履	B	4	4	3	240.0	720.0	98.57	math-logic
+1566	not equal to	屯	B	3	3	2	360.0	720.0	98.59	math-logic
+1567	is not equal to	岗	B	4	4	3	240.0	720.0	98.62	math-logic
+1568	going forward	岛	B	2	2	1	720.0	720.0	98.64	business-email
+1569	i apologize for	岡	B	3	3	2	360.0	720.0	98.66	business-email
+1570	by end of day	岩	B	4	4	3	240.0	720.0	98.68	business-email
+1571	happy to help	岭	B	3	3	2	360.0	720.0	98.7	business-email
+1572	all the best	岳	B	3	3	2	360.0	720.0	98.72	business-email
+1573	as a follow up	岸	B	4	4	3	240.0	720.0	98.74	business-email
+1574	just following up	峡	B	3	3	2	360.0	720.0	98.76	business-email
+1575	i trust this email finds you well	峰	B	7	7	6	120.0	720.0	98.78	business-email
+1576	i will follow up	島	B	4	4	3	240.0	720.0	98.8	business-email
+1577	here is a quick	崎	B	4	4	3	240.0	720.0	98.82	business-email
+1578	do not hesitate	∀	B	3	3	2	360.0	720.0	98.84	business-email
+1579	would you be available	∆	B	4	4	3	240.0	720.0	98.86	business-email
+1580	good to hear from you	∙	B	5	5	4	180.0	720.0	98.88	business-email
+1581	it was a pleasure	√	B	4	4	3	240.0	720.0	98.9	business-email
+1582	it is worth noting	∞	B	4	4	3	238.0	714.0	98.92	logic-reasoning
+1583	in this way	∨	B	3	3	2	355.0	710.0	98.94	logic-reasoning
+1584	that is	≈	B	2	2	1	700.0	700.0	98.96	prose-connectives
+1585	as mentioned	≤	B	2	2	1	700.0	700.0	98.98	markdown-docs
+1586	specifically	≥	B	2	2	1	700.0	700.0	99.0	prose-multitoken-words
+1587	deserialization	≫	B	2	2	1	700.0	700.0	99.02	web-http-api
+1588	conn.row_factory	℃	B	3	3	2	350.0	700.0	99.04	python
+1589	fetchall()]	№	B	3	3	2	350.0	700.0	99.06	python
+1590	in payload	Ω	B	2	2	1	700.0	700.0	99.08	python
+1591	str(value	⇒	B	2	2	1	700.0	700.0	99.1	python
+1592	, default=	□	B	3	3	2	350.0	700.0	99.12	python
+1593	logger.warning(	▪	B	3	3	2	350.0	700.0	99.13	python
+1594	logger.error(	▫	B	3	3	2	350.0	700.0	99.15	python
+1595	import os	▬	B	2	2	1	700.0	700.0	99.17	python
+1596	results.append(	▲	B	3	3	2	350.0	700.0	99.19	python
+1597	.items():	△	B	2	2	1	700.0	700.0	99.21	python
+1598	from datetime import	▶	B	3	3	2	350.0	700.0	99.23	python
+1599	.isoformat()	▷	B	3	3	2	350.0	700.0	99.25	python
+1600	VALUES (?, ?	▼	B	3	3	2	350.0	700.0	99.27	python
+1601	dict(row)	▽	B	3	3	2	350.0	700.0	99.29	python
+1602	return [	◆	B	2	2	1	700.0	700.0	99.31	python
+1603	= float(	◇	B	3	3	2	350.0	700.0	99.33	python
+1604	async def	○	B	2	2	1	700.0	700.0	99.35	python
+1605	.lower()	◎	B	2	2	1	700.0	700.0	99.37	python
+1606	.replace(	☎	B	2	2	1	700.0	700.0	99.39	python
+1607	.join(	☺	B	2	2	1	700.0	700.0	99.41	python
+1608	return False	♂	B	2	2	1	700.0	700.0	99.43	python
+1609	to_dict()	♡	B	3	3	2	350.0	700.0	99.45	python
+1610	useCallback(	♦	B	3	3	2	350.0	700.0	99.47	js-ts
+1611	?: boolean	♫	B	2	2	1	700.0	700.0	99.49	js-ts
+1612	async (	✅	B	2	2	1	700.0	700.0	99.51	js-ts
+1613	JSON.stringify(	✓	B	3	3	2	350.0	700.0	99.53	js-ts
+1614	string | undefined	✨	B	3	3	2	350.0	700.0	99.55	js-ts
+1615	null;	❤	B	2	2	1	700.0	700.0	99.57	js-ts
+1616	}, []);	➡	B	3	3	2	350.0	700.0	99.59	js-ts
+1617	))}	①	B	2	2	1	700.0	700.0	99.61	js-ts
+1618	process.env.	②	B	3	3	2	350.0	700.0	99.63	js-ts
+1619	key={	③	B	2	2	1	700.0	700.0	99.65	js-ts
+1620	Result<(),	④	B	2	2	1	700.0	700.0	99.67	code-general
+1621	private static	⑤	B	2	2	1	700.0	700.0	99.69	code-general
+1622	sizeof(	┃	B	2	2	1	700.0	700.0	99.71	code-general
+1623	make([]	├	B	2	2	1	700.0	700.0	99.72	code-general
+1624	.empty()	┣	B	2	2	1	700.0	700.0	99.74	code-general
+1625	.collect()	▀	B	2	2	1	700.0	700.0	99.76	code-general
+1626	testing.T	▄	B	2	2	1	700.0	700.0	99.78	code-general
+1627	func init()	▋	B	3	3	2	350.0	700.0	99.8	code-general
+1628	be concise	▒	B	2	2	1	700.0	700.0	99.82	prompt-instructions
+1629	as json	▓	B	2	2	1	700.0	700.0	99.84	prompt-instructions
+1630	output format	々	B	2	2	1	700.0	700.0	99.86	prompt-instructions
+1631	nothing else	〇	B	2	2	1	700.0	700.0	99.88	prompt-instructions
+1632	translate to	〈	B	2	2	1	700.0	700.0	99.9	prompt-instructions
+1633	using python	〉	B	2	2	1	700.0	700.0	99.92	prompt-instructions
+1634	takes a	〒	B	2	2	1	700.0	700.0	99.94	prompt-instructions
+1635	leave the rest	〔	B	3	3	2	350.0	700.0	99.96	prompt-instructions
+1636	as is	〕	B	2	2	1	700.0	700.0	99.98	prompt-instructions
+1637	below is	〖	B	2	2	1	700.0	700.0	100.0	prompt-instructions
