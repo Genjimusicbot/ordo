@@ -228,6 +228,27 @@ save AND blind-judged quality ≥ English (6-2-1), with honest nulls (no wall-cl
 hallucination reduction on a saturated frontier baseline). The deanchor reframe was correct and is now
 the default. Built, measured, audit-ready.
 
+## Inbound layer — headroom integration (2026-06-24)
+The third side of the token triangle: compress what the model READS (docs/tools/logs/code/history),
+not just the command (grammar) and the response (verbosity). Integrated `headroom-ai` 0.27.0
+(Apache-2.0) — cloned, read the source, installed the pip package + onnxruntime, measured on our content.
+- **`harness/inbound.py`** — take-best-of {headroom, our TSV/whitespace} per content, with an
+  inflation guard; `docs/pipeline.md` (the 3-stage architecture + 9 novel inbound levers);
+  `tools/pipeline_recalc.py` (the pool-weighted total).
+- **Measured (not the marketing 90%):** logs/tool-output **92%** (headroom — its real sweet spot),
+  structured JSON **55%** (OUR TSV; base-headroom noop'd it), code 7%, dense prose **0%** (Kompress ML
+  needs onnxruntime and is lossy+modest). **Take-best mixed inbound = 45%.**
+- **Recalculated full-pipeline total:** realistic agent turn **~47% combined**; log/tool-heavy **~88%**;
+  dense-prose-library **~13%** (inbound resists → output + novel levers carry it).
+- **Honest finding:** headroom's 92% is **lossy SAMPLING** ("[40 matches compressed to 5. Retrieve
+  more: hash=…]" + CCR retrieval) — gist-preserving, aggregate-lossy. Routing rule: lossless TSV when
+  the model must ANALYZE; headroom sampling only for SHAPE-only context. "90% on docs" = "90% on
+  redundant agent context," not dense prose. Headroom's output-verbosity overlaps our ponytail, so we
+  do NOT double-stack; headroom owns inbound, ORDO owns command, our layer owns output.
+- **Novel levers identified (beyond headroom), 2 that compose with ORDO:** glossary-inward (apply our
+  phrase/macro map to documents) and relevance-gating (LongLLMLingua's +17% RAG — compression that
+  IMPROVES quality). JIT/don't-send-it is the biggest but belongs in the auto-apply runtime.
+
 ## The language is done (P0-P4). Next: the harness (separate concept)
 P0 alphabet → P1.x pool/matrix/allocation → P2 grammar (ORDO-G, ~35%, decode 1.70) → P3 output
 framework (format-by-shape + ponytail 77% + caveman) → P4 skillstone (`ORDO.md`, 1.75/2). The LANGUAGE
