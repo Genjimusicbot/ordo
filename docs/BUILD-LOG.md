@@ -60,6 +60,29 @@ is OPEN. No saving is claimed without a `tokcost.py` number; no symbol ships wit
   in-context adjacency re-validated in Phase 4; the ALPHABET ASSIGNMENT (which alien glyph maps to
   which directive/operand/modifier) is the next design step, drawing from this pool.
 
+## P1.6 — the compression matrix (frequency x token-cost) (2026-06-24)
+- **What:** `tools/freqmatrix.py` + `spec/word-matrix.tsv` + `spec/phrase-matrix.tsv` +
+  `spec/compression-map.md` + `spec/compression-map.tsv` — a measured ranking of WHICH words/phrases
+  are worth glyphing (by total token savings = frequency x tokens-saved), and the 27-phrase map.
+- **How:** real Zipf frequencies via `wordfreq`; measured running-text (space-prefixed) token cost on
+  cl100k + o200k; scored each item in "tokens saved per 1M words"; assigned the top phrases to CJK
+  morpheme glyphs (mnemonic + repurposed: 因=because, 例=for example).
+- **Checked/verified (the empirical record):**
+  - **Single-word layer is a dead lever:** of ~29k real words, only 35% are multi-token in o200k;
+    glyphing ALL of them = **~3.3%** of a token stream, and the top items are PROPER NOUNS (February,
+    Jesus, Russia) -> useful word lever **~1%**. Measured, surprising, and it kills the obvious
+    "swap common words" plan.
+  - **Phrase layer is the real vocabulary lever:** 27 collocations mapped to CJK glyphs, every glyph
+    re-verified **1/1 token**, no decode collisions, avg **1.59 tokens saved/use** (max 3: "at the
+    same time" 同, "on the other hand" 反).
+  - Caught + fixed 6 candidate glyphs that were 2-token in cl100k (故须凡顾差 + 譬) -> swapped for 1/1
+    (则确总量异) before shipping. The gate worked.
+  - Conclusion recorded in the doc: effort goes to **phrases + command structure + verbosity**, NOT
+    single-word substitution.
+- **Open:** phrase frequencies are coarse estimates (refine from a real corpus); CJK 1-token cost is
+  o200k/cl100k-proven, Claude tokenizer unverified (Phase 4); the directive+phrase layers stack but
+  sentence-level net savings measured in Phase 4.
+
 ## Next: P2 — the grammar
 Operand type-tags (text/file/code/list determinatives), the modifier set (brevity/length/format/
 tone), the mandatory epistemic slot (certainty + source), directive chaining (pipe), and the

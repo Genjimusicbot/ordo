@@ -1,0 +1,42 @@
+phrase	cl100k	o200k	saved	score_per_1M	freq_per_1M_est
+as well as	3	3	2	1200	600
+a lot of	3	3	2	1200	600
+in order to	3	3	2	1000	500
+the following	2	2	1	900	900
+for example	2	2	1	700	700
+such as	2	2	1	700	700
+make sure	2	2	1	500	500
+based on	2	2	1	500	500
+as a result	3	3	2	500	250
+in terms of	3	3	2	500	250
+on the other hand	4	4	3	450	150
+at the same time	4	4	3	450	150
+I would like to	4	4	3	450	150
+according to	2	2	1	400	400
+in other words	3	3	2	400	200
+in this case	3	3	2	400	200
+can you	2	2	1	400	400
+step by step	3	3	2	300	150
+let me know	3	3	2	300	150
+as soon as	3	3	2	300	150
+in addition	2	2	1	250	250
+keep in mind	3	3	2	240	120
+with respect to	3	3	2	240	120
+write a function that	4	4	3	240	80
+for instance	2	2	1	200	200
+note that	2	2	1	200	200
+feel free to	3	3	2	200	100
+could you	2	2	1	200	200
+in general	2	2	1	200	200
+make a list of	4	4	3	180	60
+for the most part	4	4	3	180	60
+the difference between	3	3	2	180	90
+take into account	3	3	2	160	80
+due to the fact that	5	5	4	160	40
+more or less	3	3	2	160	80
+return value	2	2	1	120	120
+as shown	2	2	1	100	100
+the bug	2	2	1	90	90
+error handling	2	2	1	90	90
+unit test	2	2	1	90	90
+please	1	1	0	0	800
