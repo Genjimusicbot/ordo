@@ -13,4 +13,6 @@ C7 intent-as-symbol · C8 harness · C9 committed+verdict.
 | 5 | P7/C3 | end-to-end floor: 3 realistic exchanges (prompt+output) English→ORDO = 495→178 = **64%** combined | **C3 PASS** | 4/9 |
 | 6 | P8/C4+C6 | blind A/B 9 tasks: quality ORDO 6 wins / 2 tie / 1 loss (structure-driven, readable-ORDO) → **quality holds/exceeds**; output tokens 6468→4423 = ~32% (≈48% ex one over-delivery outlier) | **C4 PASS, C6 PASS** | 6/9 |
 | 7 | P7/C7 | built spec/macros.md (16 intent-as-symbol macros, avg 8.2tok→1.4tok, saved 6.8/use); decode test launched | running | 6/9 |
-| 8 | P8/C5 | hallucination/epistemic experiment launched | running | 6/9 |
+| 8 | P8/C7 | macro decode test: mean **1.8/2** (54/60), deterministic; bare-subject fix noted | **C7 PASS** | 7/9 |
+| 9 | P8/C5 | hallucination v1: both arms 0/24 confident-wrong, 8/8 abstain — markers DON'T backfire but test under-discriminates (easy fictional items); T1 escalation → harder traps | inconclusive → re-run | 7/9 |
+| 10 | P8/C5b | hallucination v2: invention-bait + false-premise traps where a plain reader slips | running | 7/9 |

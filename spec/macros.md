@@ -34,6 +34,11 @@ own best behaviors (chain-of-thought, devil's advocate, senior-review) get trigg
 layer is also a **quality** lever, not only a token lever — a 1-token code that reliably invokes a
 strong reasoning mode.
 
+## Decode rule (from the C7 test, 1.8/2)
+A macro **augments** the base instruction, it does not replace it. `this gap` = "address this, AND what
+am I not asking" (not just the gap question alone). The only decode miss in testing was decoders
+dropping the implicit "answer this" on a bare-subject + macro form; reading a macro as additive fixes it.
+
 ## Honesty
 Codes are readable English abbreviations (some are established: eli5, cot) so decode is reliable;
 exotic single-glyph versions were rejected (deanchor: they cost reliability for ~0 extra tokens). The
