@@ -1,0 +1,11 @@
+{
+  "name": "ordo",
+  "owner": { "name": "SprucetheAI", "url": "https://github.com/SprucetheAI" },
+  "plugins": [
+    {
+      "name": "ordo",
+      "source": "./",
+      "description": "The ORDO context-engineering framework as an installable skill — compress + 6 classify-first gates + 10 pillars + ledger orchestration, paste-free. Activates on coding/agentic tasks; silent on trivial replies."
+    }
+  ]
+}

@@ -1,5 +1,7 @@
 #!/usr/bin/env node
 import { decode, emit, ponytailFlags, compressInbound, getOperatingProfile, getSkillstone } from "../src/index.js";
+import { measure, render } from "../tools/measure.mjs";
+import { initProject } from "../src/init.js";
 
 const [cmd, ...args] = process.argv.slice(2);
 const arg = args.join(" ");
@@ -11,6 +13,8 @@ switch (cmd) {
   case "emit": { try { console.log(emit(JSON.parse(arg))); } catch { console.error("emit needs a JSON arg"); process.exit(1); } break; }
   case "profile": case "spec": console.log(getOperatingProfile()); break;
   case "skillstone": console.log(getSkillstone()); break;
+  case "measure": { const di = args.indexOf("--dir"); console.log(render(measure(di >= 0 ? args[di + 1] : undefined), args.includes("--json"))); break; }
+  case "init": console.log(initProject(args[0])); break;
   default:
     console.log(`ORDO — context-engineering framework for LLMs
 

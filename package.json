@@ -6,11 +6,11 @@
   "main": "src/index.js",
   "exports": { ".": "./src/index.js" },
   "bin": { "ordo": "bin/ordo.js" },
-  "files": ["src", "bin", "ORDO.md", "OPERATING-PROFILE.md", "spec", "DISCLAIMERS.md", "BENCHMARKS.md"],
+  "files": ["src", "bin", "tools", "skills", ".claude-plugin", "ORDO.md", "OPERATING-PROFILE.md", "CONTEXT-SAVER.md", "spec", "DISCLAIMERS.md", "BENCHMARKS.md"],
   "scripts": { "test": "node --test test/test.mjs" },
   "keywords": ["llm", "tokens", "token-compression", "context-engineering", "prompt-engineering", "ordo", "agents", "context-rot", "ai"],
   "license": "MIT",
   "engines": { "node": ">=18" },
-  "repository": { "type": "git", "url": "git+https://github.com/Genjimusicbot/ordo.git" },
-  "homepage": "https://github.com/Genjimusicbot/ordo#readme"
+  "repository": { "type": "git", "url": "git+https://github.com/SprucetheAI/ordo.git" },
+  "homepage": "https://github.com/SprucetheAI/ordo#readme"
 }

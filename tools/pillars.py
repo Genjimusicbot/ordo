@@ -34,9 +34,36 @@ def _inbound_gate():
     return 100 * (b - a) // max(b, 1), eng
 
 
+def _p3():
+    """P3: the real cost/token/duration meter is now BUILT — `node tools/measure.mjs` reads Anthropic's own
+    `usage.*` + timestamps from Claude Code's JSONL (lossless billed counts, no re-tokenization). Status
+    upgrades to COMPUTED the moment a paired A/B is recorded in tools/measure-ab.json
+    ({"on": <measure result>, "off": <measure result>}); until then the SPEED claim stays a proxy — the meter
+    measures real spend/duration, but an ORDO on-vs-off delta needs the paired run."""
+    ab = ROOT / "tools" / "measure-ab.json"
+    if ab.exists():
+        try:
+            d = json.loads(ab.read_text(encoding="utf-8"))
+            on, off = d["on"]["totals"], d["off"]["totals"]
+            dt = 100 * (off["totalTokens"] - on["totalTokens"]) // max(off["totalTokens"], 1)
+            dc = off["costUsd"] - on["costUsd"]
+            return ("COMPUTED",
+                    f"A/B measured: {dt}% fewer tokens, ${dc:.4f} cheaper (ORDO on vs off) via tools/measure.mjs — "
+                    "real billed usage.* counts; retail prices DIRECTIONAL for Max-plan users",
+                    "ordo measure on-run vs off-run (tools/measure-ab.json)")
+        except Exception:
+            pass
+    return ("PROXY-ONLY",
+            "output-token saving is the proxy; the real meter is BUILT (node tools/measure.mjs reads billed "
+            "usage.*+duration from Claude Code JSONL, lossless) — record a paired on/off run to "
+            "tools/measure-ab.json to upgrade this to COMPUTED",
+            "ordo measure A/B (harness built; paired run pending)")
+
+
 def scorecard():
     cut, flags = _ponytail_gate()
     p1, eng = _inbound_gate()
+    p3_status, p3_value, p3_gate = _p3()
     return [
         {"id": "P1", "name": "Context length (inbound)", "status": "COMPUTED",
          "value": f"lossless TSV {p1}% on structured (mixed corpus 45%); headroom 92% on redundant (lossy, gated)",
@@ -44,9 +71,7 @@ def scorecard():
         {"id": "P2", "name": "Token output", "status": "COMPUTED",
          "value": f"ponytail {cut}% computed live on this sample; 77% on a longer verbose sample (agent-measured)",
          "gate": "ponytail filler-cut, quality-equality"},
-        {"id": "P3", "name": "Speed (wall-clock)", "status": "PROXY-ONLY",
-         "value": "output-token saving is the proxy; true ms/turn needs a controlled timing harness",
-         "gate": "time real paired calls (TODO)"},
+        {"id": "P3", "name": "Speed (wall-clock)", "status": p3_status, "value": p3_value, "gate": p3_gate},
         {"id": "P4", "name": "Quality of output", "status": "AGENT-JUDGED",
          "value": "ORDO 6 win / 2 tie / 1 loss vs English (blind, structure-driven)",
          "gate": "multi-agent blind judge (C4)"},
