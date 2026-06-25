@@ -72,10 +72,10 @@ export function aggregate(records) {
     if (!prev || tot(r.usage) > tot(prev.usage)) seen.set(r.key, r);
   }
   const sessions = new Map(); const warnings = new Set();
-  let tIn = 0, tOut = 0, tCW = 0, tCR = 0, cost = 0, minTs = null, maxTs = null;
+  let tIn = 0, tOut = 0, tCW = 0, tCR = 0, cost = 0, minTs = null, maxTs = null, defaultTokens = 0;
   for (const r of seen.values()) {
     const { price, matched } = priceFor(r.model);
-    if (!matched) warnings.add(r.model || "(no model field)");
+    if (!matched) { warnings.add(r.model || "(no model field)"); defaultTokens += tot(r.usage); }
     const c = costOf(r.usage, price); const u = r.usage;
     tIn += u.input_tokens || 0; tOut += u.output_tokens || 0;
     tCW += u.cache_creation_input_tokens || 0; tCR += u.cache_read_input_tokens || 0; cost += c;
@@ -87,6 +87,7 @@ export function aggregate(records) {
     sessions: [...sessions.values()].sort((a, b) => b.costUsd - a.costUsd),
     totals: { messages: seen.size, inputTokens: tIn, outputTokens: tOut, cacheWriteTokens: tCW,
       cacheReadTokens: tCR, totalTokens: tIn + tOut + tCW + tCR, costUsd: cost,
+      defaultTokens, defaultPct: Math.round(100 * defaultTokens / Math.max(tIn + tOut + tCW + tCR, 1)),
       durationMs: (minTs !== null && maxTs !== null) ? maxTs - minTs : null },
     warnings: [...warnings],
   };
@@ -117,7 +118,7 @@ export function render(result, json = false) {
   lines.push("");
   lines.push(`TOTAL\tmsgs=${t.messages}\ttokens=${t.totalTokens}\t$${t.costUsd.toFixed(4)}` + (t.durationMs !== null ? `\tspan=${(t.durationMs / 60000).toFixed(1)}min` : ""));
   lines.push(`tokens: in=${t.inputTokens} out=${t.outputTokens} cacheW=${t.cacheWriteTokens} cacheR=${t.cacheReadTokens}`);
-  if (result.warnings.length) lines.push(`WARN unpriced (counted at sonnet-default, directional): ${result.warnings.join(", ")}`);
+  if (result.warnings.length) lines.push(`WARN unpriced (counted at sonnet-default): ${result.warnings.join(", ")} — ${t.defaultPct}% of tokens are default-priced, so the $ is only that-much directional`);
   lines.push("# retail per-token prices — DIRECTIONAL for Max-plan users (right for A/B deltas, wrong for absolute spend)");
   return lines.join("\n");
 }

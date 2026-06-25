@@ -13,11 +13,12 @@
 
 <p align="center">
   <a href="#what-is-ordo">What</a> ·
-  <a href="#what-ordo-is-trying-to-solve">Why</a> ·
+  <a href="#who-needs-ordo-and-what-it-fixes-for-you">Who needs it</a> ·
   <a href="#how-to-use-plug-and-play">How to use</a> ·
-  <a href="#how-it-works">How it works</a> ·
-  <a href="#the-numbers">Numbers</a> ·
-  <a href="#inspired-by-shoulders-of-giants">Inspired by</a>
+  <a href="#architecture--the-four-layers">Architecture</a> ·
+  <a href="#the-gates-classify-then-route">Gates</a> ·
+  <a href="#the-pillars-what-it-optimizes">Pillars</a> ·
+  <a href="#the-numbers">Numbers</a>
 </p>
 
 ---
@@ -48,6 +49,29 @@ Three problems every heavy LLM user hits:
   output and the inbound are mostly recoverable filler.
 - **Vibe-coded answers.** The first plausible draft ships a bug, or over-engineers, or quietly bends the
   spec to fit habit. There's no gate forcing "do it good, not fast."
+
+## Who needs ORDO (and what it fixes for you)
+
+You, if you spend real money or real context on an LLM and feel it getting dumber as the session grows.
+Concretely:
+
+- **You live in Claude Code / Cursor and the bills or limits sting.** ORDO's output contract + inbound
+  compaction cut the token bulk of every turn — a structured-data turn drops **~47–68% (measured)** — and
+  `npx ordo measure` shows you the real dollar delta from *your own* logs.
+- **Your long sessions start sharp and end sloppy.** That's context rot (a 200K model degrades at ~50K —
+  Chroma, measured). ORDO's context-rot gate externalizes state to a ledger and compacts *before* the window
+  starves, keeping the load-bearing facts at the high-attention edges instead of the lost middle.
+- **You're not a coder and "prompt engineering" sounds like work.** Install once
+  (`/plugin marketplace add SprucetheAI/ordo` or `npx ordo init`) and `/ordo` runs the whole discipline for
+  you — no pasting, no glyphs, nothing to learn.
+- **Your agent loops, thrashes, or ships a confident-but-wrong first draft.** The gates catch it: REFEED
+  bug-checks, the autonomy gate kills a thrash in ~3 reps, the evaluation gate refuses to rate a
+  plausible-wrong answer highly.
+- **You feed JSON / logs / data to a model.** Stop pretty-printing — that one change is a **free ~47%
+  (measured)**, and ORDO does it for you automatically.
+
+If you only ever take one thing: **stop pretty-printing your JSON.** ORDO is the rest of that instinct,
+measured and packaged so you don't have to think about it.
 
 ## How to use (plug-and-play)
 
@@ -109,6 +133,55 @@ the evaluation gate judges against the real goal, never the prompt, and knows a 
 gold-plated 10. Long runs get an autonomy loop that **kills wrongful loops** and a context-rot gate that
 **compacts to a ledger** before the window starves.
 
+## Architecture — the four layers
+
+ORDO is a stack, not a trick. Each layer is independent; load only what you want (the two lanes).
+
+1. **COMPRESS** — emit only what serves, cheapest faithful form.
+   - *Input:* readable-ORDO grammar (terse shorthand the model reads directly; glyphs are an opt-in dense mode).
+   - *Output:* format-by-shape (tabular → TSV, nested → minified JSON, **never pretty-print**) + ponytail (cut
+     preamble / restate / closer, lossless).
+   - *Inbound:* compress what the model reads, behind a **measured-revert gate** — every transform is re-measured
+     and reverted if it doesn't shrink (worst case = passthrough, **never inflation**); a lossy cut must also pass
+     a coverage check (the query-relevant terms survive) or it's dropped.
+   - *Code context (optional):* query a code-graph provider for structure (parsed free), open the file for the
+     exact bytes — never trust an inferred edge as fact.
+2. **GATES** — classify the task first, then route to the cheapest sufficient process (table below). A simple task
+   gets a single pass; only hard / long / forky work pays for a gate.
+3. **PILLARS** — the ten dimensions it optimizes, each test-gated, each tagged by evidence tier — no number ships
+   above its evidence.
+4. **ORCHESTRATION** — for breadth or scale, fan out through an append-only **ledger** (state out of context,
+   resumable), single-writer, handoffs-as-pointers, every side effect through an approval queue.
+
+A real meter (`npx ordo measure`) reads your own session logs and prices them, so you can A/B the whole stack in
+actual dollars — not a vibe.
+
+## The gates (classify, then route)
+
+Each fires only where it earns its cost.
+
+| your task | gate | what it does |
+|---|---|---|
+| easy / one right answer | **single pass** | just do it — looping is tax |
+| hard, one right answer | **REFEED** | draft → typed critique → verify → refeed the *delta* → stop at the optimal band. Measured: flaws **4→0** (caught a confident-wrong blocker) at 3.3× tokens — use where a latent bug costs more than the passes |
+| hard, real fork (architecture/algorithm) | **EXPERIMENTALIST** | a conventional ∥ a divergent approach → synthesize best-of-both. Measured **3/4 wins** on hard forks |
+| any artifact, before "done" | **EVALUATION** | rate vs the REAL goal, not the prompt; debias; **10 ≠ the target** (over-engineering scores *down*). Validated **9 / 3 / 0** on right-scoped / over-built / plausible-wrong |
+| long autonomous run | **AUTONOMY** | propose-only acts, verify, escalate on a ladder, **kill wrongful loops** (a `(tool,args,result)` fingerprint catches a thrash in ~3 reps), hard budgets |
+| long / many-file context | **CONTEXT-ROT** | route complex work to a ledger + compact-at-threshold; keep load-bearing facts at the edges; rehydrate via the test gate. Simple work stays standard — **no overhead** |
+
+Plan a multi-step job with the **decompose contract** (a lower-id-only DAG + a per-node `testStrategy` + complexity-gated expansion); the autonomy gate iterates it.
+
+## The pillars (what it optimizes)
+
+P1 context · P2 token-output · P3 speed/cost · P4 quality · P5 hallucination · P6 tidyness · P7 architecture ·
+P8 rework · P9 long-form/loop · P10 context-integrity.
+
+Each carries an **evidence tier** in [`tools/pillars.py`](tools/pillars.py): **COMPUTED** (a script reproduces it
+cold), **AGENT-JUDGED** (a blind multi-agent test produced it), **GROUNDED** (measured in the literature; our
+mitigation pending a harness), **PROXY-ONLY** (an indirect proxy). P3 (speed/cost) now has a real meter
+(`ordo measure`) — it auto-upgrades to COMPUTED once you record a paired on/off A/B. The honest rule: **a number
+counts only against its tier**; we never print AGENT-JUDGED as COMPUTED.
+
 ## The numbers
 
 <div align="center"><img src="figures/savings.svg" alt="measured token reduction by layer" width="780"></div>
@@ -129,18 +202,32 @@ then **what ORDO actually measured**. We don't inherit their numbers — we cite
 | Chroma · Lost-in-the-Middle · RULER · NoLiMa | context rot is real (−20 to −58pp) | the context-rot gate | **grounded**; ledger + compact-at-threshold |
 | Ponytail · ADAPT · ultra-analytics (house) | lean · drive-to-done · unbiased rating | tidyness · autonomy loop · the evaluation gate | **−42% first-pass flaws**; self-eval 6.5/10 |
 
-### Our expected reality (the honest blend)
-| | reduction | tier |
-|---|---|---|
-| input command grammar | **~32%** | computed |
-| output contract (format + ponytail) | **~55–77%** lossless | computed |
-| inbound context | 0–92% (shape-dependent) | computed |
-| **end-to-end, realistic turn** | **~47–64%** | computed |
-| output quality vs plain English | **6 win / 2 tie / 1 loss** (blind) | agent-judged |
-| **NULLS — don't believe otherwise** | single-word swaps ~1% · glyphs *inflate* tokens · **no proven wall-clock speed win** · no hallucination cut on strong models | computed / judged |
+### Measured A/B — ORDO on vs off, per layer (real o200k counts)
+Every number is tiktoken-counted; reproduce with `python tools/ab_smoke.py`. The full variant ladder and the
+weak spots are in [`docs/AB-SMOKE-TESTS.md`](docs/AB-SMOKE-TESTS.md).
 
-All token costs are GPT-`tiktoken` proxies — **re-validate on your model.** Full reproduce commands in
-[`BENCHMARKS.md`](BENCHMARKS.md); every claim with its evidence in [`VERDICT.md`](VERDICT.md).
+| layer | A (no ORDO) | best ORDO | reduction |
+|---|---|---|---|
+| input command (grammar) | 31 tok | 16 / 11 | **−48% readable · −65% glyph** |
+| output format (tabular) | 417 tok | 221 / 94 | **−47% minify (free) · −77% TSV** |
+| output verbosity (ponytail) | 58 tok | 17 | **−71%** lossless |
+| inbound — structured | 729 tok | 225 | **−69%** lossless |
+| inbound — prose (lossless floor) | 54 tok | 41 | **−24%** |
+| **end-to-end realistic turn** | 819 tok | 260 | **−68%** (shape-dependent) |
+| output quality vs plain English | — | — | **6 win / 2 tie / 1 loss** (blind, agent-judged) |
+
+**The honest read:** on a structured-data-heavy turn ORDO cuts **~47–68% losslessly**; the single biggest
+universal win is *stop pretty-printing JSON* (**−47%, free, any JSON**). On a prose-heavy turn the lossless floor
+is modest (**~24%**) — bigger numbers need opt-in, coverage-gated lossy compaction. The glyph input row is the
+least transferable (CJK tokenizes differently on Claude) — **readable-ORDO is the safe default.** Real-world:
+`ordo measure` on 42 days of logs read **18.6B tokens / 71,736 messages**, 93% priced against real model rates.
+
+**NULLS — don't believe otherwise:** single-word substitution ~1% (dead) · exotic/glyph *surface* inflates
+tokens · **no proven wall-clock speed win** (only an output-token proxy; the meter is built, the A/B unrecorded) ·
+no hallucination cut on a strong model (and no backfire either).
+
+All token costs are GPT-`tiktoken` proxies — **re-validate on your model.** Reproduce: `python tools/ab_smoke.py`,
+`python tools/formatbench.py`, `npx ordo measure`. Every claim with its evidence tier in [`VERDICT.md`](VERDICT.md).
 
 ## Inspired by (shoulders of giants)
 Headroom · Caveman · Ponytail · TOON · LLMLingua (Microsoft) · GLOSSOPETRAE (elder_plinius) · Lojban ·

@@ -69,6 +69,16 @@ test("aggregate dedupes on key (keep-best) and sums real tokens + duration", () 
   assert.strictEqual(r.totals.durationMs, 10 * 60 * 1000);  // 10min span
   assert.ok(r.totals.costUsd > 0 && r.warnings.length === 0);
 });
+test("aggregate reports the default-priced share (how directional the $ is)", () => {
+  const recs = [
+    { sessionId: "s", model: "claude-sonnet-4", ts: null, usage: { input_tokens: 100, output_tokens: 0 }, key: "a" },
+    { sessionId: "s", model: "totally-unknown-model", ts: null, usage: { input_tokens: 300, output_tokens: 0 }, key: "b" },
+  ];
+  const r = aggregate(recs);
+  assert.strictEqual(r.totals.defaultTokens, 300);
+  assert.strictEqual(r.totals.defaultPct, 75);             // 300/400 priced at the default
+  assert.ok(r.warnings.includes("totally-unknown-model"));
+});
 
 // --- Phase 6: opt-in model routing (default-strong, never auto-downgrade) ---
 test("resolveModel is default-strong with no policy (never downgrades)", () => {
