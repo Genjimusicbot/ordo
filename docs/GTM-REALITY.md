@@ -108,17 +108,21 @@ is [`spec/thinking.md`](../spec/thinking.md) + `classifyTask()`.
 - **complexity-gate** (`classifyTask`) — triages every task in one 1× pass; LIGHT → direct answer (no tax), STRICT
   → armed discipline only for irreversible/multi-fork/long/broad work, strong model always (FrugalGPT triage). The
   overhead SAVED on light turns is measurable; measured **100% inter-rater CONSISTENCY** (36/36 on a constructed
-  corpus) — that is rule-application *reliability*, **NOT** real-world accuracy / misroute rate (no ground-truth labels).
-- **divergence** — **CLAIM WITHDRAWN.** A larger-N blind A/B (6 items × 2 judges) came out **net-negative**
-  (4W/1T/7L), overturning the early n=4 "3/4" signal. The move is scope-narrowed (fire only when the modal answer
-  is demonstrably weak) and claims nothing — a regression flag, not a win.
+  corpus) — *reliability only, NOT accuracy* (no ground truth). **Headline withdrawn**; `route_truth.py` (charter §2)
+  earns the real COMPUTED misroute number (cost-weighted, under-verify-on-irreversible floor = 0).
+- **divergence** — **GENERATIVE HALF CUT (claim NULL).** Net-negative at larger-N (4W/1T/7L); Snell/MoA/Sakana
+  predicted the null (single-pass had no verifier, no aggregator, no diverse proposers). **Deleted, not threshold-
+  tuned** — what survives is a one-line FLAG that escalates a hard-fork-weak-modal case to the experimentalist gate
+  (the only width config that survived a real cull, 3W/1T). See [`IMPROVEMENT-CHARTER.md`](IMPROVEMENT-CHARTER.md) §5.
 - **diction** — cheapest-faithful word *form* for steadier, lower-variance output; a determinism/register win,
   **not** a token-% claim (that lever is ~1%, dead — BPE already 1-tokens common words).
 - **verify-assert** — derive-then-assert the load-bearing claim in one pass, mark its support tier; a confident-
   *commitment* reducer (MT-Bench 14/20→3/20), **NOT** a measured factual-hallucination cut. Blind A/B on this
   corpus: **WASH** (2W/8T/2L, net 0) — no measured lift; kept only because it is lossless + 1×.
 - **goal-lock** — pin an immutable end-goal, re-derive each step from {goal + ACTUAL prior result}; REAL mechanism,
-  measured **DIRECTIONAL WIN** — blind A/B **8W/0T/4L (n=6, agent-judged, small-N)**, the one instinct with lift.
+  blind A/B **8W/0T/4L (n=6)** — the one instinct with lift, but **de-headlined to DIRECTIONAL**: single-family judge,
+  95% Wilson interval ≈ [0.39, 0.86] straddles 0.5. Promotes to the STRICT backbone only after the cross-family rerun
+  (charter §4 + the one rerun).
 - **reuse-replan** — check-for-reuse + one scale-judgment before building; PROCESS discipline, P7/P8 stay GROUNDED.
 - **self-heal / self-grow** — cause-first regenerate (Reflexion: blind-retry collapses to baseline), lessons accrete
   to the scoreboard; a **HUMAN-RUN** loop. Autonomous self-growth stays NULL.

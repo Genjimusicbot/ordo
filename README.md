@@ -261,7 +261,7 @@ So, out loud:
 - **No hallucination reduction** on a strong model — epistemic markers are null (no backfire); the single-pass verify-assert instinct reduces confident *commitment*, and the optional REFEED loop catches confident-wrong flaws at ~3.3× tokens — a *process*, not a measured factual-hallucination cut.
 - **Not "self-growing"** — the loop is human-run and evidence-gated (now with a cause-first self-heal + a lessons scoreboard), not an autonomous runtime.
 - **Not "fewest tokens, period"** — a lossy specialist beats the lossless stack on raw count.
-- **Creativity is UNPROVEN** — a larger-N blind A/B *overturned* the early n=4 signal: the divergence move came out **net-negative** (4W/1T/7L), so the claim is **withdrawn** and the move scope-narrowed. The instinct that *did* show a directional blind win is **goal-lock** (8W/0T/4L, n=6, agent-judged); verify-assert was a wash. All small-N, same-model-family — directional, not proof ([`docs/BUILD-LOG.md`](docs/BUILD-LOG.md)).
+- **Creativity is CUT, not just unproven** — the single-pass divergence move measured net-negative (4W/1T/7L); its generative half is **deleted** (it lacked the verifier+aggregator the science — Snell/MoA/Sakana — requires) and replaced by a one-line escalation flag. **goal-lock** is the one instinct with lift (8W/0T/4L), but the foolproof gate puts its 95% Wilson interval at **[0.39, 0.86] — straddling 0.5**, so it's *directional, not a win*, pending a cross-family rerun. Every ORDO number now passes an 11-point foolproof self-check ([`docs/IMPROVEMENT-CHARTER.md`](docs/IMPROVEMENT-CHARTER.md)).
 
 **What it IS:** the most compact *lossless* context stack on structured agentic work (−68%, stacked, reproducible),
 with real self-cleaning machinery and the nulls named. That version survives a skeptic — which is the whole point.
@@ -282,5 +282,6 @@ Xeno-runic, edgy but sanitary: near-black, one acid accent, sharp geometry, the 
 [`docs/COMPETITIVE-TEARDOWN.md`](docs/COMPETITIVE-TEARDOWN.md) (12 rival repos torn down through the eval gate) ·
 [`docs/ADD-PLAN.md`](docs/ADD-PLAN.md) (the 6 gap-fillers that survived — all shipped) ·
 [`docs/AB-SMOKE-TESTS.md`](docs/AB-SMOKE-TESTS.md) (per-layer A/B, real tokens) ·
-[`docs/GTM-REALITY.md`](docs/GTM-REALITY.md) (our own pitch red-teamed: 4/10 literal, ~8/10 scoped, the fallacies named).
+[`docs/GTM-REALITY.md`](docs/GTM-REALITY.md) (our own pitch red-teamed: 4/10 literal, ~8/10 scoped, the fallacies named) ·
+[`docs/IMPROVEMENT-CHARTER.md`](docs/IMPROVEMENT-CHARTER.md) (the foolproof judge protocol + the 11-point self-check + the keep/cut subtraction call).
 A number counts only against its evidence tier. Private-use ethics: not for evading safety or monitoring. MIT.

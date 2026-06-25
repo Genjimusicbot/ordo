@@ -28,9 +28,9 @@ ANY hard trigger ⇒ **STRICT**, else **LIGHT**. Routes EFFORT only, never a wea
 - **STRICT** (hard / irreversible / long / broad): lead with a sectioned plan + the ledger; fold in **goal-lock**
   (pin an immutable end-goal, re-derive each step from {goal + ACTUAL prior result} so an off-plan step regenerates
   the next instead of running blind), **reuse-replan** (extend an existing component; replan the structure before
-  building if it won't scale to the goal), the **divergence width move** (wide fork only — *unproven: net-negative
-  at larger-N, so fire only when the modal answer is demonstrably weak and default to NOT diverging*; Snell
-  2408.03314 width-degrades-easy-tasks), and **self-heal** (on a failed gate, diagnose the CAUSE then regenerate from the re-derived premise —
+  building if it won't scale to the goal), a **divergence FLAG** (the single-pass width move is **CUT** — it measured
+  net-negative; what survives is one line: on a hard-fork with a generic modal answer, *escalate to the EXPERIMENTALIST
+  gate* rather than diverge in-pass; default = the modal answer), and **self-heal** (on a failed gate, diagnose the CAUSE then regenerate from the re-derived premise —
   never re-adapt the broken footing). Every instinct opt-out-able with a one-line reason. Full protocol: `spec/thinking.md`.
 
 ## 1. COMPRESS — emit only what serves, in the cheapest faithful form

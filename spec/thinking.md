@@ -119,30 +119,21 @@ the CODE-CONTEXT graph as a navigation index; vendors no AST.
 Honesty: PROCESS claim, not a measured reduction. P7/P8 stay GROUNDED until a teardown→measure run clocks
 rework/rebuild-vs-fix; no "−X% rework" number before then.
 
-## 8 · DIVERGENCE WIDTH MOVE — single-pass width, difficulty-gated (STRICT, wide forks; 1×)
-Extends the EXPERIMENTALIST gate; does NOT re-add it. The 2-arm gate (REFEED arm ∥ up-to-5 arm ∥ synthesize) is
-the deliberate 2× spend GTM tells ORDO to stop selling as default — demoted to an exception-fired ESCALATION.
-The 1× width move is the DEFAULT divergence. Grounded in Snell 2408.03314 (over-optimization on easy bins),
-Sakana AB-MCTS (width>depth on hard), MoA 2406.04692 (seeing diverse alternatives lifts the answer).
+## 8 · DIVERGENCE — a FLAG, not a search (single-pass width CUT; claim NULL)
+**The single-pass generate-2-3-and-self-cull move is DELETED.** It measured net-negative (4 win / 1 tie / 7 loss,
+AGENT-JUDGED) and the science predicts exactly that null: Snell 2408.03314 (the stronger optimizer DEGRADES
+within-capability bins and every gain needs a VERIFIER/PRM), MoA 2406.04692 (width helps only with a synthesizing
+AGGREGATOR + DIVERSE proposers), Sakana AB-MCTS (width's lift is selector-bound — Pass@k collapses with a naive
+selector). Single-pass §8 had none of those — same-model, no verifier, self-cull — so it shipped the regression,
+not the lift. We **delete** it rather than threshold-tune it (a higher bar still ships the same verifier-less generator).
 
-**DIFFICULTY GATE FIRST (a QUALITY rule, not only cost):** EASY / within-capability / one-right-answer → DO NOT
-diverge; width-search measurably DEGRADES easy problems (Snell bins 1-2). Take the modal answer. HARD / real
-fork / modal-answer-smells-generic → run the width move:
-1. Name the modal answer in one line (the default trajectory).
-2. Before committing, enumerate 2-3 approaches distinct in PRINCIPLE not paint (invert the obvious / change
-   paradigm / steal from a far field / drop the "required" element). Hold them side by side — this captures the
-   MoA effect internally.
-3. Score each against the win-condition in one line; adversarially cull the different-but-worse (the culling is
-   half the value).
-4. Commit to ONE: usually the modal answer survives — say why the alternatives lost; when a divergent principle
-   wins, graft it and ship one intentional plan.
-
-Escalate to the full 2-arm gate ONLY if the 1× move is genuinely undecided. **HONEST STATUS — claim withdrawn:**
-a larger-N blind A/B (6 items × 2 judges) came out **net-negative** for the width move (4 win / 1 tie / 7 loss),
-overturning the earlier n=4 "3/4" signal. So the move is **unproven and tightened**: fire it ONLY when the modal
-answer is *demonstrably* generic/weak against the win-condition; **default to NOT diverging** (Snell's
-degradation rule applies even inside "hard" forks — width adds noise where the fork isn't genuinely wide). Claim
-nothing; treat width as a flag to investigate, never a validated win, and NEVER "more creative across fields."
+**What survives is ONE line — a difficulty FLAG, no generation:** if the task is HARD-real-fork (classifyTask) AND
+the modal answer reads generic against the explicit win-condition, do NOT diverge here — **ESCALATE to the
+EXPERIMENTALIST gate** (`spec/experimentalist-gate.md`), which supplies the missing aggregator (synthesize-best-of-
+both) and the missing verifier (adversarial cull against a written win-condition) — the two ingredients the science
+requires, and the only width config that survived a real cull (3W/1T, the tie failed safe). **Default = take the
+modal answer** (Snell's easy-bin rule). Claim **NULL** for single-pass width; never "more creative across fields."
+The flag's fire/no-fire boundary could later be COMPUTED against an oracle pass@1 set (Snell §3.2).
 
 ## 9 · SELF-HEAL — on a failed gate, diagnose the CAUSE before regenerating (STRICT; the REFEED failure-branch)
 Belongs in `framework.md` under REFEED as the failure-branch router, not a new pass. Grounded in Reflexion's
