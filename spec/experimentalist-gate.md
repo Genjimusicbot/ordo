@@ -59,6 +59,19 @@ The classifier (REFEED step 1) routes the task:
   gate is selective (hard/advanced/fork only). Whether the dual-perspective actually beats REFEED-alone
   on hard tasks is **test-gated**, not assumed (see `BUILD-LOG.md`).
 
+## Measured (test-gate: conventional-only vs synthesized, 4 hard fork tasks)
+Blind judge: **synthesis(conv+experimentalist) beat conventional-alone on 3 of 4** (rate-limiter,
+full-text-search, undo/redo), **tied on 1** (dedup), and the tie **failed safe** (the divergent idea was
+unsafe and got culled, not shipped). The wins were substantive, not cosmetic: on the rate limiter the
+experimentalist caught the conventional arm *quietly reframing the win-condition* to justify a
+per-request network hop that structurally loses a p99 contest (a single pass ships that unchallenged);
+on undo/redo it grafted a CRDT counter-toggle that makes "correct under conflict" free instead of
+proof-bound. **The gate's value is dual: the grafts AND the disciplined adversarial CULLING** (rejecting
+its own different-but-worse ideas against the literal win-condition) — which is what keeps it from
+shipping novelty for its own sake. **Verdict: earns its 2-arm cost on hard, wide-solution-space forks;
+the chief risk it guards is the conventional answer bending the spec to habit.** Cost is why the gate
+stays selective (the classifier), never default.
+
 ## Relation to the framework
 This is REFEED's "diverge-debate-graft" loop-shape, promoted to a first-class gated mode. The classifier
 chooses: single pass (easy) → REFEED-only (hard, one right answer) → dual-perspective (hard, real fork).
