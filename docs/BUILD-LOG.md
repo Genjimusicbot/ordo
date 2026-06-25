@@ -294,11 +294,22 @@ Extending the framework with two quality/safety gates, from the user's KLADDS ag
   single-answer tasks skip it (divergence there is theatre). Coding divergence methods (invert-obvious,
   change-paradigm, steal-from-far-field, remove-required, exaggerate, constraint-roulette, change-POV).
   Test-gate running: does synthesized(conv+experimentalist) beat conventional-alone on hard forks?
-- **Autonomy gate** (`spec/autonomy.md`, in synthesis): a STRICT long-form agentic-autonomy framework
-  for hermes/openclaw-class agents — the autonomous loop + safety gates, error handling + recovery,
-  DESTRUCTION OF WRONGFUL LOOPS (no-progress/oscillation/thrashing/runaway detect-and-kill), decidable
-  termination, budgets with a hard kill, the approval queue for destructive side effects. Synthesized
-  from our docs (ADAPT ladder/termination, the strand approval-queue) + external research.
+- **Autonomy gate** (`spec/autonomy.md`, DONE — 57 patterns, codebase-grounded): a STRICT long-form
+  agentic-autonomy framework. The agents read the REAL KLADDS infra (strand_runner, autonomy.py,
+  retry.py, mailforge, cadence_runner, assistant_agentic, routes_autonomy) so it is specific, not
+  generic. **9 loop steps** (GATE-PRE→select-shape→plan→act[fingerprint+propose-only]→observe→verify→
+  escalate[ADAPT ladder]→write/freeze→terminate-check). **9 kill conditions** (no-progress/livelock,
+  oscillation+thrash via (tool,args,result) fingerprint, runaway step-cap, wall-clock SIGKILL,
+  idle/heartbeat, budget fail-closed, CAMPAIGN runaway [50 strands chaining = 4hr], deferral ceiling,
+  retry-storm circuit-breaker, manual kill). **11 error rules** (transient-vs-terminal taxonomy, backoff
+  +full-jitter, idempotency-key exactly-once, checkpoint/journal resume, partial-failure isolation,
+  dead-letter, fail-open-vs-fail-closed per-field, kill-switch+wallet, escalation watchdog, model
+  fallback). **Termination is PROVABLE** (monotone-green + hard caps).
+- **ACTIONABLE GAP it surfaced (real fix for KLADDS):** the framework's correctness leans on
+  **(tool,args,result) loop-signature fingerprinting** — the ONE guard the codebase does NOT yet own.
+  Today `assistant_agentic` exhausts silently into a truncated answer with no loop-cause logged, and
+  oscillation is only caught by the coarse 25-step ceiling (~24 wasted identical turns can burn first).
+  Highest-value add: catches a stuck loop in ~3 reps. Flagged for a follow-up.
 - **P7/P8 test-gate (measured, blind, 22 agents):** **P7 architecture** = `arch` directive +0.20
   (1.40→1.60 rebuild-vs-fix); reliably states a rebuild verdict + justification, lift concentrated where
   plain underperforms (the regex-HTML case), neutral where the model already re-architects or no
