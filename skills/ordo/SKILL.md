@@ -22,6 +22,13 @@ Run the whole tool: **compression + quality + autonomy**, honest-first. Depth is
 - **Measured or marked.** Every claim is a measured number or it says "unmeasured." Lossless-first: a compression
   % counts only if its comprehension/quality gate passes. `ordo measure` reads real billed tokens/$ from the logs.
 
+## 0.5 THINK FIRST — classify, then route (1× dispatcher · `references/thinking.md`)
+Spend effort proportional to stakes, in ONE pass; escalate to a multi-pass gate only by exception. Triage on 5
+hard signals (reversibility · real-fork · horizon · breadth · load-bearing facts). **LIGHT** → act direct, only
+diction + verify-assert fire. **HARD** → **STRICT**: plan + ledger, goal-lock (re-derive each step from {locked
+end-goal + ACTUAL prior result}), reuse-before-build, single-pass divergence on wide forks (difficulty-gated —
+width degrades easy tasks), cause-first self-heal on a failed gate. Routes effort, never a weaker model. Opt-out-able.
+
 ## 1. COMPRESS — emit only what serves, cheapest faithful form
 - **Input:** readable-ORDO grammar (`sum txt 3bul conc no:preamble`); the glyph form is an opt-in dense mode. `references/grammar.md`.
 - **Output:** format-by-shape — tabular → TSV, nested → minified JSON, **never pretty-print**; prose → ponytail

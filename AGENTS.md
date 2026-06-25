@@ -24,14 +24,21 @@ the pillars, and the orchestration discipline.
 
 ## The runtime you can call (Node)
 ```js
-import { decode, emit, compressInbound, ponytailFlags, resolveModel, getSpec } from "ordo-llm";
+import { decode, emit, compressInbound, ponytailFlags, resolveModel, classifyTask, getSpec } from "ordo-llm";
 decode("σ文3列简");        // ORDO command -> full English instruction
 emit(data);                // cheapest faithful format
 compressInbound(doc);      // lossless inbound compression (measured-revert: never inflates)
 ponytailFlags(text);       // filler the output contract forbids
+classifyTask(signals);     // {mode:LIGHT|STRICT, engage[]} — effort dispatcher (spec/thinking.md §1)
 resolveModel(req, policy); // opt-in model routing (default-strong; null policy = never downgrade)
 getSpec("framework");      // load a gate's SOP as text
 ```
+
+**Think first (`spec/thinking.md`).** Before acting, classify the task on 5 hard signals (reversibility ·
+real-fork · horizon · breadth · load-bearing facts). LIGHT → act direct, only diction + verify-assert fire.
+HARD → STRICT: lead with a plan + ledger, pin an immutable end-goal and re-derive each step from {goal + actual
+prior result}, reuse-before-build, single-pass divergence on wide forks, cause-first self-heal on a failed gate.
+One pass; the multi-pass gates fire by exception. Spend effort proportional to the stakes.
 The gates are SOPs you apply, not code that runs — `getSpec()` returns them as instructions.
 
 ## CLI (for non-coders too)

@@ -11,13 +11,15 @@
 - [ORDO.md](ORDO.md): the language skillstone (teach an LLM ORDO-G in one paste).
 
 ## Runtime (executable)
-- src/index.js: decode(), emit()/bestFormat(), compressInbound() (measured-revert), ponytailFlags(), resolveModel(), getSpec().
+- src/index.js: decode(), emit()/bestFormat(), compressInbound() (measured-revert), ponytailFlags(), resolveModel(), classifyTask(), getSpec().
 - tools/measure.mjs: real cost/token/duration meter from Claude Code's own JSONL usage.* (lossless billed counts).
-- `npm install ordo-llm` ; `npx ordo decode "σ文3列简"` ; `npx ordo measure` ; `npx ordo init` ; `npm test` (18/18).
+- tools/clock.mjs: wall-clock latency harness (the path to EARN "faster"; cut until clock-ab.json records a paired win).
+- `npm install ordo-llm` ; `npx ordo measure` ; `npx ordo init` ; `npm test` (24/24).
 - Install for non-coders: `/plugin marketplace add SprucetheAI/ordo` → `/plugin install`, or `npx ordo init`.
 
 ## Methodology (prompt SOPs — text, not code)
-- spec/framework.md (REFEED loop), spec/experimentalist-gate.md, spec/evaluation-gate.md,
+- spec/thinking.md (the single-pass dispatcher: classify LIGHT/STRICT → route effort; diction, verify-assert, goal-lock, reuse-replan, divergence-width, self-heal).
+- spec/framework.md (REFEED loop + self-heal failure-branch), spec/experimentalist-gate.md, spec/evaluation-gate.md,
   spec/autonomy.md, spec/context-rot.md, spec/orchestration.md.
 - spec/code-context.md (code-graph contract: AST-first, budgeted render, confidence-tagged edges).
 - spec/decompose.md (task-graph data contract: lower-id DAG + per-node testStrategy).

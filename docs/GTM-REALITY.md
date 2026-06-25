@@ -96,3 +96,36 @@ not harness-measured; and "growth" is a human-run, evidence-gated loop, not an a
 
 Framed this way, **refusing the fallacy IS the moat being honored, not just claimed** — and that is the version
 worth selling.
+
+---
+
+## Evolution — the single-pass thinking protocol (post-red-team)
+The verdict drove a **build, not a rewrite**: the gaps it named are now real mechanisms, **single-pass** (no
+enforced double-runs), grounded in the LLM wiki, each shipping a SCOPED claim or staying internal. The dispatcher
+is [`spec/thinking.md`](../spec/thinking.md) + `classifyTask()`.
+
+### What each mechanism now honestly earns
+- **complexity-gate** (`classifyTask`) — triages every task in one 1× pass; LIGHT → direct answer (no tax), STRICT
+  → armed discipline only for irreversible/multi-fork/long/broad work, strong model always (FrugalGPT triage). The
+  overhead SAVED on light turns is measurable; the classifier's own accuracy is **UNMEASURED** (a judgment call).
+- **divergence** — on hard wide forks only, enumerate distinct-in-principle approaches → cull → commit, at 1×;
+  blind **3/4 (n=4)**. Difficulty-gated because width *degrades* easy tasks (Snell 2408.03314). NOT general creativity.
+- **diction** — cheapest-faithful word *form* for steadier, lower-variance output; a determinism/register win,
+  **not** a token-% claim (that lever is ~1%, dead — BPE already 1-tokens common words).
+- **verify-assert** — derive-then-assert the load-bearing claim in one pass, mark its support tier; a confident-
+  *commitment* reducer (MT-Bench 14/20→3/20), **NOT** a measured factual-hallucination cut.
+- **goal-lock** — pin an immutable end-goal, re-derive each step from {goal + ACTUAL prior result}; REAL mechanism,
+  **UNMEASURED** outcome (no "reduces drift X%").
+- **reuse-replan** — check-for-reuse + one scale-judgment before building; PROCESS discipline, P7/P8 stay GROUNDED.
+- **self-heal / self-grow** — cause-first regenerate (Reflexion: blind-retry collapses to baseline), lessons accrete
+  to the scoreboard; a **HUMAN-RUN** loop. Autonomous self-growth stays NULL.
+- **faster** — INTERNAL ONLY: `tools/clock.mjs` is the latency harness; no "faster" word until `clock-ab.json`
+  records a paired per-task win. P3 reads cost-measurable / speed-unmeasured.
+
+### The honest path from ~8 toward 10 (measurements owed, not claims re-worded)
+The move toward 10 is the COUNT of harnesses run and recorded, never a banner: (1) **clock-ab.json** — the biggest
+debt, "faster" is a fallacy until then; (2) measure-ab.json (cost PROXY→COMPUTED); (3) classifyTask misroute rate
+on a labeled set; (4) verify-assert single-pass A/B (a 1× number distinct from REFEED's 3.3×); (5) goal-lock drift
+A/B; (6) reuse-replan teardown→measure (P7/P8 GROUNDED→COMPUTED); (7) the NoLiMa-style P10 rot-retention harness;
+(8) divergence n=4→larger-N. **A right-scoped, fully-measured 9 with no laundered nulls IS the target; the last
+tick to a marketing 10 is exactly the over-claim the red-team killed.**

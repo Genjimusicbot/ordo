@@ -31,9 +31,15 @@ instead of degrading), and **enforces quality discipline** (so the answer is bug
 the first plausible draft). It ships as a **paste-in spec** (load it into your system prompt / `CLAUDE.md`)
 plus a thin **npm runtime** for the deterministic bits.
 
+Under all of it is one law: **spend effort proportional to the stakes, in a single pass.** ORDO classifies each
+task light vs hard and only arms the heavy discipline — verification, divergence, goal-lock, replanning — where
+being wrong is expensive; easy tasks stay fast and terse. The multi-pass gates exist, but they fire **by
+exception, not by default** ([`spec/thinking.md`](spec/thinking.md)).
+
 It's deliberately not hype. Every claim below is tagged **computed** (a script reproduces it), **agent-judged**
 (a blind test produced it), or **grounded** (a cited study). The repo even scores *itself* with its own
-evaluation gate and ships the **6.5/10** critique unedited ([`docs/SELF-EVAL.md`](docs/SELF-EVAL.md)).
+evaluation gate and ships the **6.5/10** critique unedited ([`docs/SELF-EVAL.md`](docs/SELF-EVAL.md)), then
+re-ran the gate on its own GTM pitch and shipped that **4/10** too ([`docs/GTM-REALITY.md`](docs/GTM-REALITY.md)).
 
 ## What ORDO is trying to solve
 
@@ -137,6 +143,11 @@ gold-plated 10. Long runs get an autonomy loop that **kills wrongful loops** and
 
 ORDO is a stack, not a trick. Each layer is independent; load only what you want (the two lanes).
 
+0. **THINK FIRST (the dispatcher)** — classify each task on 5 hard signals (reversibility · real-fork · horizon ·
+   breadth · load-bearing facts). **LIGHT** → act direct, only two always-on 1× instincts fire (diction +
+   verify-assert). **HARD** → **STRICT** mode arms the ledger, goal-lock (re-derive each step from the locked
+   end-goal + the *actual* prior result), reuse-replan, the single-pass divergence move, and self-heal. One pass;
+   the gates fire by exception. Routes effort, never a weaker model. `spec/thinking.md`, `classifyTask()`.
 1. **COMPRESS** — emit only what serves, cheapest faithful form.
    - *Input:* readable-ORDO grammar (terse shorthand the model reads directly; glyphs are an opt-in dense mode).
    - *Output:* format-by-shape (tabular → TSV, nested → minified JSON, **never pretty-print**) + ponytail (cut
@@ -246,11 +257,11 @@ not by any single ratio. A lossy specialist still uses fewer raw tokens, which i
 We red-teamed our own pitch with 3 independent adversarial raters. The literal "improves almost everything" thesis
 scored **4/10** for laundering its own nulls; the scoped version **~8/10** ([`docs/GTM-REALITY.md`](docs/GTM-REALITY.md)).
 So, out loud:
-- **Not faster** (wall-clock) — only an output-token proxy; nothing was clocked, and a verify loop can make a turn *slower*.
-- **No hallucination reduction** on a strong model — epistemic markers are null (no backfire); the optional REFEED loop catches confident-wrong flaws at ~3.3× tokens, a *process*, not a property.
-- **Not "self-growing"** — the improvement loop is human-run and evidence-gated, not an autonomous runtime.
+- **Not faster** (wall-clock) — still a fallacy on the token proxy, but now there's a real path: [`tools/clock.mjs`](tools/clock.mjs) times paired runs; the claim stays **cut** until `clock-ab.json` records a win.
+- **No hallucination reduction** on a strong model — epistemic markers are null (no backfire); the single-pass verify-assert instinct reduces confident *commitment*, and the optional REFEED loop catches confident-wrong flaws at ~3.3× tokens — a *process*, not a measured factual-hallucination cut.
+- **Not "self-growing"** — the loop is human-run and evidence-gated (now with a cause-first self-heal + a lessons scoreboard), not an autonomous runtime.
 - **Not "fewest tokens, period"** — a lossy specialist beats the lossless stack on raw count.
-- Quality / creativity / direction wins are **blind agent-judged, small-N** — directional leans, not computed proofs.
+- **Creativity is narrow** — the divergence move helps on *hard forks only* (blind 3/4, n=4), and is difficulty-gated because width *degrades* easy tasks; it is not a general creativity lift. Quality / direction wins are blind agent-judged, small-N — directional leans, not computed proofs.
 
 **What it IS:** the most compact *lossless* context stack on structured agentic work (−68%, stacked, reproducible),
 with real self-cleaning machinery and the nulls named. That version survives a skeptic — which is the whole point.
