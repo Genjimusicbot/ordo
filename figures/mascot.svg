@@ -1,0 +1,25 @@
+<svg viewBox="0 0 260 260" xmlns="http://www.w3.org/2000/svg" font-family="ui-monospace, monospace">
+  <defs>
+    <linearGradient id="acid" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#d9f64f"/><stop offset="1" stop-color="#79d65a"/>
+    </linearGradient>
+  </defs>
+  <rect width="260" height="260" rx="20" fill="#0a0c0d"/>
+  <!-- hex containment -->
+  <polygon points="130,26 214,76 214,184 130,234 46,184 46,76" fill="none" stroke="#1f2a2c" stroke-width="2"/>
+  <polygon points="130,40 202,82 202,178 130,220 58,178 58,82" fill="none" stroke="#2a3638" stroke-width="1"/>
+  <!-- the watcher: a hooded angular helm -->
+  <path d="M130 70 L186 112 L172 170 L130 188 L88 170 L74 112 Z" fill="#11181a" stroke="#3a4a4c" stroke-width="2"/>
+  <!-- visor slit (acid eyes) -->
+  <path d="M96 128 L124 134 L124 124 L96 118 Z" fill="url(#acid)"/>
+  <path d="M164 128 L136 134 L136 124 L164 118 Z" fill="url(#acid)"/>
+  <!-- nasal rune stroke -->
+  <line x1="130" y1="138" x2="130" y2="166" stroke="#5fbf86" stroke-width="3"/>
+  <!-- othala rune (ᛟ = order / heritage) on the brow -->
+  <g stroke="#c6f135" stroke-width="3" fill="none" stroke-linejoin="round">
+    <path d="M130 84 L118 96 L122 106 L138 106 L142 96 Z"/>
+    <line x1="122" y1="106" x2="114" y2="116"/><line x1="138" y1="106" x2="146" y2="116"/>
+  </g>
+  <!-- faint scanline grid for the xeno-clean feel -->
+  <g stroke="#10171800" ><rect x="0" y="0" width="0" height="0"/></g>
+</svg>

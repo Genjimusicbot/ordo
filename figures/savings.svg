@@ -1,0 +1,40 @@
+<svg viewBox="0 0 860 460" xmlns="http://www.w3.org/2000/svg" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace">
+  <rect x="0" y="0" width="860" height="460" rx="14" fill="#0a0c0d"/>
+  <rect x="0.5" y="0.5" width="859" height="459" rx="14" fill="none" stroke="#1d2426" stroke-width="1"/>
+  <!-- rune accent -->
+  <text x="812" y="44" font-size="26" fill="#1f2a2c" text-anchor="middle">ᛟ</text>
+  <text x="40" y="46" font-size="22" fill="#e8edec" font-weight="700">ORDO — measured token reduction, by layer</text>
+  <text x="40" y="70" font-size="12.5" fill="#7c8a88">o200k tokenizer (GPT proxy). re-validate on your model. each bar is a runnable gate, not a vibe.</text>
+  <!-- grid -->
+  <g stroke="#161c1d" stroke-width="1">
+    <line x1="60" y1="120" x2="820" y2="120"/><line x1="60" y1="190" x2="820" y2="190"/>
+    <line x1="60" y1="260" x2="820" y2="260"/><line x1="60" y1="330" x2="820" y2="330"/>
+    <line x1="60" y1="400" x2="820" y2="400"/>
+  </g>
+  <g font-size="11" fill="#5a6664" text-anchor="end">
+    <text x="52" y="124">100%</text><text x="52" y="194">75%</text><text x="52" y="264">50%</text><text x="52" y="334">25%</text><text x="52" y="404">0%</text>
+  </g>
+  <!-- bars: baseline y=400, full=280px for 100% -->
+  <!-- Grammar 32 -> h=90 -->
+  <rect x="96" y="310" width="96" height="90" rx="3" fill="#79d65a"/>
+  <text x="144" y="300" font-size="15" fill="#cdeec0" text-anchor="middle" font-weight="700">32%</text>
+  <!-- Format TSV 59 -> h=165 -->
+  <rect x="240" y="235" width="96" height="165" rx="3" fill="#9ee84a"/>
+  <text x="288" y="225" font-size="15" fill="#e3f7bd" text-anchor="middle" font-weight="700">59%</text>
+  <!-- Output ponytail 77 -> h=216 -->
+  <rect x="384" y="184" width="96" height="216" rx="3" fill="#c6f135"/>
+  <text x="432" y="174" font-size="15" fill="#eefbb6" text-anchor="middle" font-weight="700">77%</text>
+  <!-- Inbound logs 92 -> h=258 -->
+  <rect x="528" y="142" width="96" height="258" rx="3" fill="#d9f64f"/>
+  <text x="576" y="132" font-size="15" fill="#f4fcc4" text-anchor="middle" font-weight="700">92%</text>
+  <!-- End-to-end ~55 -> h=154 -->
+  <rect x="672" y="246" width="96" height="154" rx="3" fill="#5fbf86"/>
+  <text x="720" y="236" font-size="15" fill="#c2ead2" text-anchor="middle" font-weight="700">~55%</text>
+  <g font-size="12" fill="#aab6b3" text-anchor="middle">
+    <text x="144" y="422">grammar</text><text x="144" y="438" font-size="10" fill="#6b7674">input cmd</text>
+    <text x="288" y="422">format</text><text x="288" y="438" font-size="10" fill="#6b7674">TSV vs JSON</text>
+    <text x="432" y="422">ponytail</text><text x="432" y="438" font-size="10" fill="#6b7674">output filler</text>
+    <text x="576" y="422">inbound</text><text x="576" y="438" font-size="10" fill="#6b7674">logs/tools</text>
+    <text x="720" y="422">end-to-end</text><text x="720" y="438" font-size="10" fill="#6b7674">real mix</text>
+  </g>
+</svg>

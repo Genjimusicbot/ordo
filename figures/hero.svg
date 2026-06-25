@@ -1,0 +1,30 @@
+<svg viewBox="0 0 920 300" xmlns="http://www.w3.org/2000/svg" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace">
+  <defs>
+    <linearGradient id="acidH" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#d9f64f"/><stop offset="1" stop-color="#79d65a"/>
+    </linearGradient>
+  </defs>
+  <rect width="920" height="300" rx="16" fill="#0a0c0d"/>
+  <rect x="0.5" y="0.5" width="919" height="299" rx="16" fill="none" stroke="#1d2426"/>
+  <!-- faint rune ribbon -->
+  <text x="40" y="280" font-size="15" fill="#141b1c" letter-spacing="10">ᛟ ᛗ ᛇ ᛉ ᚱ ᛞ ᛟ ᛗ ᛇ ᛉ ᚱ ᛞ ᛟ ᛗ ᛇ ᛉ ᚱ ᛞ ᛟ ᛗ ᛇ ᛉ ᚱ ᛞ ᛟ ᛗ</text>
+  <!-- mascot sigil (left) -->
+  <g transform="translate(40,58) scale(0.62)">
+    <polygon points="130,26 214,76 214,184 130,234 46,184 46,76" fill="none" stroke="#1f2a2c" stroke-width="2.5"/>
+    <path d="M130 70 L186 112 L172 170 L130 188 L88 170 L74 112 Z" fill="#11181a" stroke="#3a4a4c" stroke-width="2.5"/>
+    <path d="M96 128 L124 134 L124 124 L96 118 Z" fill="url(#acidH)"/>
+    <path d="M164 128 L136 134 L136 124 L164 118 Z" fill="url(#acidH)"/>
+    <line x1="130" y1="138" x2="130" y2="166" stroke="#5fbf86" stroke-width="4"/>
+    <g stroke="#c6f135" stroke-width="4" fill="none" stroke-linejoin="round">
+      <path d="M130 84 L118 96 L122 106 L138 106 L142 96 Z"/>
+      <line x1="122" y1="106" x2="114" y2="116"/><line x1="138" y1="106" x2="146" y2="116"/>
+    </g>
+  </g>
+  <!-- wordmark -->
+  <text x="232" y="128" font-size="86" font-weight="800" fill="#eef3f1" letter-spacing="4">ORDO</text>
+  <rect x="234" y="146" width="232" height="5" fill="url(#acidH)"/>
+  <text x="236" y="178" font-size="16" fill="#9fb0ad" letter-spacing="2">context-engineering for LLMs</text>
+  <!-- slogan -->
+  <text x="236" y="226" font-size="22" font-weight="700" fill="#c6f135">the context limiter that actually makes your LLM smarter</text>
+  <text x="236" y="256" font-size="12.5" fill="#6b7674">measured · honest · plug-and-play · MIT · the parts that don't work are named</text>
+</svg>
