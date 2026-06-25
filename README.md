@@ -9,7 +9,7 @@
   <img src="https://img.shields.io/badge/install-%2Fordo%20plugin%20%C2%B7%20npm%20%C2%B7%20paste-d9f64f.svg" alt="install">
 </p>
 
-<p align="center"><b>fewer tokens · no context rot · higher-quality answers · no magic claims — the parts that don't work are named</b></p>
+<p align="center"><b>lossless token compaction, measured · rot-resistant context · honest-first — the nulls are named, not hidden</b></p>
 
 <p align="center">
   <a href="#what-is-ordo">What</a> ·
@@ -229,6 +229,32 @@ no hallucination cut on a strong model (and no backfire either).
 All token costs are GPT-`tiktoken` proxies — **re-validate on your model.** Reproduce: `python tools/ab_smoke.py`,
 `python tools/formatbench.py`, `npx ordo measure`. Every claim with its evidence tier in [`VERDICT.md`](VERDICT.md).
 
+### vs using a single tool standalone (`python tools/standalone_compare.py`)
+Same turn; each rival covers ONE layer, ORDO stacks them. ORDO wins **among lossless** approaches *by stacking* —
+not by any single ratio. A lossy specialist still uses fewer raw tokens, which is why ORDO's claim is "fewest
+**lossless**," never "fewest, period."
+
+| approach | tokens vs raw | lossless |
+|---|---|---|
+| minify-only (free, universal) | −40% | ✅ |
+| formatter / inbound-only (single layer) | −62% | ✅ |
+| **ORDO full stack** | **−68%** | ✅ |
+| headroom-only (lossy specialist) | −79% | ⚠ lossy |
+| ORDO + headroom (gated) | −86% | ⚠ lossy |
+
+### What ORDO does NOT claim (the moat is refusing the fallacy)
+We red-teamed our own pitch with 3 independent adversarial raters. The literal "improves almost everything" thesis
+scored **4/10** for laundering its own nulls; the scoped version **~8/10** ([`docs/GTM-REALITY.md`](docs/GTM-REALITY.md)).
+So, out loud:
+- **Not faster** (wall-clock) — only an output-token proxy; nothing was clocked, and a verify loop can make a turn *slower*.
+- **No hallucination reduction** on a strong model — epistemic markers are null (no backfire); the optional REFEED loop catches confident-wrong flaws at ~3.3× tokens, a *process*, not a property.
+- **Not "self-growing"** — the improvement loop is human-run and evidence-gated, not an autonomous runtime.
+- **Not "fewest tokens, period"** — a lossy specialist beats the lossless stack on raw count.
+- Quality / creativity / direction wins are **blind agent-judged, small-N** — directional leans, not computed proofs.
+
+**What it IS:** the most compact *lossless* context stack on structured agentic work (−68%, stacked, reproducible),
+with real self-cleaning machinery and the nulls named. That version survives a skeptic — which is the whole point.
+
 ## Inspired by (shoulders of giants)
 Headroom · Caveman · Ponytail · TOON · LLMLingua (Microsoft) · GLOSSOPETRAE (elder_plinius) · Lojban ·
 VOKU · the context-rot literature (Chroma, Liu et al., NVIDIA RULER, Adobe/LMU NoLiMa) · and the house
@@ -243,5 +269,7 @@ Xeno-runic, edgy but sanitary: near-black, one acid accent, sharp geometry, the 
 [`DISCLAIMERS.md`](DISCLAIMERS.md) · [`VERDICT.md`](VERDICT.md) · [`docs/SELF-EVAL.md`](docs/SELF-EVAL.md)
 (ORDO graded by its own gate: 6.5/10, with the holes) · [`docs/BUILD-LOG.md`](docs/BUILD-LOG.md) ·
 [`docs/COMPETITIVE-TEARDOWN.md`](docs/COMPETITIVE-TEARDOWN.md) (12 rival repos torn down through the eval gate) ·
-[`docs/ADD-PLAN.md`](docs/ADD-PLAN.md) (the 6 gap-fillers that survived — all shipped). A number counts only
-against its evidence tier. Private-use ethics: not for evading safety or monitoring. MIT.
+[`docs/ADD-PLAN.md`](docs/ADD-PLAN.md) (the 6 gap-fillers that survived — all shipped) ·
+[`docs/AB-SMOKE-TESTS.md`](docs/AB-SMOKE-TESTS.md) (per-layer A/B, real tokens) ·
+[`docs/GTM-REALITY.md`](docs/GTM-REALITY.md) (our own pitch red-teamed: 4/10 literal, ~8/10 scoped, the fallacies named).
+A number counts only against its evidence tier. Private-use ethics: not for evading safety or monitoring. MIT.
