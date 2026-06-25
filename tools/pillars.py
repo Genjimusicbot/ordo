@@ -69,6 +69,12 @@ def scorecard():
                   "BLOCKER) at 3.3x token cost. NOT a token saver — a bug-catching/quality lever; net-positive only "
                   "where a latent bug exists (downstream bug-cost > 3.3x pass-cost); pure tax on already-correct tasks",
          "gate": "single-pass vs draft->critique->revise, blind quality + flaw count + token sum"},
+        {"id": "P10", "name": "Context integrity (rot-resistance)", "status": "GROUNDED",
+         "value": "the PROBLEM is measured by the literature (Chroma rot at ~50K on a 200K model; lost-in-the-middle "
+                  "-20pp; RULER effective ~50-65pct; NoLiMa -58pp at 32K). The GATE = complexity-adaptive ledger + "
+                  "compact-at-threshold (warn 70/flush 85/hard 90, drop tool-output first, keep load-bearing at the "
+                  "edges, rehydrate via the test gate). Mitigation efficacy needs a long-context harness to measure",
+         "gate": "accuracy-retention vs naive-stuffing on a NoLiMa-style long rot-baited run (needs harness)"},
     ]
 
 

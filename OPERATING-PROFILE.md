@@ -34,11 +34,12 @@ the orchestration discipline. Depth lives in `spec/` and `docs/`; this is the sp
 | hard, real fork (architecture/algorithm/novel) | **EXPERIMENTALIST** | gated-conventional ∥ divergent → synthesize best-of-both → act (`spec/experimentalist-gate.md`). Measured 3/4 wins on hard forks; catches the conventional answer bending the spec to habit |
 | any artifact, before "done" | **EVALUATION** | rate honestly vs the real goal — debias, structure-over-cosmetics, honest pros + caveats, optimal-band (`spec/evaluation-gate.md`) |
 | long-form autonomous run | **AUTONOMY** | GATE-PRE → act(propose-only) → observe → verify → escalate(ladder) → terminate; kill wrongful loops; hard budgets (`spec/autonomy.md`) |
+| long / complex / many-file context | **CONTEXT-ROT** | complexity classifier routes complex work to a LEDGER + compact-at-threshold (warn 70/flush 85/hard 90; drop tool-output first; keep load-bearing at the head+tail edges, never the lost middle; rehydrate via the test gate). Simple work stays on the standard protocol — no overhead (`spec/context-rot.md`) |
 
 ## 3. THE PILLARS — what it optimizes (test-gated, scoreboard in `tools/pillars.py`)
 P1 context · P2 token-output · P3 speed · P4 quality · P5 hallucination · P6 tidyness · P7 architecture
-(rebuild-vs-fix) · P8 rework · P9 long-form/loop. Optimize all, lossless-first; a number that no gate
-produced does not count. **8/9 measured.**
+(rebuild-vs-fix) · P8 rework · P9 long-form/loop · P10 context-integrity (rot-resistance). Optimize all,
+lossless-first; a number that no gate produced does not count. **8/10 measured, P10 grounded.**
 
 ## 4. PERSISTENCE + MULTI-AGENT — ledger orchestration (`spec/orchestration.md`)
 Fan out for breadth (>5 independent files), confidence (adversarial verify), or scale. Coordinate

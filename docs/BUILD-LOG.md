@@ -325,7 +325,29 @@ persistence), all honest-first.
   the append-only ANCHOR/PROGRESS ledgers (state out of context, resumable), single-writer orchestrator,
   **handoffs-as-pointers not payloads**, the approval queue, pipeline-vs-barrier, adversarial-verify, and
   the git/file discipline. Codifies how this whole build was actually run.
-- **`OPERATING-PROFILE.md`** (1,442 tok, loadable as a system prompt / `CLAUDE.md`): the single spine that
+## Context-rot gate — complexity-adaptive compaction + ledger (2026-06-25)
+The user's adaptive-compaction idea, grounded in the literature and built into the framework.
+- **The research (sourced):** Chroma **Context Rot** (2025) — a 200K model degrades meaningfully at
+  **~50K**, non-uniform, even on trivial tasks; LongMemEval ~30-60% gap focused-vs-full. **Lost in the
+  Middle** (2023) — U-shaped position bias, middle dips ~20pp and can fall BELOW the no-context baseline.
+  **RULER** (2024) — effective context ~50-65% of advertised. **NoLiMa** (2025) — under associative
+  reasoning Claude 3.5 −57.8pp at 32K, most effective lengths capped ~2K. NIAH overstates ability.
+- **`spec/context-rot.md`** — the gate. **Complexity classifier** (5 triggers: horizon >15-20 tool
+  calls / breadth >5 files / load-bearing facts / irreversibility / projected-fill >50%) routes complex
+  work to the LEDGER+compaction track, simple work to standard (no overhead). **Compaction policy**:
+  warn 70 → flush+checkpoint 85 → hard-compact 90 (95%-auto fires too late to have room to summarize),
+  plus a degradation-signal trigger (distractor density / self-contradiction / middle-placement). **Keep
+  at the high-attention EDGES** (anchor re-seated at HEAD, green criteria, load-bearing facts, recent
+  files at full fidelity), **drop tool-output FIRST** (70-80% of budget). **The rehydrate-gate (re-read +
+  run the tests) is the non-lossy backstop that licenses lossy compaction.** Composes with what we own
+  (ADAPT ledgers, autonomy state-out-of-context, handoffs-as-pointers, REFEED refeed-the-delta).
+- **New pillar P10 (context-integrity)** added; status **GROUNDED** (the problem is measured by the
+  studies; the gate's mitigation needs a long-context harness to measure, an honest gap like P3).
+- **Honest limit:** compaction cannot recover what was never written to the ledger before being dropped;
+  the rehydrate-gate only catches drift the tests detect.
+
+## Capstone — evaluation gate + orchestration + the operating profile (2026-06-25)
+- **`OPERATING-PROFILE.md`** (loadable as a system prompt / `CLAUDE.md`): the single spine that
   ties the full stack — the honest stance (10≠optimal, debias, lossless-first), COMPRESS (readable-ORDO +
   output contract + inbound), the 5 GATES (single/REFEED/experimentalist/evaluation/autonomy, classify
   first), the 9 PILLARS, PERSISTENCE+multi-agent, CREATIVITY — plus **the honest scorecard** (proven vs

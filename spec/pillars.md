@@ -31,6 +31,7 @@ does not count.
 | P7 | **Architecture (rebuild-vs-fix)** | on a fragmented/unscalable task, does it flag the foundation + propose re-architecture vs build-on-top | blind rubric judge on fragmented-code scenarios | UNBUILT (new directive) | `arch`/`rebuild?` macro |
 | P8 | **Rework reduction** (the payoff) | rounds-to-correct (iterations to an accepted result) + thinking/cleanup tokens avoided | multi-turn task, count iterations English vs ORDO | UNMEASURED | the sum of P4-P7 (cleaner first pass) |
 | P9 | **Long-form / loop quality** (subjugated long-form → long-form context) | quality-per-NET-token: does a structured multi-pass loop beat one big pass on quality AND total tokens | single-pass vs refeed-loop on a task, judge quality + sum tokens | MEASURED: REFEED 2 wins/3 ties, flaws 4→0, at 3.3× tokens — a bug-catching lever, net-positive only where a latent bug exists | the REFEED framework (`framework.md`) |
+| P10 | **Context integrity** (rot-resistance) | accuracy retention on a long rot-baited run with the gate vs naive context-stuffing | NoLiMa-style multi-needle + distractor at short baseline vs long, gate-on vs naive-stuff (needs a long-context harness) | GROUNDED (the problem is measured: rot at ~50K, NoLiMa −58pp@32K); gate mitigation not yet measured | the context-rot gate (`context-rot.md`): complexity-adaptive ledger + compact-at-threshold |
 
 ## The "do it good, not fast" behavioral layer (serves P4, P7, P8)
 Three directives that force the model off the generic averaged answer and onto *this* problem — added
