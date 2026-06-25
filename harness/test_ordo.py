@@ -77,6 +77,10 @@ def test_roundtrip_covers_benchmark():
 
 
 if __name__ == "__main__":
+    try:
+        sys.stdout.reconfigure(encoding="utf-8")  # glyphs print on a default Windows console
+    except Exception:
+        pass
     fns = [v for k, v in sorted(globals().items()) if k.startswith("test_")]
     for fn in fns:
         fn()

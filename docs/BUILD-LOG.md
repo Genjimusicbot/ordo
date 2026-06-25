@@ -325,6 +325,27 @@ persistence), all honest-first.
   the append-only ANCHOR/PROGRESS ledgers (state out of context, resumable), single-writer orchestrator,
   **handoffs-as-pointers not payloads**, the approval queue, pipeline-vs-barrier, adversarial-verify, and
   the git/file discipline. Codifies how this whole build was actually run.
+## Productionization + go-live (2026-06-25)
+Critical round (the user asked me to be critical first): **dogfooded ORDO's own evaluation gate on
+ORDO-as-a-product** → an independent agent scored it **6.5/10**, naming the real holes (not installable;
+~1 part runnable / ~4 parts markdown marketed as an engine; scoreboard overclaimed "8/10 MEASURED" vs
+docs' "7/8" with agent-judged pillars stamped MEASURED and P2 printing 77% but computing 67%; Windows
+UTF-8 crash; GPT-proxy/one-model). Published unedited as `docs/SELF-EVAL.md`. Then FIXED the top holes:
+- **Real npm package** (`ordo-llm`): `package.json` + `src/index.js` (faithful JS port of the
+  deterministic core — `decode`/`emit`/`bestFormat`/`compressInbound`/`ponytailFlags` + spec loaders) +
+  `bin/ordo.js` CLI + `test/test.mjs` **11/11 green** + `examples/basic.mjs` + MIT `LICENSE`. Genuinely
+  `npm install`-able and runnable.
+- **Honesty gap closed (the #1 fix):** README rewritten to lead with the honest scorecard and split
+  RUNTIME (real code) from METHODOLOGY (the gates = prompt SOPs, loaded as text, not executed);
+  `pillars.py` now tags each pillar by evidence tier (COMPUTED / AGENT-JUDGED / GROUNDED / PROXY-ONLY),
+  P2 prints its computed number, the tally is consistent. Windows UTF-8 stdout forced in the glyph
+  scripts.
+- **AI-usage docs:** `AGENTS.md` + `llms.txt`; **reproducible `BENCHMARKS.md`** (computed vs agent-judged
+  with reproduce commands).
+- **Still open (honest roadmap, in SELF-EVAL):** commit the decode/quality eval transcripts; measure on
+  a non-GPT tokenizer; harnesses for P10/P3.
+- **Went live:** pushed to a public GitHub repo (MIT).
+
 ## Context-rot gate — complexity-adaptive compaction + ledger (2026-06-25)
 The user's adaptive-compaction idea, grounded in the literature and built into the framework.
 - **The research (sourced):** Chroma **Context Rot** (2025) — a 200K model degrades meaningfully at

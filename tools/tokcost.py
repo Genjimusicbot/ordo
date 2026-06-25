@@ -86,4 +86,8 @@ def main(argv):
 
 
 if __name__ == "__main__":
+    try:
+        sys.stdout.reconfigure(encoding="utf-8")  # glyphs print on a default Windows console
+    except Exception:
+        pass
     sys.exit(main(sys.argv[1:]))

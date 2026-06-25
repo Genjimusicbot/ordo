@@ -1,0 +1,25 @@
+# ORDO
+
+> A measured, honest context-engineering framework for LLMs: a terse command grammar + an output-
+> discipline contract + quality/autonomy gates. Runtime (decode/format/inbound) + a paste-in spec.
+> No magic claims; an honest scorecard ships with it (GPT-tokenizer proxies; re-validate on your model).
+
+## Start here
+- [OPERATING-PROFILE.md](OPERATING-PROFILE.md): the whole framework on one page (paste into a system prompt).
+- [AGENTS.md](AGENTS.md): how an AI agent activates and uses ORDO.
+- [README.md](README.md): install, the honest scorecard, runtime-vs-methodology.
+- [ORDO.md](ORDO.md): the language skillstone (teach an LLM ORDO-G in one paste).
+
+## Runtime (executable)
+- src/index.js: decode(), emit()/bestFormat(), compressInbound(), ponytailFlags(), getSpec().
+- `npm install ordo-llm` ; `npx ordo decode "σ文3列简"` ; `npm test` (11/11).
+
+## Methodology (prompt SOPs — text, not code)
+- spec/framework.md (REFEED loop), spec/experimentalist-gate.md, spec/evaluation-gate.md,
+  spec/autonomy.md, spec/context-rot.md, spec/orchestration.md.
+
+## Evidence
+- BENCHMARKS.md (computed vs agent-judged, with reproduce commands).
+- VERDICT.md (every measured number + the cut list).
+- docs/SELF-EVAL.md (ORDO scored 6.5/10 by its own evaluation gate — the honest critique).
+- DISCLAIMERS.md (private-use ethics; not for evading safety/monitoring).

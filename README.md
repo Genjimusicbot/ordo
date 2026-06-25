@@ -1,71 +1,73 @@
 # ORDO
 
-**An experimental, LLM-native command language.** ORDO collapses the verbose prompts people type
-every day ("summarize the following in three bullet points", "refactor this and explain why") into
-terse symbolic directives a frontier model reads zero-shot from a spec. One directive-glyph plus a
-few typed slots replaces a sentence. It is built *for* a transformer, not retrofitted from human
-speech.
+**A measured, honest context-engineering framework for LLMs.** It cuts tokens, enforces output and
+quality discipline, and keeps long autonomous runs safe, with an honest scorecard that tells you exactly
+what's proven and what isn't. No magic-multiplier claims; the parts that don't work are named.
 
-Latin *ordo*: order, rank, arrangement. A language that puts intent in order.
+Two things ship in one package:
+1. **A runtime** (real, tested JavaScript): decode an ORDO command to English, serialize data in the
+   cheapest faithful format, compress inbound context losslessly, flag verbosity.
+2. **A paste-in operating spec**: the gates and pillars as prompt SOPs your LLM follows.
 
-> **Two standalone, complementary concepts.** ORDO (this repo) is the *language*. The *harness*
-> (orchestration, auto-commanding, verbosity control, self-learning) is a separate piece that will
-> *use* ORDO. This repo builds the language first; the harness comes after. They are designed to
-> compose, but each stands alone.
+## What it actually does — and doesn't (the honest scorecard)
+| layer | result | evidence |
+|---|---|---|
+| input command grammar | ~32% fewer tokens | computed (both tokenizers) |
+| output contract (format-by-shape + ponytail) | ~55-77% lossless | computed |
+| end-to-end (prompt + output) | ~47-64% on a real mix | computed |
+| output quality vs plain English | ORDO won 6 / tied 2 / lost 1 (blind) | agent-judged |
+| REFEED loop (hard tasks) | first-pass flaws 4→0, at 3.3× tokens | agent-judged |
+| **NULLS — do not believe otherwise** | | |
+| single-word substitution | ~1% (dead lever) | computed |
+| exotic-glyph surface | *inflates* tokens; doesn't transfer to NL | computed + GLOSSOPETRAE |
+| wall-clock speed | **no proven win** — only an output-token proxy | unmeasured |
+| hallucination on a strong model | **no reduction** (baseline already at floor) | agent-judged |
 
-## Why this can work (the entrypoint)
-The premise is no longer speculative. Two independent results ground it:
-- **Zero-shot acquisition** (elder_plinius, GLOSSOPETRAE, June 2026): given only a grammar *spec*,
-  frontier models read, write, and translate a never-before-seen constructed language with no
-  fine-tuning, and at full glyph-swap they execute alien code *better* than the English version
-  (Opus +36pp zero-shot on hard programs) while human legibility drops to ~15%.
-- **The redundancy is measured** (Microsoft LLMLingua, peer-reviewed): ~80-95% of natural-language
-  tokens are recoverable redundancy to a model; compressing prompts 4x can *raise* accuracy.
+All token costs are GPT-tokenizer (`tiktoken`) proxies — Claude/Gemini tokenizers are proprietary;
+**re-validate on your target model.** A blunt self-evaluation (ORDO scoring *itself* with its own
+evaluation gate: **6.5/10 as a product**, with the holes) is in `docs/SELF-EVAL.md`.
 
-ORDO turns those findings into a *usable, lossless* notation. See `docs/method.md` for the full
-lineage (Lojban's unambiguous grammar, logographic determinatives, VOKU's epistemic marking, runes,
-and the honest corrections).
+## Install
+```bash
+npm install ordo-llm
+```
+```js
+import { decode, emit, compressInbound, getOperatingProfile } from "ordo-llm";
 
-## The four design laws (the anti-shortcut discipline)
-1. **Every symbol is tokenizer-validated.** "One glyph = one token" is false for exotic glyphs (BPE
-   shatters them). A symbol earns its place only by *measured* token cost vs the phrase it replaces.
-   See `tools/tokcost.py` and the measured costs in `spec/lexicon.md`.
-2. **The compression is the grammar, not the glyph.** One directive + terse typed slots collapses a
-   whole request; the glyph is the writing system, the slot-grammar is the engine.
-3. **Lossless-to-intent, always.** Every symbol has a precise meaning and an English expansion; a
-   model loading the ORDO spec must reconstruct the original intent (round-trip gate). Unlike lossy
-   prompt-compression, ORDO round-trips.
-4. **Epistemic + brevity are native grammar.** A mandatory certainty/evidence slot (kills confident
-   hallucination) and a brevity/format slot (terseness is structural, not a request).
+decode("σ文3列简心金业通¬序");
+// -> "summarize the following text in 3 bullet points concisely focusing on the financial figures
+//     for a non-expert; do not include any preamble"
 
-## Status — built and measured (P0-P4 done)
-The language is real. Every number below was measured, not promised (`docs/BUILD-LOG.md` logs what was
-checked per phase):
-- **Alphabet** (`spec/lexicon.md`): 28 directive glyphs, each 1 token; plus a 1,674-glyph measured pool.
-- **Grammar** (`spec/grammar.md`, ORDO-G): determinative type-tags, no whitespace. Cuts 20 real prompts
-  **~35%** (benchmark 32→11 tokens, 66%), both tokenizers. **Decode-tested 1.70/2** by 3 independent
-  agents reading only the spec.
-- **Output framework** (`spec/output.md`): format-by-shape (tabular→TSV ~55% off JSON; never
-  pretty-print) + verbosity (ponytail cuts a chatty answer **77%, lossless**; caveman 68% on
-  operational text). The biggest lever.
-- **Skillstone** (`ORDO.md`): one ~1.9k-token file that teaches any LLM the whole stack in one paste.
+emit({ users: [{ id: 1, name: "A" }, { id: 2, name: "B" }] });  // -> TSV (≈55% fewer tokens than JSON)
+```
+CLI: `npx ordo decode "σ文3列简"` · `npx ordo profile` (prints the spec to paste into your LLM).
+Python research/measurement tools live in `tools/` and `harness/` (`pip`-free; stdlib + `tiktoken`).
 
-No magic multiplier is claimed — a measured, lossless, grammar-driven reduction on the command +
-output layers. Read `DISCLAIMERS.md` for the honest caveats (GPT-tokenizer proxies, private-use only).
+## Runtime vs methodology (be clear about what executes)
+- **RUNTIME** (this package *runs*): `decode`, `emit` / `bestFormat`, `compressInbound`, `ponytailFlags`,
+  and the spec loaders. Deterministic, **11/11 tests green** (`npm test`).
+- **METHODOLOGY** (prompt SOPs in `spec/*.md`, loaded as text via `getSpec(name)`, **not executed**):
+  the gates — REFEED, experimentalist, evaluation, autonomy, context-rot. You hand these to your LLM as
+  instructions; ORDO does not run them for you. Calling them "code" would be a lie; they are a
+  disciplined system prompt.
 
-## Layout
-- `ORDO.md` — **the skillstone: paste this into any LLM to teach it ORDO.** Start here to use it.
-- `DISCLAIMERS.md` — what ORDO is and is not; the honest caveats.
-- `docs/method.md` — research lineage + design method. `docs/BUILD-LOG.md` — per-phase what/how/verified.
-- `spec/` — the language: `lexicon.md` (alphabet), `grammar.md` (ORDO-G), `output.md` (the framework),
-  `compression-map.md` + `master-map.*` (the vocabulary layer + its honest ~1-5% ceiling).
-- `tests/` — the benchmark prompts + their ORDO encodings + verification corpora.
-- `tools/` — the measurement tooling that keeps it honest: `tokcost`, `glyphpool`, `freqmatrix`,
-  `allocate`, `formatbench`.
+## How an AI uses it
+Paste `getOperatingProfile()` (or `npx ordo profile`) into your system prompt. The model then: writes
+terse ORDO commands, applies the output contract (TSV/minified-JSON/ponytail), and runs the right gate
+per task (single pass → REFEED → experimentalist → evaluation → autonomy → context-rot). See
+`AGENTS.md` and `llms.txt`.
 
-## Use
-1. Paste `ORDO.md` into any frontier LLM (system prompt or first message). It now reads and writes ORDO.
-2. Send terse commands: `σ文3列简` = "summarize the following in 3 concise bullets". The model expands
-   and executes. Its output follows the format + verbosity rules automatically.
-3. Token savings depend on the model's tokenizer (optimized on GPT proxies; re-validate on yours). The
-   spec is paid once (cache it); the output-verbosity savings amortize it in a handful of responses.
+## The framework
+- **Language:** `ORDO.md` (skillstone), `spec/grammar.md`, `spec/lexicon.md`, `spec/macros.md`.
+- **Compression:** `spec/output.md`, `spec/pipeline.md` (inbound), `spec/compression-map.md`.
+- **Gates:** `spec/framework.md` (REFEED), `spec/experimentalist-gate.md`, `spec/evaluation-gate.md`,
+  `spec/autonomy.md`, `spec/context-rot.md`, `spec/orchestration.md`.
+- **Pillars + scorecard:** `spec/pillars.md`, `tools/pillars.py` (status-honest: COMPUTED vs
+  AGENT-JUDGED vs GROUNDED vs PROXY).
+- **The whole thing on one page:** `OPERATING-PROFILE.md`.
+
+## Honesty
+`DISCLAIMERS.md` (what it is and is not; private-use ethics — not for evading safety/monitoring),
+`VERDICT.md` (every measured number + the cut list), `docs/BUILD-LOG.md` (per-phase what/how/verified),
+`docs/SELF-EVAL.md` (the 6.5/10 critique). The moat here is honesty: if a number isn't backed by its
+stated evidence tier, it doesn't count. MIT licensed.

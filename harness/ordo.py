@@ -199,6 +199,11 @@ def decode(s: str) -> str:
 
 
 if __name__ == "__main__":
+    import sys
+    try:
+        sys.stdout.reconfigure(encoding="utf-8")  # glyphs print on a default Windows console
+    except Exception:
+        pass
     cases = {
         "σ文3列简心金业通¬序": ["summarize", "3 bullet points", "financial", "non-expert", "preamble"],
         "τ话SV调正": ["translate", "conversation", "SV", "formal"],
