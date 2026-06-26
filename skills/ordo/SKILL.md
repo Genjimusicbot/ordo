@@ -55,6 +55,10 @@ P1 context · P2 token-output · P3 speed/cost (meter: `ordo measure`) · P4 qua
 P7 architecture · P8 rework · P9 long-form/loop · P10 context-integrity. Optimize all, lossless-first; a number no gate produced does not count.
 
 ## 4. PERSISTENCE + MULTI-AGENT (`references/orchestration.md`)
+**Project memory (grows with the project):** on a STRICT task, read `.ordo/ledger.md` at the start (the immutable
+goal + decisions + open blockers) and append to it as you work — it is the durable state, the window is scratch.
+After a gate catches a real failure, append a one-line lesson to `.ordo/lessons.md` and read matching lessons at
+gate-pre. That is how ORDO grows with the project: a human-run, evidence-gated loop, not autonomous self-growth.
 Fan out for breadth (>5 independent files), confidence (adversarial verify), or scale. Coordinate through an append-only
 **ledger**: write-once ANCHOR, append-only PROGRESS (green count only rises), single-writer orchestrator, handoffs-as-pointers,
 all side effects through the approval queue (propose, never execute). Pipeline by default; barrier only when a stage needs all prior.

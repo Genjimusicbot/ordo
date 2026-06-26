@@ -4,6 +4,10 @@ import { decode, emit, bestFormat, ponytailFlags, compressInbound, getOperatingP
 import { priceFor, costOf, parseTranscript, aggregate } from "../tools/measure.mjs";
 import { resolveModel, classifyTask } from "../src/index.js";
 import { timeRuns } from "../tools/clock.mjs";
+import { initProject } from "../src/init.js";
+import { mkdtempSync, existsSync, readFileSync, rmSync } from "node:fs";
+import { tmpdir } from "node:os";
+import { join as pjoin } from "node:path";
 
 test("decode benchmark command carries all key terms", () => {
   const e = decode("σ文3列简心金业通¬序").toLowerCase();
@@ -120,4 +124,24 @@ test("clock timeRuns returns n runs + a sane median", () => {
   const r = timeRuns(() => { let x = 0; for (let i = 0; i < 1000; i++) x += i; }, 3);
   assert.strictEqual(r.runs.length, 3);
   assert.ok(r.medianMs >= 0 && r.maxMs >= r.minMs);
+});
+
+// --- src/init.js: the 3-tier installer (v2 packaging) ---
+test("ordo init --lean writes only the compaction skill, stateless", () => {
+  const d = mkdtempSync(pjoin(tmpdir(), "ordo-lean-"));
+  try {
+    initProject(d, { lean: true });
+    assert.ok(existsSync(pjoin(d, ".claude/skills/ordo-lean/SKILL.md")));
+    assert.ok(!existsSync(pjoin(d, ".ordo")), "lean is stateless — no .ordo persistence");
+    assert.ok(readFileSync(pjoin(d, ".claude/skills/ordo-lean/SKILL.md"), "utf8").toLowerCase().includes("token saving"));
+  } finally { rmSync(d, { recursive: true, force: true }); }
+});
+test("ordo init (full) writes the skill + .ordo persistence (grows with the project)", () => {
+  const d = mkdtempSync(pjoin(tmpdir(), "ordo-full-"));
+  try {
+    initProject(d);
+    assert.ok(existsSync(pjoin(d, ".claude/skills/ordo/SKILL.md")));
+    assert.ok(existsSync(pjoin(d, ".ordo/ledger.md")) && existsSync(pjoin(d, ".ordo/lessons.md")));
+    assert.ok(readFileSync(pjoin(d, ".ordo/ledger.md"), "utf8").includes("immutable anchor"));
+  } finally { rmSync(d, { recursive: true, force: true }); }
 });

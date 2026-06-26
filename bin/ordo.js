@@ -14,7 +14,7 @@ switch (cmd) {
   case "profile": case "spec": console.log(getOperatingProfile()); break;
   case "skillstone": console.log(getSkillstone()); break;
   case "measure": { const di = args.indexOf("--dir"); console.log(render(measure(di >= 0 ? args[di + 1] : undefined), args.includes("--json"))); break; }
-  case "init": console.log(initProject(args[0])); break;
+  case "init": { const target = args.find((a) => !a.startsWith("--")); console.log(initProject(target, { lean: args.includes("--lean") })); break; }
   default:
     console.log(`ORDO — context-engineering framework for LLMs
 
