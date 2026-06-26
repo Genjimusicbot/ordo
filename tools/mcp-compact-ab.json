@@ -1,0 +1,26 @@
+{
+  "tier": "COMPUTED (lossless inbound compaction, o200k)",
+  "results": [
+    {
+      "sample": "video transcript (segment JSON)",
+      "raw_tok": 2469,
+      "ordo_tok": 1324,
+      "reduction_pct": 46,
+      "engine": "builtin"
+    },
+    {
+      "sample": "web/social crawl (result JSON)",
+      "raw_tok": 1929,
+      "ordo_tok": 728,
+      "reduction_pct": 62,
+      "engine": "builtin"
+    },
+    {
+      "sample": "PDF text dump (headers + whitespace)",
+      "raw_tok": 540,
+      "ordo_tok": 408,
+      "reduction_pct": 24,
+      "engine": "builtin"
+    }
+  ]
+}

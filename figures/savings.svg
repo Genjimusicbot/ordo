@@ -35,6 +35,6 @@
     <text x="288" y="422">format</text><text x="288" y="438" font-size="10" fill="#6b7674">TSV vs JSON</text>
     <text x="432" y="422">ponytail</text><text x="432" y="438" font-size="10" fill="#6b7674">output filler</text>
     <text x="576" y="422">inbound</text><text x="576" y="438" font-size="10" fill="#6b7674">logs/tools</text>
-    <text x="720" y="422">end-to-end</text><text x="720" y="438" font-size="10" fill="#6b7674">real mix</text>
+    <text x="720" y="422">end-to-end</text><text x="720" y="438" font-size="10" fill="#6b7674">~55% mix · 68% struct</text>
   </g>
 </svg>

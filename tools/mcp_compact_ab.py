@@ -46,9 +46,17 @@ def main():
     print("# MCP-output compaction A/B — raw vs ORDO-compacted (o200k) [COMPUTED, lossless]\n")
     print("| bundled-tool output | raw tok | ORDO tok | reduction | engine |")
     print("|---|---|---|---|---|")
+    rows = []
     for name, raw in SAMPLES:
         comp, b, a, eng = compress_inbound(raw, use_headroom=False)
-        print(f"| {name} | {TOK(raw)} | {TOK(comp)} | **−{round(100 * (TOK(raw) - TOK(comp)) / max(TOK(raw), 1))}%** | {eng} |")
+        rt, ct = TOK(raw), TOK(comp)
+        pct = round(100 * (rt - ct) / max(rt, 1))
+        rows.append({"sample": name, "raw_tok": rt, "ordo_tok": ct, "reduction_pct": pct, "engine": eng})
+        print(f"| {name} | {rt} | {ct} | **−{pct}%** | {eng} |")
+    # commit the result as a recorded artifact (a number you can re-derive, not just claim)
+    import json as _json
+    (Path(__file__).resolve().parent / "mcp-compact-ab.json").write_text(
+        _json.dumps({"tier": "COMPUTED (lossless inbound compaction, o200k)", "results": rows}, indent=2), encoding="utf-8")
     print("\nThe ORDO value-add: the bundled tools (video / crawler / PDF) are not ours — routing their output "
           "through the lossless inbound compactor IS. A transcript or a crawl enters context already shrunk, so the "
           "Full tier costs fewer tokens than wiring the same MCPs up raw. Structured JSON → TSV (big win); prose/PDF "

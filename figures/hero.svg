@@ -25,6 +25,6 @@
   <rect x="234" y="146" width="232" height="5" fill="url(#acidH)"/>
   <text x="236" y="178" font-size="16" fill="#9fb0ad" letter-spacing="2">context-engineering for LLMs</text>
   <!-- slogan -->
-  <text x="236" y="226" font-size="22" font-weight="700" fill="#c6f135">the context limiter that actually makes your LLM smarter</text>
-  <text x="236" y="256" font-size="12.5" fill="#6b7674">measured · honest · plug-and-play · MIT · the parts that don't work are named</text>
+  <text x="236" y="226" font-size="22" font-weight="700" fill="#c6f135">mention it once · auto-applied lossless compaction −47–68%</text>
+  <text x="236" y="256" font-size="12.5" fill="#6b7674">+ the tools Claude lacks, compacted · measured · the parts that don't work are named · MIT</text>
 </svg>

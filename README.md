@@ -12,25 +12,25 @@
 <p align="center"><b>mention it once → auto-applied lossless compaction + the tools Claude lacks · honest-first — every claim measured, the nulls named</b></p>
 
 <p align="center">
-  <a href="#three-ways-to-install-pick-by-how-much-you-want">Install (3 tiers)</a> ·
+  <a href="#three-ways-to-install">Install (3 tiers)</a> ·
   <a href="#what-is-ordo">What</a> ·
   <a href="#it-runs-itself-auto-activation">Auto-activation</a> ·
-  <a href="#architecture--the-four-layers">Architecture</a> ·
+  <a href="#architecture--the-stack">Architecture</a> ·
   <a href="#the-numbers">Numbers</a> ·
   <a href="#honesty-the-moat">Honesty</a>
 </p>
 
 ---
 
-## Three ways to install — pick by how much you want
+## Three ways to install
 
 | | **🟢 ordo.md** | **⚫ ORDO Lean** | **🔶 ORDO Full** |
 |---|---|---|---|
 | **One line** | the discipline as a paste-in | token saving, nothing else | the whole layer that fixes the annoyances |
-| **Install** | paste a file into `CLAUDE.md` | `npx ordo init --lean` | `npx ordo init` (or `/plugin install`) |
-| **You get** | compression + the dispatcher as prose | format-by-shape + ponytail + inbound compaction, **measured −47–68%** | Lean **+** the classify→route dispatcher + the gates (opt-in) + **bundled video/PDF/crawler MCPs, compaction-wrapped (−24–62%)** + `.ordo/` persistence that grows with the project |
+| **Install** | paste [`OPERATING-PROFILE.md`](OPERATING-PROFILE.md) (or [`CONTEXT-SAVER.md`](CONTEXT-SAVER.md) for lean prose) into `CLAUDE.md` | `npx ordo init --lean` | `npx ordo init` (or `/plugin install`) |
+| **You get** | compression + the dispatcher as prose | format-by-shape + ponytail + inbound compaction, **measured −47–68%** | Lean **+** the classify→route dispatcher + the gates (opt-in) + a **crawler (live) + native PDF + a video add-slot, all compaction-wrapped (−24–62%)** + `.ordo/` persistence that grows with the project |
 | **For** | "just put it in my prompt" | "I just want lower bills" | "the one install for all of it" |
-| **Footprint** | ~1k tokens, zero deps | tiny skill, zero MCP | a plugin + a bundled `.mcp.json` |
+| **Footprint** | ~1k tokens, zero deps | tiny skill, zero MCP | a plugin + `.ordo/mcp.json.example` (firecrawl live; video = add-slot) |
 | **Proven** | compression (measured) | compression (measured) | compression + tool-compaction (both measured); the gates honest/opt-in |
 
 ```bash
@@ -39,16 +39,18 @@ npx ordo init --lean   # Lean — token saving only, as neat and light as cavema
 ```
 
 **Lean is exactly that:** *only* the compacting + verbosity. No gates, no tools, no quality claims — the smallest
-thing that pays for itself. **Full is the superset** and the one that fixes "all the annoyances of Claude": it
-bundles the tools Claude lacks (video / PDF / crawler) and **compacts their output**, and it grows with the
-project. Per-tier breakdown: [`docs/V2-ARCHITECTURE.md`](docs/V2-ARCHITECTURE.md).
+thing that pays for itself. **Full is the superset:** it bundles a web/social **crawler** (firecrawl), uses Claude
+Code's **native PDF**, leaves a **video add-slot** (no standard server exists yet — honestly marked), and
+**compacts every tool's output** (the measured differentiator), and it grows with the project. Per-tier breakdown:
+[`docs/V2-ARCHITECTURE.md`](docs/V2-ARCHITECTURE.md) · [`docs/tiers/`](docs/tiers/).
 
 ## It runs itself (auto-activation)
 
 The reason frameworks don't get used: you have to remember to invoke them. ORDO doesn't make you.
 
-1. **Mention it once** — a word to Claude ("use ORDO"), a line in `CLAUDE.md`, `/ordo`, or `npx ordo init`. It is
-   then resident for the whole session.
+1. **Set it once** — `npx ordo init`, `/plugin install`, or a line in `CLAUDE.md`. That one step is the whole
+   setup; after it, the skill is resident every session and a bare "use ORDO" (or nothing at all) is enough — it
+   auto-fires on coding/agentic tasks.
 2. **It routes itself** — `classifyTask()` decides *which part* applies per task (light → just compress + answer;
    hard → arm the ledger + the right gate). You never pick.
 3. **It persists and grows** — Full drops a project-local `.ordo/ledger.md` + `lessons.md` the skill reads at the
@@ -59,10 +61,12 @@ No memorization, no manual invocation, no drift back to raw Claude. As light to 
 
 ## What is ORDO
 
-ORDO is a **context-engineering framework** you give your LLM. It does three things: **compresses** what
-goes in and out (so you pay for fewer tokens), **fights context rot** (so a long chat stays accurate
-instead of degrading), and **enforces quality discipline** (so the answer is bug-checked and honest, not
-the first plausible draft). It ships as a **paste-in spec** (load it into your system prompt / `CLAUDE.md`)
+ORDO is the **auto-applied agent layer** you give your LLM. Set it once and it does three *proven* things:
+**compresses** what goes in and out so you pay for fewer tokens (measured **−47–68%**), **bundles the tools Claude
+lacks** (crawler + native PDF + a video slot) and **compacts their output**, and **fights context rot** so a long
+session stays accurate. It also ships quality gates (REFEED, evaluation, autonomy…) as **opt-in discipline** —
+honestly tiered, because on a frontier model they mostly *wash*, so they are not the headline. It ships as a
+**paste-in spec** (load it into your system prompt / `CLAUDE.md`)
 plus a thin **npm runtime** for the deterministic bits.
 
 Under all of it is one law: **spend effort proportional to the stakes, in a single pass.** ORDO classifies each
@@ -170,7 +174,7 @@ the evaluation gate judges against the real goal, never the prompt, and knows a 
 gold-plated 10. Long runs get an autonomy loop that **kills wrongful loops** and a context-rot gate that
 **compacts to a ledger** before the window starves.
 
-## Architecture — the four layers
+## Architecture — the stack
 
 ORDO is a stack, not a trick. Each layer is independent; load only what you want (the two lanes).
 

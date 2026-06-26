@@ -44,7 +44,7 @@ ANY hard trigger ⇒ **STRICT**, else **LIGHT**. Routes EFFORT only, never a wea
   (lossy+retrieval), our TSV for structured data (lossless), lossless-first; never glyph the surface
   (it inflates tokens). **Measured-revert gate:** every transform is re-measured and REVERTED if it does
   not shrink (worst case = passthrough); a lossy cut must also pass a coverage check (query-relevant terms
-  survive) or it is dropped. `spec/output.md` Part 4, `spec/pipeline.md`, `harness/inbound.py`.
+  survive) or it is dropped. `spec/output.md` Part 4, `harness/inbound.py`.
 - **Macros** for whole recurring intents — `cot risk arch fresh tidy eli5 srev` … (1-2 tokens each).
   `spec/macros.md`.
 - **Code context:** prefer a code-graph provider (codegraph default / graphify multimodal) — structure parsed

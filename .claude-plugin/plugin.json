@@ -1,7 +1,7 @@
 {
   "name": "ordo",
-  "version": "0.1.0",
-  "description": "ORDO — a measured, honest context-engineering framework: compress tokens, fight context rot, enforce quality/autonomy gates. Installs as a skill that activates on coding/agentic tasks.",
+  "version": "0.2.0",
+  "description": "ORDO — the auto-applied agent layer: compress tokens losslessly (measured −47–68%), bundle the tools Claude lacks (crawler/PDF/video, compaction-wrapped), and grow with the project. Honest-first; the gates are opt-in. Auto-activates on coding/agentic tasks.",
   "author": { "name": "SprucetheAI" },
   "homepage": "https://github.com/SprucetheAI/ordo",
   "license": "MIT",

@@ -27,7 +27,7 @@ A breakdown tab per tier on the wiki; each is one decision the user makes by how
 |---|---|---|---|
 | **What it is** | one paste-in file | the compaction core as a skill | the whole layer: core + gates + MCP tools + crawler + vision |
 | **Install** | paste `ordo.md` into `CLAUDE.md` / system prompt | `npx ordo init --lean` | `npx ordo init` or `/plugin install ordo` |
-| **Gives you** | the discipline as prose (compression + dispatcher) | **token saving only** — format-by-shape + ponytail + inbound, measured-revert | Lean **plus** the classify→route dispatcher, the 5 gates (opt-in), bundled **video/PDF/mp4 vision + crawler MCPs** with compaction, persistence + lessons |
+| **Gives you** | the discipline as prose (compression + dispatcher) | **token saving only** — format-by-shape + ponytail + inbound, measured-revert | Lean **plus** the classify→route dispatcher, the gates (opt-in), a **crawler + native PDF + a video add-slot** with compaction, persistence + lessons |
 | **For** | "I just want it in my prompt" | "I just want fewer tokens / lower bills" | "I want the one install that fixes all the annoyances" |
 | **Footprint** | ~1k tokens, zero deps | tiny skill, zero MCP | a plugin + `.mcp.json` (the bundled servers) |
 | **Activation** | auto on every turn in that repo | auto-fires on coding/agentic tasks | auto-fires + auto-routes which layer per task |

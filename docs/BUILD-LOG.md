@@ -370,7 +370,7 @@ The user's adaptive-compaction idea, grounded in the literature and built into t
 ## Capstone — evaluation gate + orchestration + the operating profile (2026-06-25)
 - **`OPERATING-PROFILE.md`** (loadable as a system prompt / `CLAUDE.md`): the single spine that
   ties the full stack — the honest stance (10≠optimal, debias, lossless-first), COMPRESS (readable-ORDO +
-  output contract + inbound), the 5 GATES (single/REFEED/experimentalist/evaluation/autonomy, classify
+  output contract + inbound), the GATES (single/REFEED/experimentalist/evaluation/autonomy/context-rot, classify
   first), the 9 PILLARS, PERSISTENCE+multi-agent, CREATIVITY — plus **the honest scorecard** (proven vs
   the NULLS we must never claim) and **the issues fixed this pass** (single entry-point, the eval SOP,
   multi-agent codified, readable-canonical, the P3 honest gap, the loop-fingerprint follow-up).
