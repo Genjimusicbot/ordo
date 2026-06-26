@@ -70,9 +70,10 @@ honestly tiered, because on a frontier model they mostly *wash*, so they are not
 plus a thin **npm runtime** for the deterministic bits.
 
 Under all of it is one law: **spend effort proportional to the stakes, in a single pass.** ORDO classifies each
-task light vs hard and only arms the heavy discipline — verification, divergence, goal-lock, replanning — where
-being wrong is expensive; easy tasks stay fast and terse. The multi-pass gates exist, but they fire **by
-exception, not by default** ([`spec/thinking.md`](spec/thinking.md)).
+task light vs hard and only arms the heavy discipline — the ledger, goal-lock, replanning, the gates — where being
+wrong is expensive; easy tasks stay fast and terse. The gates fire **by exception, not by default**, and on a
+frontier model their quality lifts are **directional, not proven** (opt-in, named in the scorecard — the headline
+wins are compression + tooling, not the gates) ([`spec/thinking.md`](spec/thinking.md)).
 
 It's deliberately not hype. Every claim below is tagged **computed** (a script reproduces it), **agent-judged**
 (a blind test produced it), or **grounded** (a cited study). The repo even scores *itself* with its own
@@ -181,8 +182,9 @@ ORDO is a stack, not a trick. Each layer is independent; load only what you want
 0. **THINK FIRST (the dispatcher)** — classify each task on 5 hard signals (reversibility · real-fork · horizon ·
    breadth · load-bearing facts). **LIGHT** → act direct, only two always-on 1× instincts fire (diction +
    verify-assert). **HARD** → **STRICT** mode arms the ledger, goal-lock (re-derive each step from the locked
-   end-goal + the *actual* prior result), reuse-replan, the single-pass divergence move, and self-heal. One pass;
-   the gates fire by exception. Routes effort, never a weaker model. `spec/thinking.md`, `classifyTask()`.
+   end-goal + the *actual* prior result), reuse-replan, a divergence **flag** (escalates a weak modal answer to the
+   experimentalist gate — the single-pass move was cut), and self-heal — all opt-in, **directional on a frontier
+   model**. One pass; the gates fire by exception. Routes effort, never a weaker model. `spec/thinking.md`, `classifyTask()`.
 1. **COMPRESS** — emit only what serves, cheapest faithful form.
    - *Input:* readable-ORDO grammar (terse shorthand the model reads directly; glyphs are an opt-in dense mode).
    - *Output:* format-by-shape (tabular → TSV, nested → minified JSON, **never pretty-print**) + ponytail (cut

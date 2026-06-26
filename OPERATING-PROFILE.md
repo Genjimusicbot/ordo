@@ -31,7 +31,9 @@ ANY hard trigger ⇒ **STRICT**, else **LIGHT**. Routes EFFORT only, never a wea
   building if it won't scale to the goal), a **divergence FLAG** (the single-pass width move is **CUT** — it measured
   net-negative; what survives is one line: on a hard-fork with a generic modal answer, *escalate to the EXPERIMENTALIST
   gate* rather than diverge in-pass; default = the modal answer), and **self-heal** (on a failed gate, diagnose the CAUSE then regenerate from the re-derived premise —
-  never re-adapt the broken footing). Every instinct opt-out-able with a one-line reason. Full protocol: `spec/thinking.md`.
+  never re-adapt the broken footing). Every instinct opt-out-able with a one-line reason. **Honest tier:** on a
+frontier model the instinct quality-lifts are DIRECTIONAL or wash (goal-lock Wilson ≈ [0.39, 0.86], verify-assert a
+wash) — they are opt-in discipline, not the headline; the proven wins are compression + tooling. Full protocol: `spec/thinking.md`.
 
 ## 1. COMPRESS — emit only what serves, in the cheapest faithful form
 - **Command (input):** readable-ORDO grammar is canonical — `sum txt 3bul conc aud:lay no:preamble`

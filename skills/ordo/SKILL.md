@@ -26,8 +26,9 @@ Run the whole tool: **compression + quality + autonomy**, honest-first. Depth is
 Spend effort proportional to stakes, in ONE pass; escalate to a multi-pass gate only by exception. Triage on 5
 hard signals (reversibility · real-fork · horizon · breadth · load-bearing facts). **LIGHT** → act direct, only
 diction + verify-assert fire. **HARD** → **STRICT**: plan + ledger, goal-lock (re-derive each step from {locked
-end-goal + ACTUAL prior result}), reuse-before-build, single-pass divergence on wide forks (difficulty-gated —
-width degrades easy tasks), cause-first self-heal on a failed gate. Routes effort, never a weaker model. Opt-out-able.
+end-goal + ACTUAL prior result}), reuse-before-build, a divergence **flag** (escalate a weak modal answer to the
+experimentalist gate — the single-pass move was cut), cause-first self-heal. Routes effort, never a weaker model.
+Opt-out-able. Honest tier: the instinct lifts are DIRECTIONAL/wash on a frontier model — opt-in, not the headline.
 
 ## 1. COMPRESS — emit only what serves, cheapest faithful form
 - **Input:** readable-ORDO grammar (`sum txt 3bul conc no:preamble`); the glyph form is an opt-in dense mode. `references/grammar.md`.
