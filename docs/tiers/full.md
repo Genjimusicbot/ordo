@@ -16,10 +16,11 @@ Drops `.claude/skills/ordo/SKILL.md` + the operating profile + 16 gate-spec refe
 - **The gates (opt-in, honest)** — REFEED / experimentalist / evaluation / autonomy / context-rot, classify-first.
   *Honestly tiered:* on a frontier model the single-pass instincts mostly **wash** (measured, named in the
   scorecard) — they help where you're under-resourced or on specific traps, and stay off by default.
-- **Bundled tools, compaction-wrapped (the differentiator):** a web/social **crawler** (firecrawl, needs a key),
-  Claude Code's **native PDF**, and a **video add-slot** (no standard server exists yet — honestly marked). The
-  value-add is **compacting every tool's output**: crawl **−62%**, transcript **−46%**, PDF **−24%** (measured,
-  `python tools/mcp_compact_ab.py` → `tools/mcp-compact-ab.json`). See [`../../spec/mcp-bundle.md`](../../spec/mcp-bundle.md).
+- **Bundled tools, compaction-wrapped (the differentiator):** a web **crawler** (firecrawl) + **social scraper**
+  (apify), Claude Code's **native PDF**, and **video sight** (ffmpeg keyframes → native image vision via
+  `tools/video_frames.py` — no fake MCP). The value-add is **compacting every tool's output**: crawl **−62%**,
+  transcript **−46%**, PDF **−24%** (measured, `python tools/mcp_compact_ab.py` → `tools/mcp-compact-ab.json`). See
+  [`../../spec/mcp-bundle.md`](../../spec/mcp-bundle.md).
 - **Persistence that grows with the project** — the skill reads `.ordo/ledger.md` (goal + decisions) at the start
   of a hard task and appends as it works; lessons accrete to `.ordo/lessons.md`. A human-run evidence loop —
   **not** autonomous self-growth (that claim is a measured null).

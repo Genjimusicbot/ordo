@@ -141,7 +141,9 @@ test("ordo init (full) writes the skill + .ordo persistence (grows with the proj
   try {
     initProject(d);
     assert.ok(existsSync(pjoin(d, ".claude/skills/ordo/SKILL.md")));
+    assert.ok(existsSync(pjoin(d, ".claude/commands/ordo.md")), "/ordo slash command is dropped");
     assert.ok(existsSync(pjoin(d, ".ordo/ledger.md")) && existsSync(pjoin(d, ".ordo/lessons.md")));
+    assert.ok(existsSync(pjoin(d, ".ordo/mcp.json.example")));
     assert.ok(readFileSync(pjoin(d, ".ordo/ledger.md"), "utf8").includes("immutable anchor"));
   } finally { rmSync(d, { recursive: true, force: true }); }
 });

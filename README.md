@@ -28,9 +28,9 @@
 |---|---|---|---|
 | **One line** | the discipline as a paste-in | token saving, nothing else | the whole layer that fixes the annoyances |
 | **Install** | paste [`OPERATING-PROFILE.md`](OPERATING-PROFILE.md) (or [`CONTEXT-SAVER.md`](CONTEXT-SAVER.md) for lean prose) into `CLAUDE.md` | `npx ordo init --lean` | `npx ordo init` (or `/plugin install`) |
-| **You get** | compression + the dispatcher as prose | format-by-shape + ponytail + inbound compaction, **measured −47–68%** | Lean **+** the classify→route dispatcher + the gates (opt-in) + a **crawler (live) + native PDF + a video add-slot, all compaction-wrapped (−24–62%)** + `.ordo/` persistence that grows with the project |
+| **You get** | compression + the dispatcher as prose | format-by-shape + ponytail + inbound compaction, **measured −47–68%** | Lean **+** the classify→route dispatcher + the `/ordo` command + the gates (opt-in) + a **web crawler + social scraper + native PDF + video sight (ffmpeg frames → native vision), all compaction-wrapped (−24–62%)** + `.ordo/` persistence that grows with the project |
 | **For** | "just put it in my prompt" | "I just want lower bills" | "the one install for all of it" |
-| **Footprint** | ~1k tokens, zero deps | tiny skill, zero MCP | a plugin + `.ordo/mcp.json.example` (firecrawl live; video = add-slot) |
+| **Footprint** | ~1k tokens, zero deps | tiny skill, zero MCP | a plugin + `/ordo` + `.ordo/mcp.json.example` (firecrawl + apify) |
 | **Proven** | compression (measured) | compression (measured) | compression + tool-compaction (both measured); the gates honest/opt-in |
 
 ```bash
@@ -39,18 +39,18 @@ npx ordo init --lean   # Lean — token saving only, as neat and light as cavema
 ```
 
 **Lean is exactly that:** *only* the compacting + verbosity. No gates, no tools, no quality claims — the smallest
-thing that pays for itself. **Full is the superset:** it bundles a web/social **crawler** (firecrawl), uses Claude
-Code's **native PDF**, leaves a **video add-slot** (no standard server exists yet — honestly marked), and
-**compacts every tool's output** (the measured differentiator), and it grows with the project. Per-tier breakdown:
-[`docs/V2-ARCHITECTURE.md`](docs/V2-ARCHITECTURE.md) · [`docs/tiers/`](docs/tiers/).
+thing that pays for itself. **Full is the superset:** a web **crawler** (firecrawl) + **social scraper** (apify),
+Claude Code's **native PDF**, **video sight** (ffmpeg keyframes → native image vision — `tools/video_frames.py`,
+no fake MCP), and it **compacts every tool's output** (the measured differentiator), and it grows with the
+project. Per-tier breakdown: [`docs/V2-ARCHITECTURE.md`](docs/V2-ARCHITECTURE.md) · [`docs/tiers/`](docs/tiers/).
 
 ## It runs itself (auto-activation)
 
 The reason frameworks don't get used: you have to remember to invoke them. ORDO doesn't make you.
 
-1. **Set it once** — `npx ordo init`, `/plugin install`, or a line in `CLAUDE.md`. That one step is the whole
-   setup; after it, the skill is resident every session and a bare "use ORDO" (or nothing at all) is enough — it
-   auto-fires on coding/agentic tasks.
+1. **Set it once** — `npx ordo init`, `/plugin install`, drag the skill into `.claude/skills/`, or a line in
+   `CLAUDE.md`. That one step is the whole setup; after it, the skill is resident every session, a bare "use ORDO"
+   (or nothing) is enough — it auto-fires on coding/agentic tasks — and **`/ordo`** activates it on demand.
 2. **It routes itself** — `classifyTask()` decides *which part* applies per task (light → just compress + answer;
    hard → arm the ledger + the right gate). You never pick.
 3. **It persists and grows** — Full drops a project-local `.ordo/ledger.md` + `lessons.md` the skill reads at the

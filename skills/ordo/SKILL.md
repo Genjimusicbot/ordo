@@ -38,6 +38,10 @@ width degrades easy tasks), cause-first self-heal on a failed gate. Routes effor
 - **Tool output (the bundled-MCP value-add):** route EVERY tool result — a video transcript, a web/social crawl, a
   PDF dump, any tool — through the inbound compactor before it enters context. Measured **−24 to −62%** on tool
   output (`references/mcp-bundle.md`). The tools aren't ORDO's; compacting them is.
+- **See a video:** extract keyframes (`tools/video_frames.py`, ffmpeg) → Read them as images (native vision) →
+  ponytail the per-frame notes. PDFs/images are native; crawler = firecrawl; socials = apify.
+- **Orchestrate other skills:** when a house skill (ultra-design, ultra-video, …) is installed, route to it and
+  **compact its output** — ORDO is the routing + compaction layer *over* your skills, never a replacement.
 - **Code context:** prefer an AST graph (structure parsed free, never burns tokens) as a *navigation index* — open
   the file for exact bytes; never trust an INFERRED edge as fact. `references/code-context.md`.
 

@@ -30,26 +30,35 @@ This is a human-run, evidence-gated loop — NOT autonomous self-growth.>
 `;
 
 // The bundled-MCP template (NOT active — rename to .mcp.json + add your keys to enable). ORDO's value-add is
-// routing each tool's output through the inbound compactor (spec/mcp-bundle.md). PDFs/images are native to Claude
-// Code (the Read tool); video has no standard server yet — add one to the "video" slot when you have it.
+// routing each tool's output through the inbound compactor (spec/mcp-bundle.md). firecrawl = open web, apify =
+// social scraping. VIDEO uses tools/video_frames.py (ffmpeg keyframes → native image vision, no MCP). PDFs/images
+// are native to Claude Code (the Read tool).
 const MCP_EXAMPLE = JSON.stringify({
-  _README: "Rename to .mcp.json and add your keys to enable. ORDO compacts every tool's output (spec/mcp-bundle.md).",
+  _README: "Rename to .mcp.json + add keys to enable. ORDO compacts every tool's output (spec/mcp-bundle.md). VIDEO: tools/video_frames.py (ffmpeg keyframes → native vision, no MCP). PDFs/images: native (Read tool).",
   mcpServers: {
-    firecrawl: { command: "npx", args: ["-y", "firecrawl-mcp"], env: { FIRECRAWL_API_KEY: "<your-key>" } },
-    "video (add your video-understanding MCP here)": { command: "npx", args: ["-y", "<video-mcp-package>"], env: {} },
+    firecrawl: { command: "npx", args: ["-y", "firecrawl-mcp"], env: { FIRECRAWL_API_KEY: "<your-firecrawl-key>" } },
+    apify: { command: "npx", args: ["-y", "@apify/actors-mcp-server"], env: { APIFY_TOKEN: "<your-apify-token>" } },
   },
 }, null, 2) + "\n";
+
+// drop the /ordo slash command so it works in the project regardless of tier
+function writeCommand(target) {
+  const cmdDir = join(target, ".claude", "commands");
+  mkdirSync(cmdDir, { recursive: true });
+  writeFileSync(join(cmdDir, "ordo.md"), readFileSync(join(ROOT, "commands", "ordo.md"), "utf8"));
+}
 
 /** Install ORDO into <targetDir or cwd>/.claude/. opts.lean → the compaction-only tier. Returns a status string. */
 export function initProject(targetDir, opts = {}) {
   const target = targetDir || process.cwd();
+  writeCommand(target); // /ordo works in both tiers
 
   if (opts.lean) {
     const dir = join(target, ".claude", "skills", "ordo-lean");
     mkdirSync(dir, { recursive: true });
     writeFileSync(join(dir, "SKILL.md"), readFileSync(join(ROOT, "skills", "ordo-lean", "SKILL.md"), "utf8"));
-    return `ORDO Lean installed → ${dir}\n  SKILL.md (compaction + verbosity only — token saving, stateless).\n` +
-      "  Auto-fires on data/output tasks. Restart the session to pick it up.";
+    return `ORDO Lean installed → ${dir}\n  SKILL.md (compaction + verbosity only) + /ordo command.\n` +
+      "  Auto-fires on data/output tasks; /ordo activates it on demand. Restart the session to pick it up.";
   }
 
   const skillDir = join(target, ".claude", "skills", "ordo");
@@ -71,7 +80,7 @@ export function initProject(targetDir, opts = {}) {
   if (!existsSync(join(ordoDir, "mcp.json.example"))) writeFileSync(join(ordoDir, "mcp.json.example"), MCP_EXAMPLE);
 
   return `ORDO Full installed → ${skillDir}\n  SKILL.md + OPERATING-PROFILE.md + ${n} spec references + ` +
-    ".ordo/ (ledger + lessons + mcp.json.example — grows with the project).\n" +
-    "  Auto-fires + auto-routes on coding/agentic tasks. Bundled-tool output is compaction-wrapped (spec/mcp-bundle.md).\n" +
+    ".ordo/ (ledger + lessons + mcp.json.example) + /ordo command — grows with the project.\n" +
+    "  Auto-fires + auto-routes on coding/agentic tasks; /ordo activates on demand. Tool output is compaction-wrapped.\n" +
     "  Restart the session to pick it up.";
 }

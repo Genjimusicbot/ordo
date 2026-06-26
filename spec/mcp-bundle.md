@@ -12,13 +12,16 @@ context.** A transcript or a crawl arrives already shrunk. *That compaction is t
 | PDF text dump (prose) | **−24%** (whitespace; deep dedup is the opt-in headroom path) |
 
 ## The anchor tools (the Full install ships `.ordo/mcp.json.example`)
-- **Web / social crawler** — `firecrawl-mcp` (real; needs `FIRECRAWL_API_KEY`) crawls the open web + the large
-  socials. Results → `compressInbound` (JSON→TSV, dedup) before context.
+- **Web crawler** — `firecrawl-mcp` (real; needs `FIRECRAWL_API_KEY`) crawls the open web. Results →
+  `compressInbound` (JSON→TSV, dedup) before context.
+- **Social media** — `@apify/actors-mcp-server` (real; needs `APIFY_TOKEN`) scrapes the largest socials (X /
+  Instagram / TikTok / LinkedIn / etc. via Apify actors). Results → compacted before context.
 - **PDF / images** — **native to Claude Code** (the Read tool reads PDFs + images). ORDO adds: route the extracted
   text through the inbound compactor; for a huge PDF keep the load-bearing pages, reference the rest.
-- **Video / mp4 (vision)** — add a video-understanding MCP (frames → described/transcribed) to the example file when
-  you have one; ORDO compacts the segment output (−46% measured). Video has no single standard server yet — this is
-  the documented add-slot, honestly marked.
+- **Video / mp4 (vision)** — ORDO does video the **REAL way, no fake MCP**: `tools/video_frames.py` extracts
+  keyframes with ffmpeg, the agent **Reads them as images** (Claude Code's native image vision), and ORDO
+  ponytail-compacts the per-frame notes (−46% measured on segment output). That is ORDO teaching the model to *see*
+  a video — frames + native vision, no extra service.
 
 ## The ORDO rule (the universal value-add)
 On ANY tool result — bundled or not — apply the inbound contract: structured → TSV, prose/logs → lossless whitespace
