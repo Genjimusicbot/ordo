@@ -1,27 +1,61 @@
 <div align="center">
-  <img src="figures/hero.svg" alt="ORDO — the context limiter that actually makes your LLM smarter" width="820">
+  <img src="figures/hero.svg" alt="ORDO — mention it once: auto-applied lossless compaction + the tools Claude lacks, honest-first" width="820">
 </div>
 
 <p align="center">
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-c6f135.svg" alt="MIT"></a>
-  <img src="https://img.shields.io/badge/tests-18%2F18-79d65a.svg" alt="tests">
+  <img src="https://img.shields.io/badge/tests-26%2F26-79d65a.svg" alt="tests">
   <img src="https://img.shields.io/badge/honest-scorecard%20inside-9ee84a.svg" alt="honest">
-  <img src="https://img.shields.io/badge/install-%2Fordo%20plugin%20%C2%B7%20npm%20%C2%B7%20paste-d9f64f.svg" alt="install">
+  <img src="https://img.shields.io/badge/install-3%20tiers%20%C2%B7%20md%20%C2%B7%20lean%20%C2%B7%20full-d9f64f.svg" alt="install">
 </p>
 
-<p align="center"><b>lossless token compaction, measured · rot-resistant context · honest-first — the nulls are named, not hidden</b></p>
+<p align="center"><b>mention it once → auto-applied lossless compaction + the tools Claude lacks · honest-first — every claim measured, the nulls named</b></p>
 
 <p align="center">
+  <a href="#three-ways-to-install-pick-by-how-much-you-want">Install (3 tiers)</a> ·
   <a href="#what-is-ordo">What</a> ·
-  <a href="#who-needs-ordo-and-what-it-fixes-for-you">Who needs it</a> ·
-  <a href="#how-to-use-plug-and-play">How to use</a> ·
+  <a href="#it-runs-itself-auto-activation">Auto-activation</a> ·
   <a href="#architecture--the-four-layers">Architecture</a> ·
-  <a href="#the-gates-classify-then-route">Gates</a> ·
-  <a href="#the-pillars-what-it-optimizes">Pillars</a> ·
-  <a href="#the-numbers">Numbers</a>
+  <a href="#the-numbers">Numbers</a> ·
+  <a href="#honesty-the-moat">Honesty</a>
 </p>
 
 ---
+
+## Three ways to install — pick by how much you want
+
+| | **🟢 ordo.md** | **⚫ ORDO Lean** | **🔶 ORDO Full** |
+|---|---|---|---|
+| **One line** | the discipline as a paste-in | token saving, nothing else | the whole layer that fixes the annoyances |
+| **Install** | paste a file into `CLAUDE.md` | `npx ordo init --lean` | `npx ordo init` (or `/plugin install`) |
+| **You get** | compression + the dispatcher as prose | format-by-shape + ponytail + inbound compaction, **measured −47–68%** | Lean **+** the classify→route dispatcher + the gates (opt-in) + **bundled video/PDF/crawler MCPs, compaction-wrapped (−24–62%)** + `.ordo/` persistence that grows with the project |
+| **For** | "just put it in my prompt" | "I just want lower bills" | "the one install for all of it" |
+| **Footprint** | ~1k tokens, zero deps | tiny skill, zero MCP | a plugin + a bundled `.mcp.json` |
+| **Proven** | compression (measured) | compression (measured) | compression + tool-compaction (both measured); the gates honest/opt-in |
+
+```bash
+npx ordo init          # Full — auto-router + gates + bundled tools + persistence
+npx ordo init --lean   # Lean — token saving only, as neat and light as caveman
+```
+
+**Lean is exactly that:** *only* the compacting + verbosity. No gates, no tools, no quality claims — the smallest
+thing that pays for itself. **Full is the superset** and the one that fixes "all the annoyances of Claude": it
+bundles the tools Claude lacks (video / PDF / crawler) and **compacts their output**, and it grows with the
+project. Per-tier breakdown: [`docs/V2-ARCHITECTURE.md`](docs/V2-ARCHITECTURE.md).
+
+## It runs itself (auto-activation)
+
+The reason frameworks don't get used: you have to remember to invoke them. ORDO doesn't make you.
+
+1. **Mention it once** — a word to Claude ("use ORDO"), a line in `CLAUDE.md`, `/ordo`, or `npx ordo init`. It is
+   then resident for the whole session.
+2. **It routes itself** — `classifyTask()` decides *which part* applies per task (light → just compress + answer;
+   hard → arm the ledger + the right gate). You never pick.
+3. **It persists and grows** — Full drops a project-local `.ordo/ledger.md` + `lessons.md` the skill reads at the
+   start of a hard task and appends to as it works. That is "grows with the project" — concrete, a human-run
+   evidence loop (not autonomous self-growth; we measured that null and named it).
+
+No memorization, no manual invocation, no drift back to raw Claude. As light to live with as caveman.
 
 ## What is ORDO
 
@@ -239,6 +273,18 @@ no hallucination cut on a strong model (and no backfire either).
 
 All token costs are GPT-`tiktoken` proxies — **re-validate on your model.** Reproduce: `python tools/ab_smoke.py`,
 `python tools/formatbench.py`, `npx ordo measure`. Every claim with its evidence tier in [`VERDICT.md`](VERDICT.md).
+
+### Bundled-tool output, compacted (Full tier — `python tools/mcp_compact_ab.py`)
+The Full tier's tools (video / crawler / PDF) aren't ORDO's — **compacting their output is.** Measured, lossless:
+
+| bundled-tool output | reduction |
+|---|---|
+| web / social crawl (result JSON) | **−62%** |
+| video transcript (segment JSON) | **−46%** |
+| PDF text dump (prose) | **−24%** (whitespace; deep dedup = opt-in) |
+
+A transcript or a crawl enters context already shrunk, so the Full tier costs fewer tokens than wiring the same
+MCPs up raw. That is the differentiator.
 
 ### vs using a single tool standalone (`python tools/standalone_compare.py`)
 Same turn; each rival covers ONE layer, ORDO stacks them. ORDO wins **among lossless** approaches *by stacking* —
