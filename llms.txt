@@ -29,5 +29,5 @@
 ## Evidence
 - BENCHMARKS.md (computed vs agent-judged, with reproduce commands).
 - VERDICT.md (every measured number + the cut list).
-- docs/SELF-EVAL.md (ORDO scored 6.5/10 by its own evaluation gate — the honest critique).
+- docs/SELF-EVAL.md (ORDO scored 7.6/10 by a fresh 5-rater blind pass — was 6.5 pre-V2; the per-dimension breakdown + the honest critique).
 - DISCLAIMERS.md (private-use ethics; not for evading safety/monitoring).

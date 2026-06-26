@@ -84,8 +84,8 @@ model their quality lifts are **directional, not proven**. They're opt-in and na
 win is the token saving ([`spec/thinking.md`](spec/thinking.md)).
 
 Every number is tagged **computed** (a script reproduces it), **agent-judged** (a blind test produced it), or
-**grounded** (a cited study). The repo even grades *itself* with its own evaluation gate and ships the **6.5/10**
-critique unedited ([`docs/SELF-EVAL.md`](docs/SELF-EVAL.md)), then ran the same gate on its own marketing and
+**grounded** (a cited study). The repo even grades *itself*: a fresh five-rater blind pass lands **7.6/10** and it
+still ships the earlier **6.5** critique unedited ([`docs/SELF-EVAL.md`](docs/SELF-EVAL.md)), then ran the same gate on its own marketing and
 shipped that **4/10** too ([`docs/GTM-REALITY.md`](docs/GTM-REALITY.md)).
 
 ## What ORDO is trying to solve
@@ -254,7 +254,7 @@ then **what ORDO actually measured**. We don't inherit their numbers — we cite
 | Lojban | one unambiguous parse | the determinative grammar | **input −32%**, decode 2.00/2 |
 | VOKU | mandatory epistemic marking | the epistemic slot | honest null on strong models (no reduction, no backfire) |
 | Chroma · Lost-in-the-Middle · RULER · NoLiMa | context rot is real (−20 to −58pp) | the context-rot gate | **grounded**; ledger + compact-at-threshold |
-| Ponytail · ADAPT · ultra-analytics (house) | lean · drive-to-done · unbiased rating | tidyness · autonomy loop · the evaluation gate | **−42% first-pass flaws**; self-eval 6.5/10 |
+| Ponytail · ADAPT · ultra-analytics (house) | lean · drive-to-done · unbiased rating | tidyness · autonomy loop · the evaluation gate | **−42% first-pass flaws**; self-eval **7.6** (was 6.5) |
 
 ### Measured A/B — ORDO on vs off, per layer (real o200k counts)
 Every number is tiktoken-counted; reproduce with `python tools/ab_smoke.py`. The full variant ladder and the
@@ -280,7 +280,10 @@ least transferable (CJK tokenizes differently on Claude) — **readable-ORDO is 
 tokens · **no proven wall-clock speed win** (only an output-token proxy; the meter is built, the A/B unrecorded) ·
 no hallucination cut on a strong model (and no backfire either).
 
-All token costs are GPT-`tiktoken` proxies — **re-validate on your model.** Reproduce: `python tools/ab_smoke.py`,
+All token costs are GPT-`tiktoken` proxies — **re-validate on your model.** `python tools/tokenizer_robustness.py`
+shows the *structural* wins hold across 4 BPE tokenizers (gpt2 50k → o200k 200k vocab; ponytail 1pp, TSV 8pp,
+end-to-end 11pp spread, and −68% is the conservative end); the glyph row is the volatile one (33pp). The exact
+Claude count via `count_tokens` is still owed (key-gated). Reproduce: `python tools/ab_smoke.py`,
 `python tools/formatbench.py`, `npx ordo measure`. Every claim with its evidence tier in [`VERDICT.md`](VERDICT.md).
 
 ### The Full tier bonus — the tools Claude lacks
@@ -336,7 +339,7 @@ Xeno-runic, edgy but sanitary: near-black, one acid accent, sharp geometry, the 
 
 ## Honesty — the receipts
 [`DISCLAIMERS.md`](DISCLAIMERS.md) · [`VERDICT.md`](VERDICT.md) · [`docs/SELF-EVAL.md`](docs/SELF-EVAL.md)
-(ORDO graded by its own gate: 6.5/10, with the holes) · [`docs/BUILD-LOG.md`](docs/BUILD-LOG.md) ·
+(graded **7.6** by a fresh 5-rater pass; the historical 6.5 kept for the record, with the holes) · [`docs/BUILD-LOG.md`](docs/BUILD-LOG.md) ·
 [`docs/COMPETITIVE-TEARDOWN.md`](docs/COMPETITIVE-TEARDOWN.md) (12 rival repos torn down through the eval gate) ·
 [`docs/ADD-PLAN.md`](docs/ADD-PLAN.md) (the 6 gap-fillers that survived — all shipped) ·
 [`docs/AB-SMOKE-TESTS.md`](docs/AB-SMOKE-TESTS.md) (per-layer A/B, real tokens) ·

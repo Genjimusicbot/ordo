@@ -63,7 +63,10 @@ deltas**: run a task corpus with the ORDO profile on vs off and diff.)
 - **Meter `--since` / session filter** for a cleanly scoped A/B (today: isolate runs via `--dir`).
 - **Price table for current models** (fable-5, etc.) — the WARN is the honest stand-in; extend `PRICES` to price them.
 - **A quality A/B** (blind judge) run alongside the token A/B, committed with transcripts.
-- **Validate the deltas on a non-GPT (Anthropic) tokenizer**, not only `tiktoken`.
+- **Validate the deltas on a non-GPT (Anthropic) tokenizer.** *Partially done:* `python tools/tokenizer_robustness.py`
+  re-counts the corpus across 4 BPE tokenizers (gpt2 50k → o200k 200k vocab) — the structural wins hold (ponytail
+  1pp, TSV 8pp, end-to-end 11pp spread; −68% is the conservative end), the glyph row is the volatile one (33pp).
+  Still owed: the *exact* Claude count via Anthropic `count_tokens` (key-gated here; all four above are GPT-lineage).
 
 ## The one-line honest summary
 On a **structured-data-heavy turn** ORDO cuts ~**47–68%** of tokens **losslessly**, with the single biggest
