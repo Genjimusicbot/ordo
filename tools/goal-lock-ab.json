@@ -1,0 +1,10 @@
+{
+  "n": 5,
+  "A_pass": 4,
+  "B_pass": 1,
+  "net": -3,
+  "b_wins": 0,
+  "a_wins": 3,
+  "sign_p": 0.25,
+  "tier": "COMPUTED (tier-one exact-match)"
+}

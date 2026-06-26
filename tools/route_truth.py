@@ -88,11 +88,43 @@ def report():
     return items
 
 
+def run_live():
+    """LIVE: the model EXTRACTS the 5 signals from each raw prompt → classify → score vs gold. The misroute rate
+    is COMPUTED (arithmetic vs frozen labels) over a model's extraction. Writes route-truth-ab.json."""
+    from local_model import complete
+    items, h = load()
+    SYS = ('Triage a task. Output ONLY a JSON object with 5 booleans, no prose: '
+           '{"irreversible":bool,"realFork":bool,"longHorizon":bool,"broad":bool,"loadBearing":bool}. '
+           'irreversible=a wrong answer costs more than a re-ask (money/sends/migrations/a claim shipped to a user); '
+           'realFork=a real architecture/algorithm/novel-design choice vs one deterministic answer; '
+           'longHorizon=>~15-20 tool calls or multi-phase; broad=>5 files or >1 repo; '
+           'loadBearing=IDs/contracts/schema/decisions that must survive.')
+
+    def extract(prompt):
+        r = complete("TASK: " + prompt, system=SYS)
+        try:
+            j = json.loads(r[r.find("{"):r.rfind("}") + 1])
+            return {k: bool(j.get(k)) for k in ("irreversible", "realFork", "longHorizon", "broad", "loadBearing")}
+        except Exception:
+            return {}  # extraction failure → LIGHT (the dangerous default; an under-verify if the item is STRICT)
+
+    res = score(lambda it: classify(extract(it["prompt"])), items)
+    out = {"router": "classifyTask (model extraction, opus-4-8)", "corpus": h,
+           "tier": "COMPUTED scoring over model extraction", **res}
+    (Path(__file__).resolve().parent / "route-truth-ab.json").write_text(json.dumps(out, indent=2), encoding="utf-8")
+    print(f"classifyTask (LIVE model extraction): over-spend {res['over_spend_pct']}% | under-verify "
+          f"{res['under_verify_pct']}% | irrev-floor {res['irreversible_floor_violations']} (must=0) | cost "
+          f"{res['cost']} → route-truth-ab.json  [vs always-strict cost 17, keyword-floor 31]")
+    return out
+
+
 if __name__ == "__main__":
     try:
         sys.stdout.reconfigure(encoding="utf-8")
     except Exception:
         pass
+    if "--run" in sys.argv:
+        run_live(); sys.exit(0)
     items = report()
     # deterministic self-checks
     o = score(ordo_rule, items)

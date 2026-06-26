@@ -74,11 +74,35 @@ def grade(arm_A: dict, arm_B: dict) -> dict:
             "sign_p": round(sign_test(b_wins, a_wins), 4), "tier": "COMPUTED (tier-one exact-match)"}
 
 
+def run_live():
+    """LIVE tier-one A/B: arm-A follows the stale plan; arm-B re-derives from {goal + ACTUAL step-1 result}.
+    Oracle exact-match → COMPUTED. Writes goal-lock-ab.json (tier-two cross-family judge is separate/PENDING)."""
+    import json as _json
+    from local_model import complete
+    armA, armB = {}, {}
+    for it in ITEMS:
+        armA[it["id"]] = complete(f"GOAL: {it['goal']} STEP 1 RESULT: {it['actual_step1']} The plan says STEP 2 is: "
+                                  f"\"{it['planned_step2']}\". State concisely what you will do for step 2.")
+        armB[it["id"]] = complete(f"GOAL: {it['goal']} STEP 1 RESULT: {it['actual_step1']} The plan said step 2 would "
+                                  f"be \"{it['planned_step2']}\", but RE-DERIVE the correct next step from the goal and "
+                                  f"how step 1 ACTUALLY came out. State concisely the correct step 2.")
+    g = grade(armA, armB)
+    (Path(__file__).resolve().parent / "goal-lock-ab.json").write_text(_json.dumps(g, indent=2), encoding="utf-8")
+    print(f"goal-lock (LIVE tier-one): A_pass {g['A_pass']} B_pass {g['B_pass']} | net {g['net']} | "
+          f"sign-p {g['sign_p']} | {g['tier']} → goal-lock-ab.json (tier-two cross-family judge PENDING)")
+    print("CAVEAT: tier-one keyword-oracle is BRITTLE on a strong model — both arms write sensible answers and "
+          "keyword-matching mis-grades correct-but-differently-worded re-derivations (a first live run gave "
+          "b_wins=0, an oracle artifact, not a goal-lock verdict). Substance needs the tier-two cross-family JUDGE.")
+    return g
+
+
 if __name__ == "__main__":
     try:
         sys.stdout.reconfigure(encoding="utf-8")
     except Exception:
         pass
+    if "--run" in sys.argv:
+        run_live(); sys.exit(0)
     # construction-validation: every item is a real divergence (no no-op items B could win on for free)
     for it in ITEMS:
         assert construction_valid(it), ("item has no real divergence to catch", it["id"])

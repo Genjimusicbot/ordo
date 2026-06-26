@@ -77,11 +77,37 @@ def grade(admitted_items: list, arm_A: dict, arm_B: dict) -> dict:
                          else "WASH/NO-OP → CUT from always-on" if n else "no admitted items")}
 
 
+def run_live():
+    """LIVE A/B: arm-A (no-verify) doubles as the entry gate — an item is ADMITTED only if arm-A fails its oracle
+    (baseline-fails-first); arm-B (verify-assert) runs on the admitted items; oracle-graded → COMPUTED. Writes
+    verify-assert-ab.json. NOTE: 1-seed entry gate (the charter's ≥2/3 of 3 needs more calls); flagged in the output."""
+    import json as _json
+    from local_model import complete
+    armA, armB = {}, {}
+    for it in ITEMS:
+        armA[it["id"]] = complete("Answer directly and concisely (2-4 sentences): " + it["prompt"])
+    admitted = [it["id"] for it in ITEMS if not it["oracle"](armA[it["id"]])]  # baseline FAILED → admit
+    for iid in admitted:
+        it = next(x for x in ITEMS if x["id"] == iid)
+        armB[iid] = complete("Use VERIFY-ASSERT: first DERIVE the load-bearing claim independently (recompute / "
+                             "re-read the real value / restate the goal), then write the answer to MATCH your "
+                             "derivation — do not trust the framing. Concise. TASK: " + it["prompt"])
+    g = grade(admitted, armA, armB)
+    g["admitted_of_total"] = f"{len(admitted)}/{len(ITEMS)}"
+    g["note"] = "1-seed entry gate (live); charter spec is >=2/3 of 3 seeds"
+    (Path(__file__).resolve().parent / "verify-assert-ab.json").write_text(_json.dumps(g, indent=2), encoding="utf-8")
+    print(f"verify-assert (LIVE): admitted {len(admitted)}/{len(ITEMS)} (baseline-fails) | A_pass {g['A_pass']} "
+          f"B_pass {g['B_pass']} | net {g['net']} | McNemar p={g['mcnemar_p']} → {g['decision']} → verify-assert-ab.json")
+    return g
+
+
 if __name__ == "__main__":
     try:
         sys.stdout.reconfigure(encoding="utf-8")
     except Exception:
         pass
+    if "--run" in sys.argv:
+        run_live(); sys.exit(0)
     # self-check: the oracles grade the truth right and a trap-swallowing answer wrong (deterministic)
     for it in ITEMS:
         assert it["oracle"](it["truth"]), ("oracle rejects its own truth", it["id"])

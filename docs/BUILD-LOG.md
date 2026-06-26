@@ -420,6 +420,23 @@ packaging exemplars not mechanisms; the installer/proxy products are whole produ
 - **18/18 node tests + Python self-checks green.** Rename Genjimusicbot → SprucetheAI. No foreign runtime
   vendored; 5 of 6 are spec/packaging/one-script. **The discipline held: nothing lossy ships as a default.**
 
+## Live A/B runs via the Max session — honest, partly self-refuting (2026-06-26)
+Wired the harnesses to a headless `claude -p` bridge (`tools/local_model.py`, Max OAuth, no per-call cost) and ran
+them live on Opus 4.8. The results refined the honesty, not the marketing:
+- **goal-lock LIVE tier-one: net −3** (A_pass 4 / B_pass 1, **b_wins 0**). This is NOT a goal-lock verdict — it is a
+  **harness artifact**: the tier-one keyword oracle is too brittle for a strong model (both arms write sensible
+  answers; b_wins=0 means the oracle never credited a correctly-but-differently-worded re-derivation). Self-critique
+  catch: my "COMPUTED, un-gameable" tier-one oracle is COMPUTED but measures keyword-presence, not correctness.
+  Substance needs the tier-two cross-family JUDGE (PENDING). Caveat now printed by the harness.
+- **route_truth model-extraction LIVE: abandoned** — 36 sequential `claude -p` spawns stalled and piled processes;
+  too fragile to trust. The **deterministic** route_truth result stands as the solid COMPUTED finding (taxonomy
+  complete; a naive keyword extractor at cost 31 is worse than always-strict at 17 because under-verify is 10×).
+- **The cross-cutting honest finding:** the single-pass instinct A/Bs **do not cleanly measure as wins on a frontier
+  model** (verify-assert wash + goal-lock noise + oracle brittleness) — the Reflexion pattern (self-correction is
+  emergent in strong models) showing up in ORDO's own instincts. This is *good* for the v2 product: the bold,
+  cleanly-measurable claims are **compression + bundled tooling + auto-activation**, NOT a quality-gate magic that
+  washes. The page rides the proven, the instincts stay opt-in at their true tier.
+
 ## Improvement charter EXECUTED — the foolproof harnesses built (2026-06-26)
 Built everything the charter (`docs/IMPROVEMENT-CHARTER.md`) designed; ran the one that lands COMPUTED now:
 - **`tools/judge.py`** — the 5-lock foolproof judge protocol. Stats (Wilson interval, sign-test, Cohen's κ,
