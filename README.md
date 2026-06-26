@@ -1,15 +1,16 @@
 <div align="center">
-  <img src="figures/hero.svg" alt="ORDO — mention it once: auto-applied lossless compaction + the tools Claude lacks, honest-first" width="820">
+  <img src="figures/hero.svg" alt="ORDO — cut your Claude tokens 47 to 68 percent, losslessly, the moment you mention it" width="820">
 </div>
 
 <p align="center">
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-c6f135.svg" alt="MIT"></a>
+  <img src="https://img.shields.io/badge/tokens%20saved-47--68%25%20measured-c6f135.svg" alt="tokens saved 47-68% measured">
   <img src="https://img.shields.io/badge/tests-26%2F26-79d65a.svg" alt="tests">
   <img src="https://img.shields.io/badge/honest-scorecard%20inside-9ee84a.svg" alt="honest">
-  <img src="https://img.shields.io/badge/install-3%20tiers%20%C2%B7%20md%20%C2%B7%20lean%20%C2%B7%20full-d9f64f.svg" alt="install">
+  <img src="https://img.shields.io/badge/install-3%20tiers-d9f64f.svg" alt="install 3 tiers">
 </p>
 
-<p align="center"><b>mention it once → auto-applied lossless compaction + the tools Claude lacks · honest-first — every claim measured, the nulls named</b></p>
+<p align="center"><b>Cut 47–68% of your Claude tokens, losslessly, the moment you mention it. Measured, not promised. The nulls are named.</b></p>
 
 <p align="center">
   <a href="#three-ways-to-install">Install (3 tiers)</a> ·
@@ -39,11 +40,11 @@ npx ordo init --lean   # Lean — token saving only, as neat and light as cavema
 ```
 
 **Lean is exactly that:** *only* the compacting + verbosity. No gates, no tools, no quality claims — the smallest
-thing that pays for itself. **Full is the superset:** **[last30days](https://github.com/mvanhorn/last30days-skill)**
-social/recent research across Reddit/X/YouTube/TikTok/IG/HN/GitHub (free tier, scored by upvotes/likes/real-money) +
-a web **crawler** (firecrawl) + Claude Code's **native PDF** + **video sight** (ffmpeg keyframes → native image
-vision — `tools/video_frames.py`, no fake MCP), and it **compacts every tool's output** (the measured
-differentiator), and it grows with the project. Per-tier breakdown: [`docs/V2-ARCHITECTURE.md`](docs/V2-ARCHITECTURE.md) · [`docs/tiers/`](docs/tiers/).
+thing that pays for itself, and the part with zero caveats. **Full is the superset:** everything in Lean, plus the
+auto-router, the gates (opt-in), and `.ordo/` persistence that grows with the project. The bundled tools Claude
+can't do alone ([last30days](https://github.com/mvanhorn/last30days-skill) socials, firecrawl web, native PDF,
+video sight) ride along as the bonus, each with its output compacted, which is the measured differentiator.
+Per-tier breakdown: [`docs/V2-ARCHITECTURE.md`](docs/V2-ARCHITECTURE.md) · [`docs/tiers/`](docs/tiers/).
 
 ## It runs itself (auto-activation)
 
@@ -62,27 +63,30 @@ No memorization, no manual invocation, no drift back to raw Claude. As light to 
 
 ## What is ORDO
 
-ORDO is the **auto-applied agent layer** you give your LLM. It does **not remodel how Claude thinks** — a frontier
-model already reasons well in a single pass. It **fills the gaps of raw Opus with no setup**: a strong `CLAUDE.md`,
-compaction, the goal held at the front, context + long-form management, read-files-once discipline. Set it once and
-it does three *proven* things: **compresses** in and out so you pay for fewer tokens (measured **−47–68%**),
-**bundles the tools Claude lacks** (crawler + social + native PDF + video sight) and **compacts their output**, and
-**holds a long session together** — goal-lock + a ledger + rot-compaction so the work doesn't drift or rot past
-~50K. The gains are in **context and long-form** (grounded in the rot literature); it does *not* claim a
-hallucination or IQ boost (those wash on a strong model — honestly named). It ships as a **paste-in spec**
-(load it into your system prompt / `CLAUDE.md`)
-plus a thin **npm runtime** for the deterministic bits.
+Every Claude turn wastes tokens you pay for: pretty-printed JSON, restated context, "Great question!" preambles,
+files re-read for the tenth time. **ORDO strips that waste the moment you mention it**, on autopilot, for the whole
+session. On real token counts a structured turn drops **47–68%, losslessly** — nothing is summarized away or dumbed
+down, it just stops sending the filler.
 
-Under all of it is one law: **spend effort proportional to the stakes, in a single pass.** ORDO classifies each
-task light vs hard and only arms the heavy discipline — the ledger, goal-lock, replanning, the gates — where being
-wrong is expensive; easy tasks stay fast and terse. The gates fire **by exception, not by default**, and on a
-frontier model their quality lifts are **directional, not proven** (opt-in, named in the scorecard — the headline
-wins are compression + tooling, not the gates) ([`spec/thinking.md`](spec/thinking.md)).
+It does **not** try to make Claude smarter. A frontier model already reasons well in one pass, and we measured that
+the usual "quality" tricks wash on it (we named that out loud, in the scorecard). What it fixes is what raw Opus
+with *no setup* gets wrong over real work: the goal slipping out of focus on a long task, context rotting past
+**~50K tokens**, files read again and again. It keeps the goal at the front, compacts before the window starves,
+and reads things once. Set it once and forget it's there — you just pay for fewer tokens and the session stays sharp.
 
-It's deliberately not hype. Every claim below is tagged **computed** (a script reproduces it), **agent-judged**
-(a blind test produced it), or **grounded** (a cited study). The repo even scores *itself* with its own
-evaluation gate and ships the **6.5/10** critique unedited ([`docs/SELF-EVAL.md`](docs/SELF-EVAL.md)), then
-re-ran the gate on its own GTM pitch and shipped that **4/10** too ([`docs/GTM-REALITY.md`](docs/GTM-REALITY.md)).
+> The **Full** tier also bundles what Claude can't do alone — read a video, research the socials, decode a PDF — and
+> compacts that output too. Real, and useful, but the bonus, not the point. [More on that below](#the-full-tier-bonus--the-tools-claude-lacks).
+
+Under it all is one rule: **spend effort proportional to the stakes, in a single pass.** ORDO sizes each task up
+first and only arms the heavy machinery (the ledger, goal-lock, replanning, the gates) when being wrong is actually
+expensive; easy tasks stay fast and terse. The gates fire **by exception, never by default**, and on a frontier
+model their quality lifts are **directional, not proven** (opt-in, named in the scorecard — the headline win is the
+token saving) ([`spec/thinking.md`](spec/thinking.md)).
+
+It's deliberately not hype. Every number is tagged **computed** (a script reproduces it), **agent-judged** (a blind
+test produced it), or **grounded** (a cited study). The repo even grades *itself* with its own evaluation gate and
+ships the **6.5/10** critique unedited ([`docs/SELF-EVAL.md`](docs/SELF-EVAL.md)), then ran the same gate on its own
+marketing and shipped that **4/10** too ([`docs/GTM-REALITY.md`](docs/GTM-REALITY.md)).
 
 ## What ORDO is trying to solve
 
@@ -134,12 +138,10 @@ ORDO is **context-resident** — it works whenever it's *in the model's context*
 | **Chat (Claude.ai / ChatGPT)** | paste it into **Custom Instructions / Project knowledge**, or drop the raw GitHub URL and say "follow this" | every chat in that project |
 | **Terminal / your own code** | `npm install ordo-llm` for the runtime; `npx ordo profile` to pipe the spec; **`npx ordo measure`** for the real $/token A/B | wherever you wire it |
 
-**Does it need to be loaded / referenced / uploaded?** Loaded into context — once. On **Claude Code** the
-cleanest path is the **plugin** (`/plugin marketplace add SprucetheAI/ordo` → `/plugin install`) or
-`npx ordo init`: it drops the `/ordo` skill into `.claude/` and auto-loads on coding tasks, so a non-coder
-never pastes anything. Elsewhere, **put it in `CLAUDE.md`** (or project knowledge) and point your LLM/IDE at
-`OPERATING-PROFILE.md`. Want the real dollar proof? `npx ordo measure` reads your own session logs and reports
-actual tokens + cost — run it with ORDO on vs off for the A/B delta.
+**Loaded once, then cached** — it's not a daemon. On Claude Code the plugin (or `npx ordo init`) drops the `/ordo`
+skill and auto-loads on coding tasks, so a non-coder never pastes anything; everywhere else, put it in `CLAUDE.md`.
+Want the dollar proof? `npx ordo measure` reads your own logs and reports real tokens + cost — run it ORDO-on vs
+ORDO-off for the A/B delta.
 
 ### The language is opt-in (off by default)
 The terse command grammar (`σ文3列简` → "summarize the following in 3 concise bullets…") is a power-user add-on,
@@ -281,8 +283,11 @@ no hallucination cut on a strong model (and no backfire either).
 All token costs are GPT-`tiktoken` proxies — **re-validate on your model.** Reproduce: `python tools/ab_smoke.py`,
 `python tools/formatbench.py`, `npx ordo measure`. Every claim with its evidence tier in [`VERDICT.md`](VERDICT.md).
 
-### Bundled-tool output, compacted (Full tier — `python tools/mcp_compact_ab.py`)
-The Full tier's tools (video / crawler / PDF) aren't ORDO's — **compacting their output is.** Measured, lossless:
+### The Full tier bonus — the tools Claude lacks
+The token saving is the point. The **Full** tier adds the things Claude can't do alone — read a video (ffmpeg
+keyframes → native vision), research the socials via [last30days](https://github.com/mvanhorn/last30days-skill)
+(free tier), decode a PDF — but the tools aren't the differentiator. **Compacting their output is** (measured,
+lossless, `python tools/mcp_compact_ab.py`):
 
 | bundled-tool output | reduction |
 |---|---|
